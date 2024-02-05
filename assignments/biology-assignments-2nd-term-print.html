@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+@page{
+margin:1vw 0 0 1.5vw !important;
+width:210mm !important;
+height:297mm !important;
+}
+@media print{
+body{
+-webkit-print-color-adjust: exact;
+}
+div{
+height:297mm !important;
+width:210mm! important;
+}
+}
+</style>
+<style>
+@font-face{
+font-family:'arial';
+src:url('https://good-web-dev.github.io/WebFonts/Arial.woff2') format('woff2');
+}
+@font-face{
+font-family:'arial-bold';
+src:url('https://good-web-dev.github.io/WebFonts/Arial-Bold.woff2') format('woff2');
+}
+:root{
+--border:0.2vw solid #000;
+--th-bg-color:#749646;
+--th-fg-color:#ffffff;
+--th-dark-bg-color:#527424;
+--even-tr-bg-color:#F7F9F2;
+}
+*{
+padding:0;
+margin:0.6vw;
+}
+table{
+margin:0 auto;
+}
+table, td, th{
+border-collapse: collapse;
+border:var(--border);
+font-family:'arial';
+text-align:center;
+padding:1.6vw;   
+font-size:2vw;
+font-weight:normal;
+}
+tr td:nth-child(even){
+font-family:'arial-bold';
+}
+th, button{
+background-color:var(--th-bg-color);
+color:var(--th-fg-color);
+font-family:'arial-bold';
+font-size:2.2vw;
+}
+th[colspan="3"], button{
+background-color:var(--th-dark-bg-color);
+}
+th.number{
+padding:0.4vw;
+width:fit-content;
+}
+div tr:nth-child(even){
+background-color:var(--even-tr-bg-color);
+}
+button{
+border:none;
+}
+table{
+width:100%;
+}
+</style>
+</head>
+<body>
+<!-- ***** first assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3"><button onclick="for(i=0;i<document.querySelectorAll('td').length;i++){document.querySelectorAll('td')[i].style.color='transparent';}">الفصل الأول</button></th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الهيكل المحوري</td>
+<td>أحد قسمي الجهاز الهيكلي في الإنسان ويشمل عظام العمود الفقري والأضلاع والجمجمة وعظمة القصّ.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الهيكل الطرفي</td>
+<td>يتكون من عظام الطرف العلوي والطرف السفلي وعظام الكتف وعظام الحوض.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>العظم الكثيف</td>
+<td>طبقة العظم الخارجية القوية والكثيفة التي تحوي أنظمة هافرس.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الخلية العظمية</td>
+<td>هي مكون من مكونات النسيج العظمي لها امتدادات سيتوبلازمية وتتصل بالخلايا الأخرى والأوعية الدموية القريبة.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>العظم الإسفنجي</td>
+<td>طبقة العظم الداخلية الخفيفة التي تحوي تجاويف مليئة بالنخاع العظمي.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>نخاع العظم الأحمر</td>
+<td>نوع من النخاع العظمي ينتج خلايا الدم البيضاء والحمراء والصفائح الدموية.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>نخاع العظم الأصفر</td>
+<td>تكون من دهون مخزنة فقط.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الخلية العظمية البانية</td>
+<td>الخلايا التي تكون العظم وتبنيه.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>تكوين العظام (التعظم)</td>
+<td>عملية تكوين العظم بواسطة الخلايا العظمية البانية.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الخلية العظمية الهادمة</td>
+<td>الخلايا التي تحطم خلايا العظم.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>الأربطة</td>
+<td>حزم من النسيج الضام القوي يربط العظام ببعضها مع بعض.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>العضلة الملساء</td>
+<td>عضلات تبطن معظم الأعضاء الداخلية المجوفة في الجسم ومنها المعدة والأمعاء والرحم.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>العضلة اللاإرادية</td>
+<td>العضلات التي لا يسيطر الجسم على حركتها.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>العضلة القلبية</td>
+<td>عضلات لاإرادية توجد في القلب فقط.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>العضلة الهيكلية</td>
+<td>عضلات مخططة ينتج عنها حركة الجسم عندما تنقبض وهي مرتبطة مع العظام بالأوتار.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>العضلات الإرادية</td>
+<td>العضلات الهيكلية التي يستطيع الجسم التحكم في حركتها.</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الوتر</td>
+<td>حزمة من نسيج ضام قاسٍ تربط العضلات مع العظام.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>اللييف العضلي</td>
+<td>ألياف عضلية صغيرة جدًا تساعد على انقباض العضلات، تتكون من خيوط بروتين الأكتين والميوسين.</td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>الميوسين</td>
+<td>خيوط بروتينية توجد في الخلايا العضلية وتعمل مع الأكتين على انقباض العضلات.</td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>الأكتين</td>
+<td>خيوط بروتينية رفيعة في الخلايا العضلية تعمل مع خيوط الميوسين على انقباض العضلات وانبساطها.</td>
+</tr>
+<tr>
+<th class="number">٢١</th>
+<td>القطعة العضلية</td>
+<td>وحدة الوظيفة في العضلات الهيكلية التي تنقبض وتتكون من ألياف عضلية.</td>
+</tr>
+</table>
+</div>
+<!-- ***** second assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الثاني</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الخلية العصبية</td>
+<td>الخلايا التي تنقل السيالات العصبية في الجسم وتتكون من جسم الخلية والمحور والزوائد الشجيرية.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>جهد الفعل</td>
+<td>اسم آخر للسيال العصبي.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الزوائد الشجيرية</td>
+<td>أجزاء من الخلية العصبية تستقبل السيالات العصبية القادمة من الخلايا العصبية الأخرى وتنقلها إلى جسم الخلية العصبية.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>عتبة التنبيه</td>
+<td>أقل منبه تحتاج إليه الخلية العصبية لتكوين السيال العصبية.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>جسم الخلية</td>
+<td>جزء رئيس من الخلية العصبية يحوي نواة الخلية وعضيات جديدة.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>العقدة</td>
+<td>فجوة في الغشاء الميليني الموجود على طول المحور العصبي تنتقل السيالات العصبيه وثبًا من عقدة إلى أخرى على طول المحور.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>محور الخلية العصبية</td>
+<td>جزء من الخلية العصبية ينقل السيالات العصبية من جسمها إلى الخلايا العصبية الأخرى أو العضلات.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>التشابك العصبي</td>
+<td>مكان بين محور خلية عصبية والزوائد والشجيرية لخلية عصبية أخرى.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>رد الفعل المنعكس</td>
+<td>مسار عصبي يتكون من خلايا عصبية حسية، وخلية عصبية بينيه، وخلية عصبية حركية.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>النواقل العصبية</td>
+<td>مواد كيميائية تنتشر عبر التشابك العصبي لتتحد بالمستقبلات الموجودة على شجرات الخلايا العصبية المجاورة فتفتح قنوات على سطح الخلايا الأخرى تكون جهد فعل محايد.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>الجهاز العصبي المركزي</td>
+<td>يتكون من الدماغ والحبل الشوكي وينظم جميع العمليات والأنشطة في الجسم.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الجهاز العصبي الجسمي</td>
+<td>جزء من الجهاز العصبي الطرفي ينقل السيالات العصبية من الجلد والعضلات الهيكليه وإليهما.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>الجهاز العصبي الطرفي</td>
+<td>يتكون من الخلايا العصبية الحسية والحركية التي تنقل المعلومات من الجهاز العصبي المركزي وإليه.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>الجهاز العصبي الذاتي</td>
+<td>أحد أجزاء الجهاز العصبي الطرفي ينقل السيال العصبي من الجهاز العصبي المركزي إلى الأعضاء الداخلية في الجسم.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>المخ</td>
+<td>الجزء الأكبر من الدماغ ويقسّم إلى نصفي كرة. ويعد المسؤول عن عمليات التفكير العليا التي تتضمن اللغة والتعلم والذاكرة وحركات الجسم الإرادية.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>الجهاز العصبي السمبثاوي</td>
+<td>أحد قسمي الجهاز العصبي الذاتي الذي يضبط الأعضاء الداخلية ويكون في قمة نشاطه في حالات الطوارئ وضغط العمل (الكر والفر).</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>النخاع المستطيل</td>
+<td>جزء من جذع الدماغ يوصل الإشارات بين الدماغ والحبل الشوكي.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الجهاز العصبي جار السمبثاوي</td>
+<td>أحد قسمي جهاز العصبي الذاتي الذي يسيطر على أعضاء الجسم ويصبح أكثر نشاطًا عندما يكون جسم الإنسان في حالة راحة.</td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>القنطرة</td>
+<td>جزء من جذع الدماغ توصل الإشارات بين المخ والمخيخ.</td>
+</tr>
+</table>
+</div>
+<div>
+<table>
+<tr>
+<th class="number">٢٠</th>
+<td>تحت المهاد</td>
+<td>جزء من الدماغ ينظم درجة حرارة الجسم والعطش والشهية ويحافظ على توازن الماء في الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢١</th>
+<td>العقاقير</td>
+<td>مواد طبيعية أو مصنعة غير وظيفة الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢٢</th>
+<td>المسكن</td>
+<td>العقاقير التي تقلل من نشاط الجهاز العصبي المركزي.</td>
+</tr>
+<tr>
+<th class="number">٢٣</th>
+<td>الدوبامين</td>
+<td>من النواقل العصبية في الدماغ التي لها علاقة بتنظيم حركة الجسم ووظائف الأخرى.</td>
+</tr>
+<tr>
+<th class="number">٢٤</th>
+<td>التحمل</td>
+<td>يحدث عندما يحتاج الشخص إلى المزيد من العقاقير لكي يحصل على الأثر نفسه.</td>
+</tr>
+<tr>
+<th class="number">٢٥</th>
+<td>المنبهات</td>
+<td>العقاقير التي تزيد اليقظة والنشاط الجسمي.</td>
+</tr>
+<tr>
+<th class="number">٢٦</th>
+<td>الإدمان</td>
+<td>الاعتماد النفسي والفسيولوجي على العقار.</td>
+</tr>
+</table>
+</div>
+<!-- ***** third assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الثالث</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الشريان</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الشعيرة الدموية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الوريد</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الصمام</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>القلب</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>منظم النبض</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>البلازما (سائل الدم)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>خلية الدم الحمراء</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>الصفائح الدموية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>خلية الدم البيضاء</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>تصلب الشرايين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الحركات التنفسية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>التنفس الخارجي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>التنفس الداخلي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>القصبة الهوائية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>القصيبات الهوائية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الرئة</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الحويصلات الهوائية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>الكلية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>اليوريا (البولينا)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<!-- ***** 4th assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الرابع</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الهضم الميكانيكي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>أنزيم الأميليز</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الببسين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الأمعاء الدقيقة</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>الهضم الكيميائي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>الكبد</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>المريء</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الحملات المعوية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>الحركة الدودية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الأمعاء الغليظة</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>التغذية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>السعر الحراري</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>الفيتامين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>الأملاح المعدنية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>الغدد الصم</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>الأنسولين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الهرمون</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الجلوكاجون</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>الغدة النخامية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>ألدوستيرون</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢١</th>
+<td>الثيروكسين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٢</th>
+<td>الكورتيزول</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٣</th>
+<td>الكالسيتونين</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٤</th>
+<td>الهرمون المانع لإدرار</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٥</th>
+<td>الهرمون الجار درقي (باراثايرويد)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢٦</th>
+<td>البول</td>
+<td></td>
+</tr>
+</table>
+</div>
+<!-- ***** 5th assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الخامس</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الأنابيب المنوية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>البربخ</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الوعاء الناقل (الأسهر)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الإحليل</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>السائل المنوي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>البلوغ</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>الخلية البيضية الأولية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>قناة البيض (قناة فالوب)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>دورة الحيض</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الجسم القطبي</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>التوتة (الموريولا)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الكبسولة البلاستولية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>السائل الرهلي (الأمنيوني)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<!-- ***** 6th assignment ***** -->
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل السادس</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>البروتين المتمم (المكمل)</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الإنترفيرون</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الخلايا الليمفية</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الجسم المضاد</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>الخلايا البلازمية البائية (B)‏</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>الخلايا التائية المساعدة (T)‏</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>الخلايا التائية القاتلة</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الخلية الذاكرة</td>
+<td></td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>التطعيم (التحصين)</td>
+<td></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
