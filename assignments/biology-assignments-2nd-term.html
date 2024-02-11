@@ -74,6 +74,9 @@ background-color:var(--even-tr-bg-color);
 button{
 border:none;
 }
+.hidden{
+visibility:hidden;
+}
 </style>
 </head>
 <body>
@@ -313,7 +316,7 @@ border:none;
 <tr>
 <th class="number">٢١</th>
 <td>العقاقير</td>
-<td>مواد طبيعية أو مصنعة غير وظيفة الجسم.</td>
+<td>مواد طبيعية أو مصنعة تغير وظيفة الجسم.</td>
 </tr>
 <tr>
 <th class="number">٢٢</th>
@@ -737,5 +740,18 @@ border:none;
 </tr>
 </table>
 </div>
+<script>
+var table = document.querySelectorAll('table');
+for (var i = 0; i < table.length; i++) {
+  var ths = table[i].querySelectorAll('td:nth-child(2)');
+  for (var j = 0; j < ths.length; j++) {
+    ths[j].addEventListener('click', function(event) {
+      var parentTr = event.target.parentNode;
+      var siblingTd = parentTr.querySelector('td:nth-child(3)');
+      siblingTd.classList.toggle('hidden');
+    });
+  }
+}
+</script>
 </body>
 </html>
