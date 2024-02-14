@@ -67,7 +67,7 @@ background-color:var(--th-dark-bg-color);
 }
 th.number{
 padding:0.2vw;
-width:fit-content;
+width:10px;
 }
 div table tr:nth-child(even){
 background-color:var(--even-tr-bg-color);
@@ -78,7 +78,7 @@ border:none;
 .hidden-td, .hidden-table{
 color:transparent;
 }
-th:hover:active, td:hover:active{
+th:not(.number):hover:active, td:hover:active{
 opacity: 0.5;
 }
 </style>
