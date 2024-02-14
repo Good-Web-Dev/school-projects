@@ -38,6 +38,7 @@ src:url('https://good-web-dev.github.io/WebFonts/Helvetica-World-Bold.woff2') fo
 *{
 padding:0;
 margin:0.6vw;
+
 }
 table{
 margin:0 auto;
@@ -74,8 +75,11 @@ background-color:var(--even-tr-bg-color);
 button{
 border:none;
 }
-.hidden{
-visibility:hidden;
+.hidden-td, .hidden-table{
+color:transparent;
+}
+th:hover:active, td:hover:active{
+opacity: 0.5;
 }
 </style>
 </head>
@@ -760,10 +764,68 @@ for (var i = 0; i < table.length; i++) {
     ths[j].addEventListener('click', function(event) {
       var parentTr = event.target.parentNode;
       var siblingTd = parentTr.querySelector('td:nth-child(3)');
-      siblingTd.classList.toggle('hidden');
+      siblingTd.classList.toggle('hidden-td');
     });
   }
 }
+
+for (var k = 0; k < table.length; k++) {
+  var ths2 = table[k].querySelectorAll('td:nth-child(3)');
+  for (var l = 0; l < ths2.length; l++) {
+    ths2[l].addEventListener('click', function(event) {
+      var parentTr2 = event.target.parentNode;
+      var siblingTd2 = parentTr2.querySelector('td:nth-child(2)');
+      siblingTd2.classList.toggle('hidden-td');
+    });
+  }
+}
+
+for (var p = 0; p < table.length; p++) {
+  var th = table[p].querySelectorAll('th:nth-child(2)');
+  for (var t = 0; t < th.length; t++) {
+    th[t].addEventListener('click', function(event) {
+      var parentTr3 = event.target.parentNode;
+      var siblingTd3 = parentTr3.querySelectorAll('td:nth-child(3)');
+for (f = 0; f < siblingTd3; f++){
+      siblingTd3[f].classList.toggle('hidden-td');
+}
+    });
+  }
+}
+
+var chapters = document.querySelectorAll('.chapters');
+chapters.forEach(function(chapter){
+  var table = chapter.querySelectorAll('table');
+  for (var p = 0; p < table.length; p++) {
+    var th = table[p].querySelectorAll('th:nth-child(3)');
+    for (var t = 0; t < th.length; t++) {
+      th[t].addEventListener('click', function(event) {
+        var chapter = event.target.closest('.chapters');
+        var siblingTds = chapter.querySelectorAll('td:nth-child(3)');
+        for (var f = 0; f < siblingTds.length; f++) {
+          siblingTds[f].classList.toggle('hidden-td');
+        }
+      });
+    }
+  }
+});
+
+var chapters = document.querySelectorAll('.chapters');
+chapters.forEach(function(chapter){
+  var table = chapter.querySelectorAll('table');
+  for (var p = 0; p < table.length; p++) {
+    var th = table[p].querySelectorAll('th:nth-child(2)');
+    for (var t = 0; t < th.length; t++) {
+      th[t].addEventListener('click', function(event) {
+        var chapter = event.target.closest('.chapters');
+        var siblingTds = chapter.querySelectorAll('td:nth-child(2)');
+        for (var f = 0; f < siblingTds.length; f++) {
+          siblingTds[f].classList.toggle('hidden-td');
+        }
+      });
+    }
+  }
+});
 
 var chapters = document.querySelectorAll('.chapters');
 chapters.forEach(function(chapter) {
@@ -773,7 +835,7 @@ chapters.forEach(function(chapter) {
   th.forEach(function(element) {
     element.addEventListener('click', function() {
       tds.forEach(function(td) {
-        td.classList.toggle('hidden');
+        td.classList.toggle('hidden-table');
       });
     });
   });
