@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+@page{
+margin:1vw 0 0 1.5vw !important;
+width:210mm !important;
+height:297mm !important;
+}
+@media print{
+body{
+-webkit-print-color-adjust: exact;
+}
+div:not(.chapters){
+height:297mm !important;
+width:210mm! important;
+}
+}
+</style>
+<style>
+@font-face{
+font-family:'helvetica-world';
+src:url('https://good-web-dev.github.io/WebFonts/Helvetica-World.woff2') format('woff2');
+}
+@font-face{
+font-family:'helvetica-world-bold';
+src:url('https://good-web-dev.github.io/WebFonts/Helvetica-World-Bold.woff2') format('woff2');
+}
+:root{
+--border:0.3vw solid #CEE5B7;
+--th-bg-color:#74A242;
+--th-fg-color:#ffffff;
+--th-dark-bg-color:#528020;
+--even-tr-bg-color:#E7F2DC;
+}
+*{
+padding:0;
+margin:0.6vw;
+}
+table{
+margin:0 auto;
+width:100%;
+}
+table, td, th{
+border-collapse: collapse;
+font-family:'helvetica-world';
+text-align:center;
+padding:1vw;   
+font-size:2vw;
+font-weight:normal;
+border:var(--border);
+transition:0.2s ease-in-out;
+}
+tr td:nth-child(even){
+font-family:'helvetica-world-bold';
+}
+th, button{
+background-color:var(--th-bg-color);
+color:var(--th-fg-color);
+font-family:'helvetica-world-bold';
+font-size:2.2vw;
+}
+th[colspan="3"], button{
+background-color:var(--th-dark-bg-color);
+}
+th.number{
+padding:0.2vw;
+width:10px;
+}
+td:nth-child(2){
+width:92px;
+}
+div table tr:nth-child(even){
+background-color:var(--even-tr-bg-color);
+}
+button{
+border:none;
+}
+.hidden-td, .hidden-table{
+color:transparent;
+transition:0.2s ease-in-out;
+}
+th:not(.number):hover:active, td:hover:active{
+opacity: 0.5;
+}
+</style>
+</head>
+<body>
+<!-- ***** first assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الأول: الجهازان الهيكليان العظمي والعضلي</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الهيكل المحوري</td>
+<td>أحد قسمي الجهاز الهيكلي في الإنسان ويشمل عظام العمود الفقري والأضلاع والجمجمة وعظمة القصّ.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الهيكل الطرفي</td>
+<td>يتكون من عظام الطرف العلوي والطرف السفلي وعظام الكتف وعظام الحوض.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>العظم الكثيف</td>
+<td>طبقة العظم الخارجية القوية والكثيفة التي تحوي أنظمة هافرس.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الخلية العظمية</td>
+<td>هي مكون من مكونات النسيج العظمي لها امتدادات سيتوبلازمية وتتصل بالخلايا الأخرى والأوعية الدموية القريبة.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>العظم الإسفنجي</td>
+<td>طبقة العظم الداخلية الخفيفة التي تحوي تجاويف مليئة بالنخاع العظمي.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>نخاع العظم الأحمر</td>
+<td>نوع من النخاع العظمي ينتج خلايا الدم البيضاء والحمراء والصفائح الدموية.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>نخاع العظم الأصفر</td>
+<td>تكون من دهون مخزنة فقط.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الخلية العظمية البانية</td>
+<td>الخلايا التي تكون العظم وتبنيه.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>تكوين العظام (التعظم)</td>
+<td>عملية تكوين العظم بواسطة الخلايا العظمية البانية.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الخلية العظمية الهادمة</td>
+<td>الخلايا التي تحطم خلايا العظم.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>الأربطة</td>
+<td>حزم من النسيج الضام القوي يربط العظام ببعضها مع بعض.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>العضلة الملساء</td>
+<td>عضلات تبطن معظم الأعضاء الداخلية المجوفة في الجسم ومنها المعدة والأمعاء والرحم.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>العضلة اللاإرادية</td>
+<td>العضلات التي لا يسيطر الجسم على حركتها.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>العضلة القلبية</td>
+<td>عضلات لاإرادية توجد في القلب فقط.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>العضلة الهيكلية</td>
+<td>عضلات مخططة ينتج عنها حركة الجسم عندما تنقبض وهي مرتبطة مع العظام بالأوتار.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>العضلات الإرادية</td>
+<td>العضلات الهيكلية التي يستطيع الجسم التحكم في حركتها.</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الوتر</td>
+<td>حزمة من نسيج ضام قاسٍ تربط العضلات مع العظام.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>اللييف العضلي</td>
+<td>ألياف عضلية صغيرة جدًا تساعد على انقباض العضلات، تتكون من خيوط بروتين الأكتين والميوسين.</td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>الميوسين</td>
+<td>خيوط بروتينية توجد في الخلايا العضلية وتعمل مع الأكتين على انقباض العضلات.</td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>الأكتين</td>
+<td>خيوط بروتينية رفيعة في الخلايا العضلية تعمل مع خيوط الميوسين على انقباض العضلات وانبساطها.</td>
+</tr>
+<tr>
+<th class="number">٢١</th>
+<td>القطعة العضلية</td>
+<td>وحدة الوظيفة في العضلات الهيكلية التي تنقبض وتتكون من ألياف عضلية.</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- ***** second assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الثاني: الجهاز العصبي</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الخلية العصبية</td>
+<td>الخلايا التي تنقل السيالات العصبية في الجسم وتتكون من جسم الخلية والمحور والزوائد الشجيرية.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>جهد الفعل</td>
+<td>اسم آخر للسيال العصبي.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الزوائد الشجيرية</td>
+<td>أجزاء من الخلية العصبية تستقبل السيالات العصبية القادمة من الخلايا العصبية الأخرى وتنقلها إلى جسم الخلية العصبية.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>عتبة التنبيه</td>
+<td>أقل منبه تحتاج إليه الخلية العصبية لتكوين السيال العصبية.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>جسم الخلية</td>
+<td>جزء رئيس من الخلية العصبية يحوي نواة الخلية وعضيات عديدة.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>العقدة</td>
+<td>فجوة في الغشاء الميليني الموجود على طول المحور العصبي تنتقل السيالات العصبيه وثبًا من عقدة إلى أخرى على طول المحور.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>محور الخلية العصبية</td>
+<td>جزء من الخلية العصبية ينقل السيالات العصبية من جسمها إلى الخلايا العصبية الأخرى أو العضلات.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>التشابك العصبي</td>
+<td>مكان بين محور خلية عصبية والزوائد والشجيرية لخلية عصبية أخرى.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>رد الفعل المنعكس</td>
+<td>مسار عصبي يتكون من خلايا عصبية حسية، وخلية عصبية بينيه، وخلية عصبية حركية.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>النواقل العصبية</td>
+<td>مواد كيميائية تنتشر عبر التشابك العصبي لتتحد بالمستقبلات الموجودة على شجرات الخلايا العصبية المجاورة فتفتح قنوات على سطح الخلايا الأخرى تكون جهد فعل محايد.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>الجهاز العصبي المركزي</td>
+<td>يتكون من الدماغ والحبل الشوكي وينظم جميع العمليات والأنشطة في الجسم.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الجهاز العصبي الجسمي</td>
+<td>جزء من الجهاز العصبي الطرفي ينقل السيالات العصبية من الجلد والعضلات الهيكليه وإليهما.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>الجهاز العصبي الطرفي</td>
+<td>يتكون من الخلايا العصبية الحسية والحركية التي تنقل المعلومات من الجهاز العصبي المركزي وإليه.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>الجهاز العصبي الذاتي</td>
+<td>أحد أجزاء الجهاز العصبي الطرفي ينقل السيال العصبي من الجهاز العصبي المركزي إلى الأعضاء الداخلية في الجسم.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>المخ</td>
+<td>الجزء الأكبر من الدماغ ويقسّم إلى نصفي كرة. ويعد المسؤول عن عمليات التفكير العليا التي تتضمن اللغة والتعلم والذاكرة وحركات الجسم الإرادية.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>الجهاز العصبي السمبثاوي</td>
+<td>أحد قسمي الجهاز العصبي الذاتي الذي يضبط الأعضاء الداخلية ويكون في قمة نشاطه في حالات الطوارئ وضغط العمل (الكر والفر).</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>النخاع المستطيل</td>
+<td>جزء من جذع الدماغ يوصل الإشارات بين الدماغ والحبل الشوكي.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الجهاز العصبي جار السمبثاوي</td>
+<td>أحد قسمي جهاز العصبي الذاتي الذي يسيطر على أعضاء الجسم ويصبح أكثر نشاطًا عندما يكون جسم الإنسان في حالة راحة.</td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>القنطرة</td>
+<td>جزء من جذع الدماغ توصل الإشارات بين المخ والمخيخ.</td>
+</tr>
+</table>
+</div>
+<div>
+<table>
+<tr>
+<th class="number">٢٠</th>
+<td>تحت المهاد</td>
+<td>جزء من الدماغ ينظم درجة حرارة الجسم والعطش والشهية ويحافظ على توازن الماء في الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢١</th>
+<td>العقاقير</td>
+<td>مواد طبيعية أو مصنعة تغير وظيفة الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢٢</th>
+<td>المسكن</td>
+<td>العقاقير التي تقلل من نشاط الجهاز العصبي المركزي.</td>
+</tr>
+<tr>
+<th class="number">٢٣</th>
+<td>الدوبامين</td>
+<td>من النواقل العصبية في الدماغ التي لها علاقة بتنظيم حركة الجسم ووظائف الأخرى.</td>
+</tr>
+<tr>
+<th class="number">٢٤</th>
+<td>التحمل</td>
+<td>يحدث عندما يحتاج الشخص إلى المزيد من العقاقير لكي يحصل على الأثر نفسه.</td>
+</tr>
+<tr>
+<th class="number">٢٥</th>
+<td>المنبهات</td>
+<td>العقاقير التي تزيد اليقظة والنشاط الجسمي.</td>
+</tr>
+<tr>
+<th class="number">٢٦</th>
+<td>الإدمان</td>
+<td>الاعتماد النفسي والفسيولوجي على العقار.</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- ***** third assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الثالث: أجهزة الدوران والتنفس والإخراج</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الشريان</td>
+<td>وعاء دموي مرن له جدار سميك يحمل الدم بعيدًا عن القلب.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الشعيرة الدموية</td>
+<td>أوعية دموية صغيرة يتكون جدارها من طبقة واحدة من الخلايا ويتم بواسطتها تبادل المواد بين الدم وخلايا الجسم.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الوريد</td>
+<td>وعاء دموي يحمل الدم الراجع إلى القلب.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الصمام</td>
+<td>أحد القطع النسيجية يكون في صورة ألواح في الأوردة تمنع رجوع الدم.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>القلب</td>
+<td>عضو عضلي أجوف يضخ الدم المؤكسج إلى الجسم، والدم غير المؤكسج إلى الرئتين.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>منظم النبض</td>
+<td>مجموعة من الخلايا تقع عند الأذين الأيمن، تقوم بإرسال إشارات تجبر عضلات القلب على الانقباض.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>البلازما (سائل الدم)</td>
+<td>السائل الأصفر الشفاف من الدم.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>خلية الدم الحمراء</td>
+<td>خلية الدم التي تحوي الهيموجلوبين ولا تحوي نواة، تشبه القرص المقعّر الوجهين، تعيش فترة قصيرة، وتنقل الأكسجين إلى خلايا الجسم وتخلصه من الفضلات.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>الصفائح الدموية</td>
+<td>قطع مسطحة من الخلايا تؤدي دورًا مهمًّا في تخثر الدم.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>خلية الدم البيضاء</td>
+<td>نوع من خلايا الدم كبيرة الحجم، تحوي نواة تنتج في نخاع العظم وتقاوم الأمراض التي تصيب الجسم.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>تصلب الشرايين</td>
+<td>أحد اختلالات جهاز الدوران، إذ يحدث انسداد في الشرايين مما يعيق مرور الدم في جسم الانسان.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الحركات التنفسية</td>
+<td>إحدى عمليات الجهاز التنفسي، حيث يدخل الهواء الجسم عن طريق عمليتي الشهيق والزفير، وهما حركتا الهواء الآليتان من الرئتين وإليهما.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>التنفس الخارجي</td>
+<td>تبادل الغازات بين هواء الغلاف الجوي والدم، ويحدث في الرئتين.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>التنفس الداخلي</td>
+<td>العملية التي يتم فيها تبادل الغازات بين خلايا الجسم والدم.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>القصبة الهوائية</td>
+<td>أنبوب يحمل الهواء من الحنجرة إلى القصيبات.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>القصيبات الهوائية</td>
+<td>تتفرع القصبة الهوائية إلى أنبوبين كبيرين، يسمى الواحد منها القصيبة الهوائية.</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الرئة</td>
+<td>أكبر عضو في الجهاز التنفسي يتم داخله تبادل الغازات.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الحويصلات الهوائية</td>
+<td>أكياس هوائية ذات جدر رفيعة جدًّا، توجد في الرئتين ومحاطه بشعيرات دموية.</td>
+</tr>
+</table>
+</div>
+<div>
+<table>
+<tr>
+<th class="number">١٩</th>
+<td>الكلية</td>
+<td>تشبه حبة الفاصوليا في شكلها، وتقوم بترشيح الفضلات والماء والأملاح من الدم.</td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>اليوريا (البولينا)</td>
+<td>فضلات نيتروجينية تنتج عن جهاز الإخراج في الجسم.</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- ***** 4th assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الرابع: جهازا الهضم والغدد الصم</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الهضم الميكانيكي</td>
+<td>تحلل فيزيائي للغذاء يحدث عند مضغ الغذاء وتحويله إلى قطع صغيرة ثم يطحن بقوة في المعدة والأمعاء الدقيقة.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>إنزيم الأميليز</td>
+<td>إنزيم هاضم في اللعاب، يسمح ببدء عمليات الهضم الكيميائية في الفم عن طريق تحليل النشا إلى سكريات.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الببسين</td>
+<td>إنزيم هاضم مرتبط مع هضم البروتينات كيميائيًّا في المعدة.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الأمعاء الدقيقة</td>
+<td>الجزء الأطول من القناة الهضمية وهو مرتبط مع الهضم الميكانيكي والكيميائي للطعام.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>الهضم الكيميائي</td>
+<td>تحلل كيميائي للغذاء بواسطة الإنزيمات الهاضمة إلى جزيئات صغيرة تستطيع الخلايا امتصاصها.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>الكبد</td>
+<td>أكبر عضو داخلي في الجسم يفرز العصارة الصفراء.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>المريء</td>
+<td>أنبوب عضلي يصل بين البلعوم والمعدة ويدفع بالطعام إلى المعدة عن طريق الحركة الدودية.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الخملات المعوية</td>
+<td>بروزات إصبعية الشكل تعمل على زيادة مساحة سطح الأمعاء الدقيقة.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>الحركة الدودية</td>
+<td>انقباضات عضلية متموجة ومنتظمة تحرك الطعام عبر القناة الهضمية.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الأمعاء الغليظة</td>
+<td>الجزء النهائي من القناة الهضمية وهو مرتبط بشكل أساسي مع امتصاص الماء.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>التغذية</td>
+<td>عملية يتناول بها الفرد الغذاء ويستخدمه وتزوده بالوحدات البنائية للنمو والطاقة للحفاظ على كتلة الجسم.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>السعر الحراري (كالوري)</td>
+<td>وحدة تستخدم لقياس محتوى الغذاء من الطاقة وهو كمية الحرارة اللازمة لرفع درجة حرارة الماء 1mL درجة سيليزية واحدة.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td>الفيتامين</td>
+<td>مركب عضوي يذوب في الدهون أو الماء يحتاج إليه الجسم بكميات صغيرة للقيام بالأنشطة الأيضية.</td>
+</tr>
+<tr>
+<th class="number">١٤</th>
+<td>الأملاح المعدنية</td>
+<td>مركبات غير عضوية يستعملها الجسم بوصفها مواد بنائية وترتبط بوظائف الجسم الأيضية.</td>
+</tr>
+<tr>
+<th class="number">١٥</th>
+<td>الغدد الصم</td>
+<td>غدد منتجة للهرمون تطلق ما تنتجه إلى مجرى الدم.</td>
+</tr>
+<tr>
+<th class="number">١٦</th>
+<td>الأنسولين</td>
+<td>هرمون ينتجه البنكرياس ويعمل مع الجلوكاجون للحفاظ على مستوى السكر في الدم.</td>
+</tr>
+<tr>
+<th class="number">١٧</th>
+<td>الهرمون</td>
+<td>مادة مثل الأستروجين تنتجها الغدة الصماء وتعمل على الخلايا الهدف.</td>
+</tr>
+<tr>
+<th class="number">١٨</th>
+<td>الجلوكاجون</td>
+<td>هرمون ينتجه البنكرياس ويعطي إشارة لخلايا الكبد لتحويل الجلايكوجين إلى جلوكوز وإطلاقه إلى الدم.</td>
+</tr>
+<tr>
+<th class="number">١٩</th>
+<td>الغدة النخامية</td>
+<td>غدة صماء تقع عند قاعدة الدماغ وتسمى سيدة الغدد بسبب تنظيمها للعديد من وظائف الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢٠</th>
+<td>الألدوستيرون</td>
+<td>هرمون ستيرويدي تنتجه قشرة الغدة الكظرية يعمل في الكليتين وهو ضروري لإعادة امتصاص الصوديوم.</td>
+</tr>
+</table>
+</div>
+<div>
+<table>
+<tr>
+<th class="number">٢١</th>
+<td>الثيروكسين</td>
+<td>هرمون يؤدي إلى زيادة معدل الأيض في الجسم.</td>
+</tr>
+<tr>
+<th class="number">٢٢</th>
+<td>الكورتيزول</td>
+<td>هرمون ستيرويدي قشري يرفع من مستوى الجلوكوز في الدم تنتجه قشرة الغدة الكظرية ويقلل الالتهاب.</td>
+</tr>
+<tr>
+<th class="number">٢٣</th>
+<td>الكالسيتونين</td>
+<td>أحد هرمونات الغدة الدرقية ينظم مستوى الكالسيوم في الدم.</td>
+</tr>
+<tr>
+<th class="number">٢٤</th>
+<td>الهرمون المانع لإدرار البول</td>
+<td>يحافظ على اتزان الجسم عن طريق تنظيم اتزان الماء.</td>
+</tr>
+<tr>
+<th class="number">٢٥</th>
+<td>الهرمون الجاردرقي</td>
+<td>مادة تنتجها الغدة جارة الدرقية تزيد من مستوى الكالسيوم في الدم عن طريق التأثير في العظام لإطلاق الكالسيوم.</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- ***** 5th assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل الخامس: التكاثر والنمو في الإنسان</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>الأنابيب المنوية</td>
+<td>توجد في الخصية وتنتج الحيوانات المنوية.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>البربخ</td>
+<td>يوجد فوق كل خصية تُنقل إليه الحيوانات المنوية ويكتمل فيه نضجها وتخزن فيه.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الوعاء الناقل (الأسهر)</td>
+<td>قناة تمر فيها الحيوانات المنوية من البربخ إلى الإحليل.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الإحليل</td>
+<td>قناة بولية تناسلية مشتركة.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>السائل المنوي</td>
+<td>يتكون من الحيوانات المنوية، ومواد مغذية.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>البلوغ</td>
+<td>مرحلة نمو يصل فيها الإنسان إلى النضج الجنسي.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>الخلية البيضية الأولية</td>
+<td>الخلية الأنثوية غير مكتملة النمو.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>قناة البيض (قناة فالوب)</td>
+<td>هي القناة التي ينتقل إليها الحيوان المنوي ويتحد مع البويضة.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>دورة الحيض</td>
+<td>مجموعة من العمليات التي تحدث كل شهر تقريبًا للأنثى وتساعد في تهيئة جسم الأنثى للحمل.</td>
+</tr>
+<tr>
+<th class="number">١٠</th>
+<td>الجسم القطبي</td>
+<td>خلية صغيرة تنتج عن انقسام الخلية البيضية عند بداية كل دورة حيض.</td>
+</tr>
+<tr>
+<th class="number">١١</th>
+<td>التوتة (الموريولا)</td>
+<td>الخلية المخصبة عندما تغادر قناة البيض في اليوم الثالث وتدخل إلى الرحم.</td>
+</tr>
+<tr>
+<th class="number">١٢</th>
+<td>الكبسولة البلاستولية</td>
+<td>تنمو الخلية المخصبة في اليوم الخامس لتصبح كرة مجوفة ثم تنغرس في بطانة الرحم في اليوم السادس.</td>
+</tr>
+<tr>
+<th class="number">١٣</th>
+<td class="opp">السائل الرهلي (الأمنيوني)</td>
+<td>سائل يوجد داخل الكيس الرهلي يحمي الجنين من الصدمات ويعزله عن باقي اجزاء جسم الأم.</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- ***** 6th assignment ***** -->
+<div class="chapters">
+<div>
+<table>
+<tr>
+<th colspan="3">الفصل السادس: جهاز المناعة</th>
+</tr>
+<tr>
+<th class="number">#</th>
+<th>المفردة</th>
+<th>التعريف</th>
+</tr>
+<tr>
+<th class="number">١</th>
+<td>البروتينات المتممة (المكملة)</td>
+<td>نحو ٢٠ نوع من البروتينات الموجودة في بلازما الدم في عملية البلعمة، والتي تعزز عملية البلعمة.</td>
+</tr>
+<tr>
+<th class="number">٢</th>
+<td>الإنترفيرون</td>
+<td>بروتين مضاد للفيروس يُفرز من الخلايا المصابة بالفيروس.</td>
+</tr>
+<tr>
+<th class="number">٣</th>
+<td>الخلايا الليمفية</td>
+<td>خلايا الدم البيضاء المسؤولة عن الاستجابة المناعية المتخصصة لدى الإنسان. وهناك نوعان من هذه الخلايا هما: B ،T.</td>
+</tr>
+<tr>
+<th class="number">٤</th>
+<td>الجسم المضاد</td>
+<td>بروتين ينتج بواسطة الخلايا الليمفية البائية التي تتفاعل بشكل محدد مع مولد ضد غريب عن الجسم.</td>
+</tr>
+<tr>
+<th class="number">٥</th>
+<td>الخلايا الليمفية البائية (B)‏</td>
+<td>الخلايا الليمفية التي تفرز الأجسام المضادة.</td>
+</tr>
+<tr>
+<th class="number">٦</th>
+<td>الخلايا التائية المساعدة (T)‏</td>
+<td>خلايا ليمفية تعمل على تنشيط إفراز الجسم المضاد في الخلايا البائية والخلايا التائية القاتلة.</td>
+</tr>
+<tr>
+<th class="number">٧</th>
+<td>الخلايا التائية القاتلة (C)</td>
+<td>خلية ليمفية تدمر مسببات المرض وتطلق مواد سامة عند تنشيطها.</td>
+</tr>
+<tr>
+<th class="number">٨</th>
+<td>الخلية الذاكرة</td>
+<td>خلية ليمفية تعيش طويلًا، تنتج بسبب التعرض لمولد ضد في أثناء الاستجابة المناعية البدائية، ويمكنها العمل من خلال الاستجابة المناعية في المستقبل ضد مولد الضد نفسه.</td>
+</tr>
+<tr>
+<th class="number">٩</th>
+<td>التطعيم (التحصين)</td>
+<td>يقصد به حقن الجسم عن قصد بمولد ضد بهدف تطوير استجابة أولية وخلايا ذاكرة مناعية.</td>
+</tr>
+</table>
+</div>
+</div>
+<script>
+var table = document.querySelectorAll('table');
+for (var i = 0; i < table.length; i++) {
+  var ths = table[i].querySelectorAll('td:nth-child(2)');
+  for (var j = 0; j < ths.length; j++) {
+    ths[j].addEventListener('click', function(event) {
+      var parentTr = event.target.parentNode;
+      var siblingTd = parentTr.querySelector('td:nth-child(3)');
+      siblingTd.classList.toggle('hidden-td');
+    });
+  }
+}
+
+for (var k = 0; k < table.length; k++) {
+  var ths2 = table[k].querySelectorAll('td:nth-child(3)');
+  for (var l = 0; l < ths2.length; l++) {
+    ths2[l].addEventListener('click', function(event) {
+      var parentTr2 = event.target.parentNode;
+      var siblingTd2 = parentTr2.querySelector('td:nth-child(2)');
+      siblingTd2.classList.toggle('hidden-td');
+    });
+  }
+}
+
+for (var p = 0; p < table.length; p++) {
+  var th = table[p].querySelectorAll('th:nth-child(2)');
+  for (var t = 0; t < th.length; t++) {
+    th[t].addEventListener('click', function(event) {
+      var parentTr3 = event.target.parentNode;
+      var siblingTd3 = parentTr3.querySelectorAll('td:nth-child(3)');
+      for (var f = 0; f < siblingTd3.length; f++) {
+        siblingTd3[f].classList.toggle('hidden-td');
+      }
+    });
+  }
+}
+
+var chapters = document.querySelectorAll('.chapters');
+chapters.forEach(function(chapter){
+  var table = chapter.querySelectorAll('table');
+  for (var p = 0; p < table.length; p++) {
+    var th = table[p].querySelectorAll('th:nth-child(3)');
+    for (var t = 0; t < th.length; t++) {
+      th[t].addEventListener('click', function(event) {
+        var chapter = event.target.closest('.chapters');
+        var siblingTds = chapter.querySelectorAll('td:nth-child(3)');
+        for (var f = 0; f < siblingTds.length; f++) {
+          siblingTds[f].classList.toggle('hidden-td');
+        }
+      });
+    }
+  }
+});
+
+var chapters = document.querySelectorAll('.chapters');
+chapters.forEach(function(chapter){
+  var table = chapter.querySelectorAll('table');
+  for (var p = 0; p < table.length; p++) {
+    var th = table[p].querySelectorAll('th:nth-child(2)');
+    for (var t = 0; t < th.length; t++) {
+      th[t].addEventListener('click', function(event) {
+        var chapter = event.target.closest('.chapters');
+        var siblingTds = chapter.querySelectorAll('td:nth-child(2)');
+        for (var f = 0; f < siblingTds.length; f++) {
+          siblingTds[f].classList.toggle('hidden-td');
+        }
+      });
+    }
+  }
+});
+
+var chapters = document.querySelectorAll('.chapters');
+chapters.forEach(function(chapter) {
+  var th = chapter.querySelectorAll('table th[colspan="3"]');
+  var tds = chapter.querySelectorAll('table td');
+
+  th.forEach(function(element) {
+    element.addEventListener('click', function() {
+      tds.forEach(function(td) {
+        td.classList.toggle('hidden-table');
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

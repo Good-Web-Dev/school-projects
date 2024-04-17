@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8"/>
+<title>وصف ظاهرة الزلازل</title>
+<style>
+@page{
+margin:0 !important;
+size:A4;
+padding:0 !important;
+}
+@media print{
+body{
+margin:40px -20px !important;
+-webkit-print-color-adjust: exact;
+}
+.pages{
+height:306mm !important;
+width:210mm !important;
+}
+}
+</style>
+<style>
+@font-face{
+font-family:"uthman-tn-bold";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
+}
+@font-face{
+font-family:"uthman-tn";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
+}
+@font-face{
+font-family:"lotus";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
+}
+@font-face{
+font-family:"lotus-bold";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
+}
+@font-face{
+font-family:"basmalah";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/basmalah.woff2") format("woff2");
+}
+@font-face{
+font-family:"almodrajat";
+src:url("https://good-web-dev.github.io/WebFonts/Almodrajat.woff2") format("woff2");
+}
+body{
+display:;
+}
+::selection{
+background-color:lightsteelblue;
+color:#000;
+}
+img, br{
+pointer-events:none;
+user-select:none;
+}
+.pages{
+width:210mm;
+height:297mm;
+border:0px #000 solid;
+margin:5px auto;
+padding:30px 60px;
+}
+.page-content{
+width:210mm;
+height:297mm;
+border:#000 0px solid;
+position:relative;
+}
+.border-top{
+width:100%;
+height:2px;
+border:solid 2px #000;
+border-bottom-width:3px;
+border-left:none;
+border-right:none;
+position:absolute;
+top:45px;
+}
+.page-number{
+background-color:#F2F2F2;
+width:70px;
+height:38px;
+position:absolute;
+top:-17px;
+padding:2px 0 0 0;
+right:0;
+font-family:lotus;
+text-align:center;
+font-size:22px;
+}
+.square{
+width:45px;
+position:absolute;
+top:6px;
+right:-5.5px;
+}
+.square-div{
+text-align:center;
+border:2px #000 solid;
+border-top:none;
+border-bottom:none;
+width:45px;
+height:40px;
+position:absolute;
+top:5px;
+right:70px;
+}
+.cover{
+background-image:url('https://good-web-dev.github.io/school-projects/researches/earthquakes/cover.svg');
+background-size:1000px;
+background-position:center -115px;
+background-repeat:no-repeat;
+}
+.page-title{
+font-family:uthman-tn-bold;
+position:absolute;
+top:-21px;
+font-size:22px;
+padding:0 3px;
+}
+.pages:nth-of-type(odd) .page-number {
+left: 0;
+}
+.pages:nth-of-type(odd) .square-div {
+left: 70px;
+}
+.pages:nth-of-type(odd) .page-title {
+right:0;
+}
+.basmalah{
+font-family:basmalah;
+font-size:154px;
+margin: 30px 0 140px 0;
+text-align:center;
+height:10px;
+}
+.content{
+direction:rtl;
+font-family:lotus;
+font-size:30px;
+line-height:1.6;
+}
+.subtitles{
+font-family:lotus-bold;
+font-size:34px;
+margin-bottom:3px;
+}
+.footnotes p{
+font-size:20px;
+padding-top:20px;
+}
+hr{
+width:250px;
+border:1px solid #000;
+position:absolute;
+right:0;
+}
+sup{
+font-size:20px;
+}
+b{
+font-family:lotus-bold;
+font-weight:normal;
+}
+table, th, td{
+border-collapse:collapse;
+border:2px solid #000;
+font-size:28px;
+padding:5px;
+}
+td:nth-child(odd){
+text-align:center;
+}
+td:nth-child(even){
+padding-right:15px;
+}
+table{
+width:90%;
+margin:25px auto 0 auto;
+}
+th{
+font-family:lotus-bold;
+background-color:#f2f2f2;
+}
+td{
+font-family:lotus;
+}
+.content-js:not(.resources){
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+color:transparent;
+}
+.resources-js{
+color:transparent;
+}
+.resources-js .subtitles{
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+}
+</style>
+</head>
+<body>
+<div class="pages cover">
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">١</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الزلازل
+</p>
+<p class="basmalah">﷽</p>
+<div class="content">
+الزلزال أو الهزة الأرضية هي ظاهرة طبيعية تحدث عندما يحدث اهتزاز أو سلسلة من الاهتزازات الارتجاجية على سطح الأرض، كما أنها تحدث نتيجة لحركة الصفائح الصخرية في القشرة الأرضية، ويتم تسمية مركز الزلزال بـ"البؤرة" ويتبعه انتشار أمواج زلزالية، وتحدث الزلازل أيضًا بسبب تكسر الصخور وإزاحتها نتيجة لتراكم الإجهادات داخل الأرض، كما تحدث الأنشطة الزلزالية على حدود الصفائح الصخرية، ويمكن أن تؤدي الزلازل إلى تشقق الأرض ونضوب الينابيع أو ظهور الينابيع الجديدة، وحدوث ارتفاعات وانخفاضات في القشرة الأرضية، وحدوث أمواج عالية تحت سطح البحر (التسونامي)، وتسبب أيضًا في تدمير المباني والمواصلات والمنشآت. <sup>(١)</sup>
+<br><br>
+تحدث الزلازل نتيجة لحركة الصفائح الصخرية في القشرة الأرضية؛ فعندما تتحرك الصفائح الصخرية، تحدث توترات وتراكم للطاقة في نقاط الاحتكاك بين الصفائح، وعندما يتجاوز التوتر الحد القصوى لقوة الاحتكاك، يحدث انزلاق فجائي للصفائح الصخرية، مما يؤدي إلى إطلاق الطاقة المخزنة بشكل مفاجئ وإرسالها عبر الصخور في شكل موجات اهتزازية، وهذا ما يعرف بالزلزال. <sup>(١)</sup>
+<br><br>
+قد تسبب الزلازل في تشقق الأرض وتكون الكثير من الشقوق والكسور في القشرة الأرضية، كما أنه قد يؤدي الزلزال إلى نضوب الينابيع أو ظهور ينابيع جديدة، ويمكن أن يحدث ارتفاع وانخفاض في القشرة الأرضية، وقد يتسبب الزلزال في حدوث أمواج عالية
+</div>
+</div>
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">٢</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الزلازل
+</p>
+<div class="content">
+<br>
+تحت سطح البحر، وهذا ما يعرف بالتسونامي. كما يمكن أن تكون للزلازل آثار تخريبية على المباني والمواصلات والمنشآت، وفي الحالات الشديدة، يمكن للزلازل أن تدمر المدن بأكملها وتتسبب في خسائر بشرية ومادية هائلة. <sup>(١)</sup>
+<br><br>
+من منافع الزلازل على الإنسان توفير مصادر الطاقة، حيث يمكن استخدام الزلازل لتوليد الطاقة الجيوثيرمالية، بحيث يتم استغلال حرارة الأرض الداخلية لتوليد الكهرباء. بالإضافة إلى توفير المياه الجوفية لأن الزلازل تؤدي إلى تشكل تشققات في القشرة الأرضية، مما يساعد على تجديد وتجميع المياه الجوفية. كما أن العلماء يستخدمون الزلازل لفهم هيكل الأرض وتحركاتها، وهذا يساعد في تطوير نظريات جديدة وتحسين نماذج التنبؤ بالزلازل المستقبلية. <sup>(٢)</sup>
+<br><br>
+أما عن مضار الزلازل فيمكن أن تؤدي الزلازل الكبرى إلى خسائر بشرية جسيمة، حيث يمكن أن تتسبب في الإصابة والوفاة للعديد من الأشخاص. كما أن الزلازل تسبب في تدمير الممتلكات والبنية التحتية، مما يتطلب جهود كبيرة وتكاليف مالية لإعادة الإعمار وإصلاح الأضرار. ويمكن أن تتسبب الزلازل في آثار نفسية سلبية على الأفراد والمجتمعات، مثل القلق والاكتئاب والاضطرابات العاطفية.
+<br>
+بالإضافة إلى ذلك، يمكن أن تتسبب الزلازل في حدوث تسونامي وحرائق، مما يزيد من الأضرار والخسائر الناجمة عنها. <sup>(٢)</sup>
+</div>
+</div>
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">٣</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الزلازل
+</p>
+<br><br><br>
+<div class="content resources">
+<p class="subtitles">* المراجع: </p>
+<table>
+<tr>
+<th>رقم الاقتباسة</th>
+<th>المراجع</th>
+</tr>
+<tr>
+<td>١</td>
+<td>
+١. (زلزال)، ويكيبيديا، بتصرف.
+<br>
+٢. إيمان الحياري، (أسباب حدوث الزلازل)، موضوع، ١٠ يناير ٢٠٢١م، بتصرف.
+<br>
+٣. (الزلازل: أسبابها، آثارها، وطرق الوقاية منها)، موقع النجاح، ١١ يوليو ٢٠٢٣م، بتصرف.
+</td>
+</tr>
+<tr>
+<td>٢</td>
+<td>
+١. دينا الرقطي، آثار الزلازل على الإنسان والبيئة، موضوع، ٧ سبتمبر ٢٠٢١م، بتصرف.
+<br>
+٢. داليا عبيد، آثار الزلازل على الإنسان، موضوع، ٢١ يونيو ٢٠١٩م، بتصرف.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<script>
+var content = document.querySelectorAll('.content');
+var resources = document.querySelector('.resources');
+var isIt = true;
+
+document.querySelector('.basmalah').addEventListener('click', function(){
+  if (isIt){
+    resources.classList.add('resources-js');
+    for (var i = 0; i < content.length; i++){
+      content[i].classList.add('content-js');
+    }
+  } else {
+    resources.classList.remove('resources-js');
+    for (var i = 0; i < content.length; i++){
+      content[i].classList.remove('content-js');
+    }
+  }
+  isIt = !isIt;
+});
+
+document.querySelector('.cover').addEventListener('click', function(){
+print();
+});
+</script>
+</body>
+</html>

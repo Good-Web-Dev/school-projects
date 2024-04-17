@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8"/>
+<title>بحث بعنوان الاحتمال الهندسي</title>
+<style>
+@page{
+margin:0 !important;
+size:A4;
+padding:0 !important;
+}
+@media print{
+body{
+margin:40px -20px !important;
+-webkit-print-color-adjust: exact;
+}
+.pages{
+height:306mm !important;
+width:210mm !important;
+}
+}
+</style>
+<style>
+@font-face{
+font-family:"uthman-tn-bold";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
+}
+@font-face{
+font-family:"uthman-tn";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
+}
+@font-face{
+font-family:"lotus";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
+}
+@font-face{
+font-family:"lotus-bold";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
+}
+@font-face{
+font-family:"basmalah";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/basmalah.woff2") format("woff2");
+}
+@font-face{
+font-family:"almodrajat";
+src:url("https://good-web-dev.github.io/WebFonts/Almodrajat.woff2") format("woff2");
+}
+body{
+display:;
+}
+::selection{
+background-color:lightsteelblue;
+color:#000;
+}
+img, br{
+pointer-events:none;
+user-select:none;
+}
+.pages{
+width:210mm;
+height:297mm;
+border:0px #000 solid;
+margin:5px auto;
+padding:30px 60px;
+}
+.page-content{
+width:210mm;
+height:297mm;
+border:#000 0px solid;
+position:relative;
+}
+.border-top{
+width:100%;
+height:2px;
+border:solid 2px #000;
+border-bottom-width:3px;
+border-left:none;
+border-right:none;
+position:absolute;
+top:45px;
+}
+.page-number{
+background-color:#F2F2F2;
+width:70px;
+height:38px;
+position:absolute;
+top:-17px;
+padding:2px 0 0 0;
+right:0;
+font-family:lotus;
+text-align:center;
+font-size:22px;
+}
+.square{
+width:45px;
+position:absolute;
+top:6px;
+right:-5.5px;
+}
+.square-div{
+text-align:center;
+border:2px #000 solid;
+border-top:none;
+border-bottom:none;
+width:45px;
+height:40px;
+position:absolute;
+top:5px;
+right:70px;
+}
+.cover{
+background-image:url('https://good-web-dev.github.io/school-projects/researches/geometric-probability/cover.svg');
+background-size:1000px;
+background-position:center -115px;
+background-repeat:no-repeat;
+}
+.page-title{
+font-family:uthman-tn-bold;
+position:absolute;
+top:-21px;
+font-size:22px;
+padding:0 3px;
+}
+.pages:nth-of-type(odd) .page-number {
+left: 0;
+}
+.pages:nth-of-type(odd) .square-div {
+left: 70px;
+}
+.pages:nth-of-type(odd) .page-title {
+right:0;
+}
+.basmalah{
+font-family:basmalah;
+font-size:154px;
+margin: 30px 0 140px 0;
+text-align:center;
+height:10px;
+}
+.content{
+direction:rtl;
+font-family:lotus;
+font-size:30px;
+line-height:1.6;
+}
+.subtitles{
+font-family:lotus-bold;
+font-size:34px;
+margin-bottom:3px;
+}
+.footnotes p{
+font-size:20px;
+padding-top:20px;
+}
+hr{
+width:250px;
+border:1px solid #000;
+position:absolute;
+right:0;
+}
+sup{
+font-size:20px;
+}
+b{
+font-family:lotus-bold;
+font-weight:normal;
+}
+table, th, td{
+border-collapse:collapse;
+border:2px solid #000;
+font-size:28px;
+padding:5px;
+}
+td:nth-child(odd){
+text-align:center;
+}
+td:nth-child(even){
+padding-right:15px;
+}
+table{
+width:90%;
+margin:25px auto 0 auto;
+}
+th{
+font-family:lotus-bold;
+background-color:#f2f2f2;
+}
+td{
+font-family:lotus;
+}
+.content-js:not(.resources){
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+color:transparent;
+}
+.resources-js{
+color:transparent;
+}
+.resources-js .subtitles{
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+}
+</style>
+</head>
+<body>
+<div class="pages cover" onclick="print()">
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">١</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الاحتمال الهندسي
+</p>
+<p class="basmalah">﷽</p>
+<div class="content">
+<p class="subtitles">* مقدمة:</p>
+يُعدّ الاحتمال الهندسي فرعًا هامًا من علم الرياضيات يُعنى بدراسة الظواهر العشوائية وتوقع حدوث نتائجها قبل وقوعها. على عكس الرياضيات التقليدية التي تتعامل مع نتائج مؤكدة، يُقدم الاحتمال الهندسي طريقة لقياس احتمالية حدوث نتائج مختلفة في التجارب العشوائية.
+<p class="subtitles">* الاحتمال الهندسي:</p>
+الاحتمال هو وسيلة لدراسة توقع حدوث شيء ما لأمر معين قبل حدوثه، وهذا التوقع لا يكون مؤكد، ويوجد للاحتمال الهندسي أنواع، وهذه الأنواع تعتمد على التوقع أو الحظ، أي لا تكون مؤكدة، وهذه الأنواع تحتوي على العديد من القواعد الهامة، منها ما هو فرعي ومنها ما هو عام.
+<br><br>
+فهو وسيلة للتعامل مع مشكلة النتائج غير المعروفة، عن طريق قياس النتائج بطريقة هندسية أو رياضية، من حيث الطول، أو الحجم، أو المساحة، والاحتمال الهندسي متخصص في تحليل العمليات العشوائية.
+<br><br>
+ويعتبر الاحتمال الهندسي من الأمور الهامة، التي يستخدمها العديد من الأخصائيين في عملهم، لتحديد المساحة العشوائية التي يريدون تمثيلها أو تحديدها. ونتائج الاحتمال الهندسي تكون متوقعة وليست مؤكدة، وإذا أردت التعامل مع الظواهر المتغيرة
+</div>
+</div>
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">٢</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الاحتمال الهندسي
+</p>
+<div class="content">
+<br>
+باستمرار فلا تستطيع التعرف على النتائج، ولا يمكنك التعامل مع المتغيرات المستمرة، ولكن الاحتمال الهندسي يوفر لك طريقة مميزة لمعرفة هذه النتائج، وتحويلها من مشاكل إلى نتائج محددة.
+<br><br>
+ويوجد أنواع الاحتمالات الهندسية، وهي: الاحتمالات المشروطة، والاحتمالات المؤكدة، والاحتمالات المنفية (المستحيلة).
+<p class="subtitles">* نظرية الاحتمال الهندسي:</p>
+الاحتمال الهندسي هو ظاهرة رياضية هندسية، وهذه الظاهرة تهتم بالتجارب العشوائية، وتوقع حدوث نتائج هذه التجارب قبل إجرائها في التوقع، وهذا يسمى الاحتمال الهندسي، فالاحتمال الهندسي قائم على التجربة.
+<br><br>
+نظرية الاحتمال الهندسي هي قسم الرياضيات المتخصص بالاحتمال وعلى الرغم من وجود الكثير من البراهين والتفسيرات والاحتمالات المختلفة، لا يمكن الاستغناء عن نظرية الاحتمال الهندسي. فهي تتعامل مع المفهوم أو المضمون بطريقة رياضية دقيقة من خلال التعبير عن الاحتمال، بمجموعة من التوقعات الغير مؤكدة، من حيث مساحة ومقياس الاحتمال، التي تكون محددة ومعروفة. وبناء على ذلك فإن نظرية الاحتمالات تكون ضرورية، وهامة لكثير من الأنشطة البشرية، التي تدور حول التحليل الكمي للبيانات.
+<br><br>
+وتستخدم طرق وقوانين نظرية الاحتمال على الأنظمة المركبة والمعقدة، وهذه الأنظمة تكون بمعرفة أجزاء بسيطة عن حالتها، ولا يكون هناك معلومات كافية عنها، ومن هنا أطلق عليها أنظمة معقدة مثل الميكانيكا الإحصائية، وبناء على هذا تم اكتشاف طبيعة الاحتمال للظواهر الفيزيائية.
+</div>
+</div>
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">٣</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الاحتمال الهندسي
+</p>
+<div class="content">
+<br>
+<p class="subtitles">* العنصر الأساسي في الاحتمال الهندسي:</p>
+التجربة هي العنصر الأساسي لنظرية الاحتمال الهندسي وهذه التجربة تكون متكررة، كما أن نتائج هذه التجارب تكون مختلفة عند كل مرة من مرات التكرار. وهذه النتائج المختلفة والمحتملة تسمى بالمساحة العينية، مثل تجربة إلقاء حجر النرد، ينتج عنه عدة نتائج من رقم واحد إلى رقم ستة. والعناصر الأساسية لنظرية الاحتمال الهندسي هي الأحداث المتغيرة بطريقة عشوائية، والاحتمالات لا تكون قاصرة على علم الرياضيات أو الهندسة فقط، بل الاحتمال يحدث معنا أيضًا في حياتنا اليومية عند توقعك أو احتمال حدوث شيء معين لغرض ما.
+<p class="subtitles">* قوانين الاحتمال الهندسي:</p>
+يمكننا أن نستخدم الأحداث التي تقع واستخدامها كمثال نستطيع من خلاله أن نستخلص قوانين الاحتمال. حيث يوجد أربع قوانين للاحتمال الهندسي، التي تؤدي إلى حدوث ظواهر أخرى، وهذه القواتين هي:
+<br>
+١) قانون الاتحاد: ومن خلاله يتم الجمع بين عنصري الحادث الأول والحادث الثاني، وينتج عنه احتمال حدوث واحد فقط من الحدثين.
+<br>
+٢) قانون التقاطع: ومن خلاله يتم الجمع بين العناصر التي تكون مشتركة بين الحدثين، ويقع الحدثين معًا.
+<br>
+٣) قانون الطرح: يتم من خلاله عدم وقوع الحدث الثاني، ووقوع الحدث الأول، ولهذا السبب نقوم بكتابة الحدث الذي سيقع.
+<br>
+٤) قانون الأحداث المنفصلة: ويتم عن طريق فاصل الحدثين، أثناء الوقوع فكل واحد منهم يقع دون الآخر.
+</div>
+</div>
+</div>
+<div class="pages">
+<div class="page-content">
+<br>
+<p class="page-number">٤</p>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الاحتمال الهندسي
+</p>
+<div class="content">
+<br>
+<p class="subtitles">* أهمية الاحتمال الهندسي أو الرياضي:</p>
+تستخدم الاحتمالات في كثير من الأمور الهامة في حياتنا اليومية، وفي كثير من العلوم، لأنها تستخدم في معرفة وقياس أشياء معينة، وتوقع ما سيحدث، لكن هذه التوقعات لا تكون مؤكدة، والاحتمالات تساعد الأخصائيين في معرفة وتوضيح المفاهيم الرياضية، عن طريق الفهم والتقريب البسيط والسهل. 
+<br><br>
+ولكن قبل أن يبدأ الأخصائيين في عملهم يجب أن يضعوا في اعتبارهم الحلول عدة أسئلة منها، معرفة حساب الاحتمالات التكرارية النسبية، ومعرفة حساب الاحتمالات البديلة التوقعات الأخرى بغرض تكون معلومة من خلال عملية البحث، ومعرفة حل طرق إجراء التقدير النسبي، وأيضًا الأرصاد الجوية قائمة على نظرية الاحتمال ويستخدمونها خبراء الأرصاد في معرفة الأحوال الجوية وتوقعاتها.
+<p class="subtitles">* وختامًا:</p>
+يُعدّ الاحتمال الهندسي أداة قوية لفهم العالم من حولنا، حيث يُمكّننا من تحليل الظواهر العشوائية، واتخاذ القرارات، ونمذجة الأنظمة المعقدة، ومع ازدياد تعقيد العالم، تزداد أهمية الاحتمال الهندسي في مختلف المجالات، مما يجعله أداة لا غنى عنها للعلماء والمهندسين والاقتصاديين وغيرهم من المهنيين.
+<p style="text-align:left; margin-top:-15px;">والله ولي التوفيق.</p>
+<p class="subtitles" style="margin-top:-25px !important;">* المرجع:</p>
+شيماء الزناتي، "مفهوم الاحتمال الهندسي"، ١٢ أكتوبر ٢٠٢١، موقع مقال.
+</div>
+</div>
+</div>
+</body>
+</html>
