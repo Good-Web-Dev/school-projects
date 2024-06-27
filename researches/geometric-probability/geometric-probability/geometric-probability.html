@@ -6,19 +6,21 @@
 <style>
 @page{
 margin:0 !important;
-size:A4;
+size:210mm 297mm !important;
+width: 210mm !important;
+height: 297mm !important;
 padding:0 !important;
 }
 @media print{
 body{
 -webkit-print-color-adjust: exact;
-padding:0 !important;
 margin:0 !important;
+padding: 0 !important;
 }
 .pages{
-height:297mm !important;
-width:210mm !important;
-box-sizing:border-box;
+margin:0 !important;
+padding: 0 !important;
+page-break-after: always !important;
 }
 }
 </style>
@@ -130,7 +132,7 @@ padding:0px 15px 2px 15px;
 border-radius:50px 0 0 50px;
 border-left: double 8px white;
 border-top: double 8px white;
-margin-bottom:0;
+margin-bottom:3px;
 color:white;
 position:relative;
 right:-20px;
