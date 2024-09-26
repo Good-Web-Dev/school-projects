@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8"/>
+<title>بحث بعنوان أشراط الساعة</title>
+<style>
+@page{
+margin:0 !important;
+size:A4;
+padding:0 !important;
+}
+@media print{
+body{
+margin:40px -20px !important;
+-webkit-print-color-adjust: exact;
+}
+.pages{
+height:306mm !important;
+width:210mm !important;
+}
+}
+</style>
+<style>
+@font-face{
+font-family:"uthman-tn-hafs";
+src:url("https://good-web-dev.github.io/WebFonts/uthman-tn-hafs.woff2") format("woff2");
+}
+@font-face{
+font-family:"uthman-tn";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
+font-weight:bold;
+}
+@font-face{
+font-family:"uthman-tn";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
+font-weight: normal;
+}
+@font-face{
+font-family:"lotus";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
+font-weight: normal;
+}
+@font-face{
+font-family:"lotus";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
+font-weight:bold;
+}
+@font-face{
+font-family:"basmalah";
+src:url("https://good-web-dev.github.io/school-projects/researches/fonts/basmalah.woff2") format("woff2");
+}
+@font-face{
+font-family:"almodrajat";
+src:url("https://good-web-dev.github.io/WebFonts/Almodrajat.woff2") format("woff2");
+}
+::selection{
+background-color:lightsteelblue;
+color:#000;
+}
+img, br{
+pointer-events:none;
+user-select:none;
+}
+.pages{
+width:210mm;
+height:297mm;
+border:0px #000 solid;
+margin:5px auto;
+padding:30px 60px;
+}
+.page-content{
+width:210mm;
+height:297mm;
+border:#000 0px solid;
+position:relative;
+}
+.border-top{
+width:100%;
+height:1px;
+border:solid 2px #000;
+border-bottom-width:3px;
+border-left:none;
+border-right:none;
+position:absolute;
+top:45px;
+}
+.page-number{
+background-color:#F2F2F2;
+width:70px;
+height:40px;
+position:absolute;
+top:-20px;
+right:0;
+font-family:lotus;
+text-align:center;
+font-size:25px;
+}
+.square{
+width:43px;
+position:absolute;
+top:7px;
+right:-6px;
+}
+.square-div{
+text-align:center;
+border:2px #000 solid;
+border-top:none;
+border-bottom:none;
+width:42px;
+height:40px;
+position:absolute;
+top:5px;
+right:70px;
+}
+.cover{
+background-image:url('https://good-web-dev.github.io/school-projects/researches/signs-of-the-hour/cover.svg');
+background-size:1000px;
+background-position:center -115px;
+background-repeat:no-repeat;
+}
+.page-title{
+font-family:uthman-tn;
+font-weight: bold;;
+position:absolute;
+top:-24px;
+font-size:25px;
+padding:0 3px;
+}
+.pages:nth-of-type(even) .page-number {
+left: 0;
+}
+.pages:nth-of-type(even) .square-div {
+left: 70px;
+}
+.pages:nth-of-type(even) .page-title {
+right:0;
+}
+.basmalah{
+font-family:basmalah;
+font-size:162px;
+margin: 30px 0 138px 0;
+text-align:center;
+height:10px;
+}
+.content{
+direction:rtl;
+font-family:lotus;
+font-size:32px;
+line-height:1.6;
+text-align:justify;
+}
+.subtitles{
+font-family:lotus;
+font-weight: bold;
+font-size:36px;
+margin-bottom:3px;
+}
+.headings{
+font-family: uthman-tn;
+font-weight: bold;;
+text-align:center;
+font-size:42px;
+margin:0;
+}
+.sub-heading{
+font-size:38px;
+margin-top:10px;
+}
+.footnotes{
+font-size:26px;
+white-space:pre-wrap;
+text-align: justify;
+}
+hr{
+width:300px;
+border:1px solid #000;
+position:absolute;
+right:0;
+}
+sup{
+font-size:20px;
+}
+b{
+font-family:lotus;
+font-weight: bold;;
+font-weight:normal;
+}
+table, th, td{
+border-collapse:collapse;
+border:2px solid #000;
+font-size:28px;
+padding:5px;
+}
+td:nth-child(odd){
+text-align:center;
+}
+td:nth-child(even){
+padding-right:15px;
+}
+table{
+width:90%;
+margin:25px auto 0 auto;
+}
+th{
+font-family:lotus;
+font-weight: bold;;
+background-color:#f2f2f2;
+}
+td{
+font-family:lotus;
+}
+.content-js:not(.resources){
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+color:transparent;
+}
+.resources-js{
+color:transparent;
+}
+.resources-js .subtitles{
+text-decoration:underline 0.5px #000;
+text-decoration-skip-ink:none;
+}
+.en-word{
+font-family:georgia;
+font-size:26px;
+}
+.ayah{
+font-family:uthman-tn-hafs;
+}
+.hadith{
+font-family:uthman-tn;
+font-weight: bold;
+}
+.hadith::before{
+content:"«";
+}
+.hadith::after{
+content:"»";
+}
+.ayah::before{
+content:"ﵻ";
+}
+.ayah::after{
+content:"ﵺ";
+}
+.ornaments{
+font-family:almodrajat;
+font-size: 36px;
+position: relative;
+font-weight: 400;
+}
+/* ----- styling classes: ----- */
+.tar{
+text-align:right;
+}
+.tal{
+text-align:right;
+}
+.tac{
+text-align:right;
+}
+.mar-t-m-20{
+margin-top:-20px;
+}
+.mar-t-7{
+margin-top:7px;
+}
+.star::before{
+content:"* ";
+font-family:lotus;
+font-weight: bold;;
+}
+</style>
+</head>
+<body>
+<div class="pages cover no-page-number" onclick="print()">
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+المقدمة
+</p>
+<p class="basmalah">﷽</p>
+<div class="content">
+<p class="subtitles">* المقدمة:</p>
+يُعدّ موضوع أشراط الساعة من المواضيع الهامة التي شغلت عقول المسلمين عبر العصور، <br>
+حيث تُشير هذه الأشراط إلى علامات اقتراب يوم القيامة ونهاية العالم. <br>
+وتُعتبر هذه الأشراط بمثابة تحذير وتذكير للبشرية بضرورة الاستعداد ليوم الحساب، <br>
+والعمل على إصلاح ذات البين، والتقرب إلى الله سبحانه وتعالى. <br>
+<br>
+يهدف هذا البحث إلى دراسة أشراط الساعة من خلال تحليل النصوص الدينية والروايات الواردة عن النبي صلى الله عليه وسلم، <br>
+والبحث في دلالاتها وتفسيرها، مع التركيز على أهمية هذه الأشراط في حياة المسلم اليومية. <br>
+<br>
+سنتناول في هذا البحث: <br>
+تعريف أشراط الساعة: ما هي أشراط الساعة وكيف تُصنف؟ <br>
+أهمية دراسة أشراط الساعة: ما هي أهمية هذه الأشراط في حياة المسلم؟ <br>
+أشراط الساعة الكبرى والصغرى: ما هي أبرز أشراط الساعة الكبرى والصغرى؟ <br>
+الاستعداد ليوم القيامة: كيف يمكن للمسلم أن يستعد ليوم الحساب؟ <br>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading">الفصل الأول</h1>
+<h1 class="headings">معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة</h3><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول (معنى الأشراط والعلامات لغة):</h3>
+<p class="subtitles mar-t-7">١. معنى أشراط الساعة:</p>
+،
+وأشراط الشيء أوائله، ومنه شرط السلطان وهم نخبة أصحابه الذين يقدمهم على غيرهم
+من مجموع جنده. 
+(١ (قال الجوهري
+(٢ " (أشراط الساعة علاماا وأسباا التي دون معظمها وقيامها " 
+
+(٣ (وقال ابن الأثير
+ " الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط
+(٤ (السلطان؛ لأم
+،
+وقول الله <span class="ornaments">f</span>: <span class="ayah">فَهَلۡ يَنظُرُونَ إِلَّا ٱلسَّاعَةَ أَن تَأۡتِيَهُم بَغۡتَةٗۖ فَقَدۡ جَآءَ أَشۡرَاطُهَاۚ فَأَنَّىٰ لَهُمۡ إِذَا جَآءَتۡهُمۡ ذِكۡرَىٰهُمۡ ۝١٨</span>
+(٢ " (أشراط الساعة علاماا وأسباا التي دون معظمها وقيامها " 
+ .
+(٣ (وقال ابن الأثير
+ " الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط
+(٤ (السلطان؛ لأم
+<br>
+<hr>
+<p class="footnotes">
+١: براه (سخكخ) يعيعوقعقعب ٥٢٦ه.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading">الفصل الثاني</h1>
+<h1 class="headings">أشراط الساعة الصغرى</h1><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: أشراط ظهرت:</h3>
+<p class="subtitles mar-t-7">١. بعثة النبي <span class="ornaments">m</span>:</p>
+أخبر <span class="ornaments">m</span> أن بعثته دليل على قرب الساعة، وأنها أول علامات الساعة الصغرى، عن سهل بن سعد <span class="ornaments">h</span> قال: رَأَيْتُ رَسولَ اللَّهِ <span class="ornaments">g</span> قالَ بإصْبَعَيْهِ هَكَذَا - بالوُسْطَى والَّتي تَلِي الإبْهَامَ -: <span class="hadith">بُعِثْتُ والسَّاعَةُ كَهَاتَيْنِ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٢. وفاة النبي <span class="ornaments">m</span>:</p>
+الفجيعة بموته <span class="ornaments">m</span>، هي من أوائل علامات قرب الساعة، فقد قال عوف بن مالك <span class="ornaments">h</span>: أَتَيْتُ النَّبيَّ <span class="ornaments">g</span> في غَزْوَةِ تَبُوكَ وهو في قُبَّةٍ مِن أَدَمٍ<sup>(٣)</sup>، فَقالَ: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ: مَوْتِي . . .</span><sup>(٤)</sup> الحديث.<sup>(٥)</sup>
+<br><br><br><br>
+<hr>
+<p class="footnotes">(١) أخرجه البخاري (٤٩٣٦).                               (٢) محمد العريفي، نهاية العالم، ص٣٧.
+(٣) قبة من أدم: أي خيمة من جلد.                         (٤) أخرجه البخاري (٣١٧٦).
+(٥) محمد العريفي، نهاية العالم، ص٣٨.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+أشراط الساعة
+</p>
+<div class="content">
+<br>
+<p class="subtitles mar-t-7">٣. انشقاق القمر:</p>
+قال الله <span class="ornaments">f</span>: <span class="ayah">ٱقۡتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلۡقَمَرُ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٤. فتح بيت المقدس:</p>
+كما جاء في حديث عوف بن مالك <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ</span>، وذكر منها: <span class="hadith">فَتْحُ بَيْتِ المَقْدِسِ</span><sup>(٣)</sup>.<sup>(٤)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٥. كثرة ظهور الفتن:</p>
+«الفتن: جمع فتنة، وهي الابتلاء والامتحان والاختبار، ثم كثُرَ استعمالها فيما أخرجه الاختبار للمكروه، ثم أُطلِقت على كلِّ مكروهٍ أو آيٍلٍ إليه؛ كالإثم، والكفر، والقتل، والتَّحريق، وغير ذلك من الأمور المكروهة».<sup>(٥)</sup>
+<br>
+وقد أخبر <span class="ornaments">m</span> بمجيء فتن عظيمة يلتبس على المؤمن فيها الحق، كلما أتته فتنة قال: <span class="hadith">هذِه مُهْلِكَتِي، ثُمَّ تَنْكَشِفُ</span><sup>(٦)</sup>، ويظهر غيرها. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">بَادِرُوا بالأعْمَالِ فِتَنًا كَقِطَعِ اللَّيْلِ المُظْلِمِ، يُصْبِحُ الرَّجُلُ مُؤْمِنًا وَيُمْسِي كَافِرًا، أَوْ يُمْسِي مُؤْمِنًا وَيُصْبِحُ كَافِرًا، يَبِيعُ دِينَهُ بعَرَضٍ مِنَ الدُّنْيَا</span><sup>(٧)</sup>.<sup>(٨)</sup>
+<br><br>
+<hr>
+<p class="footnotes">(١) سورة القمر، الآية: ١.                                                    (٢) محمد العريفي، نهاية العالم، ص٣٩.
+(٣) أخرجه البخاري (٣١٧٦).                                           (٤) محمد العريفي، نهاية العالم، ص٤٢.
+(٥) يوسف الوابل، أشراط الساعة، ص٩٠.                      (٦) أخرجه مسلم (١٨٤٤).
+(٧) أخرجه مسلم (١١٨).                                                   (٨) محمد العريفي، نهاية العالم، ص٤٥.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<p class="subtitles mar-t-7">٦. إخبار النبي <span class="ornaments">g</span> بموقعة صفين:</p>
+ومن أشراط الساعة أن النبي <span class="ornaments">g</span> أخبر بمعركة تكون بين طائفتين عظيمتين من المسلمين، وكانت تلك المعركة: معركة صفين، وهي معركة وقعت بين علي ومعاوية <span class="ornaments">k</span> بعد مقتل عثمان <span class="ornaments">h</span> سنة ٣٦ للهجرة. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى تَقْتَتِلَ فِئَتانِ عَظِيمَتانِ، وتَكُونُ بيْنَهُما مَقْتَلَةٌ عَظِيمَةٌ ودَعْواهُما واحِدَةٌ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٧. ظهور الخوارج:</p>
+ومن أشراط الساعة خروج بعض الفرق المخالفة لنهج النبي <span class="ornaments">g</span> وصحابته الكرام <span class="ornaments">j</span>، فعن عبدالله بن مسعود <span class="ornaments">h</span> أنه قال: قالَ رَسولَ اللَّهِ <span class="ornaments">g</span>: <span class="hadith">يخرجُ في آخرِ الزمانِ قومٌ أحداثُ الأسنانِ، سفهاءُ الأحلامِ، يقرأونَ القرآنَ لا يُجاوزُ تَرَاقِيَهُمْ، يقولونَ من قولِ خيرِ البريَّةِ، يمرقونَ من الدِّينِ كما يَمرُقُ السهمُ من الرَّمِيَّةِ</span><sup>(٣)</sup>، ومن هؤلاء فرقة الخوارج، وهم فرقة ضالة مضلة، ومن معتقداتهم: تكفير مرتكب الكبيرة والقول بأنه يخلد في النار، وهذا ضلال مبين، والحق أن المسلم إذا ارتكب هذه الكبائر لا يكفر، لكنه يكون عاصيًا فاسقًا بفعلها، وعليه التوبة والإقلاع عن معصيته. ومن معتقداتهم أيضًا تكفير علي ومعاوية <span class="ornaments">k</span> وكثير من الصحابة الذين رضوا بالتحكيم <span class="ornaments">j</span> جميعًا.<sup>(٤)</sup>
+<br><br>
+<hr>
+<p class="footnotes">(١) أخرجه مسلم (١٥٧).                                        (٢) محمد العريفي، نهاية العالم، ص٤٧.
+(٣) أخرجه الترمذي (٢١٨٨).                                (٤) محمد العريفي، نهاية العالم، ص٤٨ - ص٤٩.
+</p>
+</div>
+</div>
+</div>
+<script>
+const pagesDivs = document.querySelectorAll('.pages .page-content');
+
+pagesDivs.forEach((pageDiv, index) => {
+  if (!pageDiv.classList.contains('no-page-number')) {
+    const numberElement = document.createElement('p');
+    numberElement.classList.add('page-number');
+    const pageNumber = index + 1;
+    const easternArabicNumber = pageNumber.toLocaleString('ar-SA');
+    numberElement.textContent = easternArabicNumber;
+    const secondChild = pageDiv.children[2]; 
+    pageDiv.insertBefore(numberElement, secondChild);
+  }
+});
+
+function getPageNumberInEasternArabic(pageNumber) {
+  const skippedDivs = document.querySelectorAll('.no-page-number').length;
+  const adjustedPageNumber = pageNumber - skippedDivs;
+  const tensDigit = Math.floor(adjustedPageNumber / 10);
+  const onesDigit = adjustedPageNumber % 10;
+  let easternArabicNumber = '';
+  if (tensDigit > 0) {
+    easternArabicNumber += easternArabicNumerals[tensDigit];
+  }
+  easternArabicNumber += easternArabicNumerals[onesDigit];
+  return easternArabicNumber;
+}
+</script>
+</body>
+</html>
