@@ -22,20 +22,28 @@ width:210mm !important;
 </style>
 <style>
 @font-face{
-font-family:"uthman-tn-bold";
+font-family:"uthman-tn-hafs";
+src:url("https://good-web-dev.github.io/WebFonts/uthman-tn-hafs.woff2") format("woff2");
+}
+@font-face{
+font-family:"uthman-tn";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
+font-weight:bold;
 }
 @font-face{
 font-family:"uthman-tn";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
+font-weight: normal;
 }
 @font-face{
 font-family:"lotus";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
+font-weight: normal;
 }
 @font-face{
-font-family:"lotus-bold";
+font-family:"lotus";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
+font-weight:bold;
 }
 @font-face{
 font-family:"basmalah";
@@ -68,7 +76,7 @@ position:relative;
 }
 .border-top{
 width:100%;
-height:2px;
+height:1px;
 border:solid 2px #000;
 border-bottom-width:3px;
 border-left:none;
@@ -79,78 +87,92 @@ top:45px;
 .page-number{
 background-color:#F2F2F2;
 width:70px;
-height:38px;
+height:40px;
 position:absolute;
-top:-17px;
-padding:2px 0 0 0;
+top:-20px;
 right:0;
 font-family:lotus;
 text-align:center;
-font-size:22px;
+font-size:25px;
 }
 .square{
-width:45px;
+width:43px;
 position:absolute;
-top:6px;
-right:-5.5px;
+top:7px;
+right:-6px;
 }
 .square-div{
 text-align:center;
 border:2px #000 solid;
 border-top:none;
 border-bottom:none;
-width:45px;
+width:42px;
 height:40px;
 position:absolute;
 top:5px;
 right:70px;
 }
 .cover{
-background-image:url('https://good-web-dev.github.io/school-projects/researches/cell-structures-and-functions/cover.svg');
+background-image:url('https://good-web-dev.github.io/school-projects/researches/signs-of-the-hour/cover.svg');
 background-size:1000px;
 background-position:center -115px;
 background-repeat:no-repeat;
 }
 .page-title{
-font-family:uthman-tn-bold;
+font-family:uthman-tn;
+font-weight: bold;;
 position:absolute;
-top:-21px;
-font-size:22px;
+top:-24px;
+font-size:25px;
 padding:0 3px;
 }
-.pages:nth-of-type(odd) .page-number {
+.pages:nth-of-type(even) .page-number {
 left: 0;
 }
-.pages:nth-of-type(odd) .square-div {
+.pages:nth-of-type(even) .square-div {
 left: 70px;
 }
-.pages:nth-of-type(odd) .page-title {
+.pages:nth-of-type(even) .page-title {
 right:0;
 }
 .basmalah{
 font-family:basmalah;
-font-size:154px;
-margin: 30px 0 140px 0;
+font-size:162px;
+margin: 30px 0 138px 0;
 text-align:center;
 height:10px;
 }
 .content{
 direction:rtl;
 font-family:lotus;
-font-size:30px;
+font-size:32px;
 line-height:1.6;
+text-align:justify;
 }
 .subtitles{
-font-family:lotus-bold;
-font-size:34px;
+font-family:lotus;
+font-weight: bold;
+font-size:36px;
 margin-bottom:3px;
 }
-.footnotes p{
-font-size:20px;
-padding-top:20px;
+.headings{
+font-family: uthman-tn;
+font-weight: bold;;
+text-align:center;
+font-size:42px;
+margin:0;
+}
+.sub-heading{
+font-size:38px;
+margin-top:10px;
+}
+.footnotes{
+font-size:26px;
+white-space:pre-wrap;
+text-align: justify;
 }
 hr{
-width:250px;
+width:300px;
 border:1px solid #000;
 position:absolute;
 right:0;
@@ -159,7 +181,8 @@ sup{
 font-size:20px;
 }
 b{
-font-family:lotus-bold;
+font-family:lotus;
+font-weight: bold;;
 font-weight:normal;
 }
 table, th, td{
@@ -179,7 +202,8 @@ width:90%;
 margin:25px auto 0 auto;
 }
 th{
-font-family:lotus-bold;
+font-family:lotus;
+font-weight: bold;;
 background-color:#f2f2f2;
 }
 td{
@@ -201,11 +225,58 @@ text-decoration-skip-ink:none;
 font-family:georgia;
 font-size:26px;
 }
+.ayah{
+font-family:uthman-tn-hafs;
+}
+.hadith{
+font-family:uthman-tn;
+font-weight: bold;
+}
+.hadith::before{
+content:"«";
+}
+.hadith::after{
+content:"»";
+}
+.ayah::before{
+content:"ﵻ";
+}
+.ayah::after{
+content:"ﵺ";
+}
+.ornaments{
+font-family:almodrajat;
+font-size: 36px;
+position: relative;
+font-weight: 400;
+}
+/* ----- styling classes: ----- */
+.tar{
+text-align:right;
+}
+.tal{
+text-align:right;
+}
+.tac{
+text-align:right;
+}
+.mar-t-m-20{
+margin-top:-20px;
+}
+.mar-t-7{
+margin-top:7px;
+}
+.star::before{
+content:"* ";
+font-family:lotus;
+font-weight: bold;;
+}
 </style>
 </head>
 <body>
 <div class="pages cover no-page-number" onclick="print()">
 </div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -214,21 +285,99 @@ font-size:26px;
 </div>
 <div class="border-top"></div>
 <p class="page-title">
-أشراط الساعة
+المقدمة
 </p>
 <p class="basmalah">﷽</p>
 <div class="content">
-<p class="subtitles">* مقدمة:</p>
-الخلية هي المكون الرئيس لجميع الكائنات الحية، حيث يتكون جسم الإنسان من عدد كبير من الخلايا، وتكمن وظيفتها بدعم بنية الجسم واستقبال العناصر الغذائية من الغذاء وتحويلها إلى طاقة يتم استخدامها لتأدية وظائف متخصصة، إضافةً لاحتوائها على المادة الوراثية <span class="en-word">DNA</span> حيث يمكنها تصنيع نسخ من نفسها لتؤدي وظيفتها في الجسم، وفي هذا البحث سنذكر تراكيبها ووظائفها الكثيرة والمعقدة.
-<p class="subtitles">* النواة:</p>
-تعد النواة مركزًا لقيادة الخلية، حيث ترسل بدورها إشارات إلى مكونات الخلية الأخرى لتنمو ويحدث فيها الانقسام وتموت لاحقًا، إضافة لاحتوائها على المادة الوراثية أو ما يسمى بالحمض النووي <span class="en-word">DNA</span>، وتحاط النواة بغشاء يسمى الغلاف النووي يفصلها عن بقية أجزاء الخلية.
-<p class="subtitles">* الجدار الخلوي:</p>
-يمكن القول بأن الجدار الخلوي هو الطبقة الخارجية للخلايا ويكون في الغالب ذو بنية صلبة ويحيط بغشاء الخلية ومكوناتها الأخرى ليوفّر الشكل والدعم للخلايا وحمايتها من الصدمات والإصابات الخارجية التي يمكن أن تتعرض لها.
-<p class="subtitles">* السيتوبلازم:</p>
-يكون السيتوبلازم على شكل مادة سميكة أشبه بالهلامية وشفافة توجد داخل غشاء الخلية
+<p class="subtitles">* المقدمة:</p>
+يُعدّ موضوع أشراط الساعة من المواضيع الهامة التي شغلت عقول المسلمين عبر العصور، <br>
+حيث تُشير هذه الأشراط إلى علامات اقتراب يوم القيامة ونهاية العالم. <br>
+وتُعتبر هذه الأشراط بمثابة تحذير وتذكير للبشرية بضرورة الاستعداد ليوم الحساب، <br>
+والعمل على إصلاح ذات البين، والتقرب إلى الله سبحانه وتعالى. <br>
+<br>
+يهدف هذا البحث إلى دراسة أشراط الساعة من خلال تحليل النصوص الدينية والروايات الواردة عن النبي صلى الله عليه وسلم، <br>
+والبحث في دلالاتها وتفسيرها، مع التركيز على أهمية هذه الأشراط في حياة المسلم اليومية. <br>
+<br>
+سنتناول في هذا البحث: <br>
+تعريف أشراط الساعة: ما هي أشراط الساعة وكيف تُصنف؟ <br>
+أهمية دراسة أشراط الساعة: ما هي أهمية هذه الأشراط في حياة المسلم؟ <br>
+أشراط الساعة الكبرى والصغرى: ما هي أبرز أشراط الساعة الكبرى والصغرى؟ <br>
+الاستعداد ليوم القيامة: كيف يمكن للمسلم أن يستعد ليوم الحساب؟ <br>
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading">الفصل الأول</h1>
+<h1 class="headings">معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة</h3><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول (معنى الأشراط والعلامات لغة):</h3>
+<p class="subtitles mar-t-7">١. معنى أشراط الساعة:</p>
+،
+وأشراط الشيء أوائله، ومنه شرط السلطان وهم نخبة أصحابه الذين يقدمهم على غيرهم
+من مجموع جنده. 
+(١ (قال الجوهري
+(٢ " (أشراط الساعة علاماا وأسباا التي دون معظمها وقيامها " 
+
+(٣ (وقال ابن الأثير
+ " الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط
+(٤ (السلطان؛ لأم
+،
+وقول الله <span class="ornaments">f</span>: <span class="ayah">فَهَلۡ يَنظُرُونَ إِلَّا ٱلسَّاعَةَ أَن تَأۡتِيَهُم بَغۡتَةٗۖ فَقَدۡ جَآءَ أَشۡرَاطُهَاۚ فَأَنَّىٰ لَهُمۡ إِذَا جَآءَتۡهُمۡ ذِكۡرَىٰهُمۡ ۝١٨</span>
+(٢ " (أشراط الساعة علاماا وأسباا التي دون معظمها وقيامها " 
+ .
+(٣ (وقال ابن الأثير
+ " الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط
+(٤ (السلطان؛ لأم
+<br>
+<hr>
+<p class="footnotes">
+١: براه (سخكخ) يعيعوقعقعب ٥٢٦ه.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading">الفصل الثاني</h1>
+<h1 class="headings">أشراط الساعة الصغرى</h1><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: أشراط ظهرت:</h3>
+<p class="subtitles mar-t-7">١. بعثة النبي <span class="ornaments">m</span>:</p>
+أخبر <span class="ornaments">m</span> أن بعثته دليل على قرب الساعة، وأنها أول علامات الساعة الصغرى، عن سهل بن سعد <span class="ornaments">h</span> قال: رَأَيْتُ رَسولَ اللَّهِ <span class="ornaments">g</span> قالَ بإصْبَعَيْهِ هَكَذَا - بالوُسْطَى والَّتي تَلِي الإبْهَامَ -: <span class="hadith">بُعِثْتُ والسَّاعَةُ كَهَاتَيْنِ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٢. وفاة النبي <span class="ornaments">m</span>:</p>
+الفجيعة بموته <span class="ornaments">m</span>، هي من أوائل علامات قرب الساعة، فقد قال عوف بن مالك <span class="ornaments">h</span>: أَتَيْتُ النَّبيَّ <span class="ornaments">g</span> في غَزْوَةِ تَبُوكَ وهو في قُبَّةٍ مِن أَدَمٍ<sup>(٣)</sup>، فَقالَ: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ: مَوْتِي . . .</span><sup>(٤)</sup> الحديث.<sup>(٥)</sup>
+<br><br><br><br>
+<hr>
+<p class="footnotes">(١) أخرجه البخاري (٤٩٣٦).                               (٢) محمد العريفي، نهاية العالم، ص٣٧.
+(٣) قبة من أدم: أي خيمة من جلد.                         (٤) أخرجه البخاري (٣١٧٦).
+(٥) محمد العريفي، نهاية العالم، ص٣٨.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -241,18 +390,27 @@ font-size:26px;
 </p>
 <div class="content">
 <br>
-حيث تحدث فيه معظم التفاعلات الكيميائية في الخلية، ويحتوي على مكونات الخلية الأخرى كالشبكة الإندوبلازمية، الفجوات، الميتوكوندريا، والريبوسومات، وغيرها الكثير.
-<p class="subtitles">* الغشاء الخلوي:</p>
-يعرف الغشاء الخلوي بأنه البطانة الخارجية للخلية، فهو غشاء رقيق يختصّ بأنه شبه نافذ ويحيط بسيتوبلازم الخلية ومحتوياتها ويقوم بفصل الخلية عن محيطها ويسمح بدخول وخروج المواد المختلفة منها.
-<p class="subtitles">* الهيكل الخلوي:</p>
-يحدد الهيكل الخلوي شكل الخلية، فهو عبارة عن شبكة من الألياف الطويلة التي تشكّل البناء العام للخلية نظرًا لدوره المهم في انقسام الخلية والسماح لها بالتحرك، فهو أيضًا يوفر نظامًا يوجه حركة مكونات الخلية الأخرى.
-<p class="subtitles">* الريبوسومات:</p>
-تعد الريبوسومات المواقع التي يتم فيها تصنيع جزيئات البروتين من الأحماض الأمينية، حيث تتكون من بروتينات و<span class="en-word">RNA</span>، ويكون جزء منها مرتبطًا بالشبكة الإندوبلازمية والجزء الآخر يسبح حرًّا في السيتوبلازم.
-<p class="subtitles">* الأهداب والأسواط:</p>
-يمكن تعريف الأهداب والأسواط بأنها زوائد خلوية متحركة توجد في الخلايا الحيوانية فقط ولا توجد في الخلايا النباتية، وتساعد على حركة الخلية ونقل السوائل والمواد عبر الخلية، أما الأهداب فتتواجد وتكثر في الجهاز التنفسي عند البشر لتمنع استنشاق البخار والدخان والكائنات الضارة من دخول الرئتين وحمايتها، إضافةً لوظيفتها في نقل الطعام والأكسجين
+<p class="subtitles mar-t-7">٣. انشقاق القمر:</p>
+قال الله <span class="ornaments">f</span>: <span class="ayah">ٱقۡتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلۡقَمَرُ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٤. فتح بيت المقدس:</p>
+كما جاء في حديث عوف بن مالك <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ</span>، وذكر منها: <span class="hadith">فَتْحُ بَيْتِ المَقْدِسِ</span><sup>(٣)</sup>.<sup>(٤)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٥. كثرة ظهور الفتن:</p>
+«الفتن: جمع فتنة، وهي الابتلاء والامتحان والاختبار، ثم كثُرَ استعمالها فيما أخرجه الاختبار للمكروه، ثم أُطلِقت على كلِّ مكروهٍ أو آيٍلٍ إليه؛ كالإثم، والكفر، والقتل، والتَّحريق، وغير ذلك من الأمور المكروهة».<sup>(٥)</sup>
+<br>
+وقد أخبر <span class="ornaments">m</span> بمجيء فتن عظيمة يلتبس على المؤمن فيها الحق، كلما أتته فتنة قال: <span class="hadith">هذِه مُهْلِكَتِي، ثُمَّ تَنْكَشِفُ</span><sup>(٦)</sup>، ويظهر غيرها. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">بَادِرُوا بالأعْمَالِ فِتَنًا كَقِطَعِ اللَّيْلِ المُظْلِمِ، يُصْبِحُ الرَّجُلُ مُؤْمِنًا وَيُمْسِي كَافِرًا، أَوْ يُمْسِي مُؤْمِنًا وَيُصْبِحُ كَافِرًا، يَبِيعُ دِينَهُ بعَرَضٍ مِنَ الدُّنْيَا</span><sup>(٧)</sup>.<sup>(٨)</sup>
+<br><br>
+<hr>
+<p class="footnotes">(١) سورة القمر، الآية: ١.                                                    (٢) محمد العريفي، نهاية العالم، ص٣٩.
+(٣) أخرجه البخاري (٣١٧٦).                                           (٤) محمد العريفي، نهاية العالم، ص٤٢.
+(٥) يوسف الوابل، أشراط الساعة، ص٩٠.                      (٦) أخرجه مسلم (١٨٤٤).
+(٧) أخرجه مسلم (١١٨).                                                   (٨) محمد العريفي، نهاية العالم، ص٤٥.
+</p>
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -261,59 +419,20 @@ font-size:26px;
 </div>
 <div class="border-top"></div>
 <p class="page-title">
-أشراط الساعة
+الفصل الثاني: أشراط الساعة الصغرى
 </p>
 <div class="content">
 <br>
-في بعض الخلايا الحيوانية الأخرى.
-<p class="subtitles">* الشبكة الإندوبلازمية:</p>
-تعد الشبكة الإندوبلازمية شبكة من الأكياس المسطحة والأنابيب المفرغة التي تمتد عبر سيتوبلازم الخلية سواء كانت خلايا نباتية أم حيوانية، وتكون مرتبطة ببعضها بواسطة غشاء واحد متصل ببعضه البعض؛ بحيث يوفر لمكونات الخلية الأخرى تجويف داخلي كمساحة داخلية، وتشغل هذه الشبكة أكثر من ١٠٪ من الحجم الكلي للخلية، ويسمح بنقل الجزيئات المختلفة بشكل انتقائي من وإلى الخلية عبر السيتوبلازم.
-<p class="subtitles">* البلاستيدات الخضراء:</p>
-تعد البلاستيدات الخضراء من المكونات المميزة للخلايا النباتية وهي أجسام صغيرة تساهم في تصنيع وتخزين المواد الغذائية في الخلية، إذ تقوم بحبس الطاقة المستمدة من ضوء الشمس أثناء حدوث عملية التمثيل الضوئي في النباتات لإنتاج الغذاء، وتكون على شكل أقراص مرتبة أشبه بالصفائح المرصوصة فوق بعضها البعض.
-<p class="subtitles">* الجسيمات الحالة:</p>
-إن الجسيمات الحالة توجد تقريبًا في جميع أنواع الخلايا حقيقية النواة، سواء كانت نباتية أو حيوانية، وهي المسؤولة عادةً عن هضم الأجزاء الكبيرة وأجزاء وبقايا الخلايا القديمة والكائنات الحية الدقيقة للتخلص منها، إذ يحيط بكل جسم حال غشاء ليحافظ على بنيته ذات الطبيعة الحمضية عبر مضخة بروتون، وتحتوي أيضًا على مجموعة كبيرة من الأنزيمات المتحللة للماء لتكسير الجزيئات الكبيرة كالأحماض النووية والسكريات والبروتينات.
-</div>
-</div>
-</div>
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة
+<p class="subtitles mar-t-7">٦. إخبار النبي <span class="ornaments">g</span> بموقعة صفين:</p>
+ومن أشراط الساعة أن النبي <span class="ornaments">g</span> أخبر بمعركة تكون بين طائفتين عظيمتين من المسلمين، وكانت تلك المعركة: معركة صفين، وهي معركة وقعت بين علي ومعاوية <span class="ornaments">k</span> بعد مقتل عثمان <span class="ornaments">h</span> سنة ٣٦ للهجرة. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى تَقْتَتِلَ فِئَتانِ عَظِيمَتانِ، وتَكُونُ بيْنَهُما مَقْتَلَةٌ عَظِيمَةٌ ودَعْواهُما واحِدَةٌ</span><sup>(١)</sup>.<sup>(٢)</sup>
+<br><br>
+<p class="subtitles mar-t-7">٧. ظهور الخوارج:</p>
+ومن أشراط الساعة خروج بعض الفرق المخالفة لنهج النبي <span class="ornaments">g</span> وصحابته الكرام <span class="ornaments">j</span>، فعن عبدالله بن مسعود <span class="ornaments">h</span> أنه قال: قالَ رَسولَ اللَّهِ <span class="ornaments">g</span>: <span class="hadith">يخرجُ في آخرِ الزمانِ قومٌ أحداثُ الأسنانِ، سفهاءُ الأحلامِ، يقرأونَ القرآنَ لا يُجاوزُ تَرَاقِيَهُمْ، يقولونَ من قولِ خيرِ البريَّةِ، يمرقونَ من الدِّينِ كما يَمرُقُ السهمُ من الرَّمِيَّةِ</span><sup>(٣)</sup>، ومن هؤلاء فرقة الخوارج، وهم فرقة ضالة مضلة، ومن معتقداتهم: تكفير مرتكب الكبيرة والقول بأنه يخلد في النار، وهذا ضلال مبين، والحق أن المسلم إذا ارتكب هذه الكبائر لا يكفر، لكنه يكون عاصيًا فاسقًا بفعلها، وعليه التوبة والإقلاع عن معصيته. ومن معتقداتهم أيضًا تكفير علي ومعاوية <span class="ornaments">k</span> وكثير من الصحابة الذين رضوا بالتحكيم <span class="ornaments">j</span> جميعًا.<sup>(٤)</sup>
+<br><br>
+<hr>
+<p class="footnotes">(١) أخرجه مسلم (١٥٧).                                        (٢) محمد العريفي، نهاية العالم، ص٤٧.
+(٣) أخرجه الترمذي (٢١٨٨).                                (٤) محمد العريفي، نهاية العالم، ص٤٨ - ص٤٩.
 </p>
-<div class="content">
-<br>
-<p class="subtitles">* الميتوكندريا:</p>
-تتواجد الميتوكندريا عادةً في السيتوبلازم وترتبط فيه بغشاء في أغلبية أنواع الخلايا حقيقية النواة، وتتمثل وظيفتها الأساسية بتوليد كميات كبيرة من الطاقة تتمثل على شكل مركب ثلاثي فوسفات الأدينوسين <span class="en-word">ATP</span> وتتخذ شكلًا مستديرًا إلى بيضاوي، وتتميز بوظيفتها بتخزين الكاليسوم للقيام بأنشطة إطلاق الإشارات من وإلى الخلايا وتوليد الحرارة ونمو الخلية وانقسامها وموتها، وتتواجد في مختلف خلايا الجسم، فمثلًا؛ تكثر في خلايا الكبد والعضلات عند الإنسان.
-<p class="subtitles">* جهاز غولجي:</p>
-يرتبط جهاز غولجي بغشاء من الخلايا حقيقية النواة وتكون عبارة عن سلسة من الأكياس المفلطحة الشكل والمكدّسة فوق بعضها البعض، وهي مسؤولة عن نقل وتعديل وتعبئة البروتينات والدهون في حويصلات متخصصة تقوم بنقلها للخلايا المحددة، تتواجد أجهزة غولجي تحديدًا في السيتوبلازم بجوار الشبكة الإندوبلازمية وبالقرب من نواة الخلية.
-<p class="subtitles">* الأنيبيات الدقيقة:</p>
-تتكون الأنيبيبات الدقيقة من هيكل أنبوبي الشكل غير محدد الطول، يتكون بشكل أساسي من بروتينات كروية الشكل تسمى توبولين، وتوجد فقط في الخلايا حقيقية النواة وتتمثل وظيفتها بتوفير المكونات الصلبة والمنظمة للهيكل الخلوي لإعطاء الخلية شكلها، إضافةً بأنها تعد من المكونات الرئيسة للأهداب والأسواط في الخلايا الحيوانية وتساهم أيضًا في انقسام الخلايا وتكاثرها وتساعد عادةً في حركة عضيات الخلية داخلها وحركة الحويصلات في الخلايا العصبية.
-</div>
-</div>
-</div>
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة
-</p>
-<div class="content">
-<br>
-<p class="subtitles">* المُريكزات:</p>
-تتكون المريكزات من أنابيب قصيرة مرتبة على شكل اسطوانة مفتوحة من الطرف وتجتمع في ٩ مجموعات من الحزم تتكون كل منها من ٣ أنابيب دقيقة وتتواجد غالبًا في قاعدة الهيكل للأهداب والأسواط وتسمى أجسامًا قاعدية، وتكون عادةً على شكل أزواج تترتب بزوايا قائمة فوق بعضها البعض، وتقوم بتكوين سحابة من البروتين حول نفسها وتعمل كأزواج في معظم الخلايا الحيوانية وكجسم واحد في الأهداب والأسواط.
-<p class="subtitles">* وختامًا:</p>
-تتكون الخلايا، لبنات بناء الحياة، من تراكيب معقدة ومتنوعة، لكل منها وظيفة محددة تساهم في عمل الخلية ككل. من النواة التي تحفظ المعلومات الوراثية إلى الميتوكوندريا التي تنتج الطاقة، تعمل هذه العضيات بانسجام للحفاظ على حياة الخلية وتأدية وظائفها بكفاءة. إن فهم أشراط الساعة يعتبر أساسيًّا لفهم العمليات الحيوية المعقدة التي تحدث داخل الكائنات الحية، كما أن التفكر فيها يشعرنا بعظمة الخالق <span style="font-family:Almodrajat; font-size: 34px;"></span> في خلقه، فتبارك الله أحسن الخالقين.
-<p class="subtitles">* المرجع:</p>
-د. سوار طلافحة، "تركيب الخلية ووظائفها"، ٢٩ أغسطس ٢٠٢١، موقع موضوع.
 </div>
 </div>
 </div>
