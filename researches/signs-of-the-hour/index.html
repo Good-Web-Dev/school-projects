@@ -1,560 +1,191 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+<meta charset="UTF-8">
 <head>
-<meta charset="UTF-8"/>
-<title>بحث بعنوان أشراط الساعة</title>
-<style>
-@page{
-margin:0 !important;
-size:A4;
-padding:0 !important;
-}
-@media print{
-body{
-margin:40px -20px !important;
--webkit-print-color-adjust: exact;
-}
-.pages{
-height:306mm !important;
-width:210mm !important;
-}
-}
-</style>
-<style>
-@font-face{
-font-family:"uthman-tn-hafs";
-src:url("https://good-web-dev.github.io/WebFonts/uthman-tn-hafs.woff2") format("woff2");
-}
-@font-face{
-font-family:"uthman-tn";
-src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
-font-weight:bold;
-}
-@font-face{
-font-family:"uthman-tn";
-src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
-font-weight: normal;
-}
-@font-face{
-font-family:"lotus";
-src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
-font-weight: normal;
-}
-@font-face{
-font-family:"lotus";
-src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
-font-weight:bold;
-}
-@font-face{
-font-family:"basmalah";
-src:url("https://good-web-dev.github.io/school-projects/researches/fonts/basmalah.woff2") format("woff2");
-}
-@font-face{
-font-family:"almodrajat";
-src:url("https://good-web-dev.github.io/WebFonts/Almodrajat.woff2") format("woff2");
-}
-::selection{
-background-color:lightsteelblue;
-color:#000;
-}
-img, br{
-pointer-events:none;
-user-select:none;
-}
-.pages{
-width:210mm;
-height:297mm;
-border:0px #000 solid;
-margin:5px auto;
-padding:30px 60px;
-}
-.page-content{
-width:210mm;
-height:297mm;
-border:#000 0px solid;
-position:relative;
-}
-.border-top{
-width:100%;
-height:1.35px;
-border:solid 2px #000;
-border-bottom-width:3px;
-border-left:none;
-border-right:none;
-position:absolute;
-top:45px;
-}
-.page-number{
-background-color:#F2F2F2;
-width:70px;
-height:40px;
-position:absolute;
-top:-20px;
-right:0;
-font-family:lotus;
-text-align:center;
-font-size:25px;
-}
-.square{
-width:43px;
-position:absolute;
-top:7px;
-right:-6px;
-}
-.square-div{
-text-align:center;
-border:2px #000 solid;
-border-top:none;
-border-bottom:none;
-width:42px;
-height:40px;
-position:absolute;
-top:5px;
-right:70px;
-}
-.cover{
-background-image:url('https://good-web-dev.github.io/school-projects/researches/signs-of-the-hour/cover.svg');
-background-size:1000px;
-background-position:center -115px;
-background-repeat:no-repeat;
-}
-.page-title{
-font-family:uthman-tn;
-font-weight: bold;;
-position:absolute;
-top:-24px;
-font-size:25px;
-padding:0 3px;
-}
-.pages:nth-of-type(even) .page-number {
-left: 0;
-}
-.pages:nth-of-type(even) .square-div {
-left: 70px;
-}
-.pages:nth-of-type(even) .page-title {
-right:0;
-}
-.basmalah{
-font-family:basmalah;
-font-size:162px;
-margin: 30px 0 138px 0;
-text-align:center;
-height:10px;
-}
-.content{
-direction:rtl;
-font-family:lotus;
-font-size:32px;
-line-height:1.6;
-text-align:justify;
-}
-.subtitles{
-font-family:lotus;
-font-weight: bold;
-font-size:36px;
-margin-bottom:3px;
-}
-.headings{
-font-family: uthman-tn;
-font-weight: bold;;
-text-align:center;
-font-size:48px;
-margin:0;
-}
-.sub-heading{
-font-size:38px;
-margin-top:10px;
-}
-.cha-num{
-font-size:44px;
-margin-top:10px;
-}
-.footnotes{
-font-size:26px;
-white-space:pre-wrap;
-text-align: justify;
-}
-hr{
-width:300px;
-border:1px solid #000;
-position:absolute;
-right:0;
-}
-sup{
-font-size:20px;
-}
-b{
-font-family:lotus;
-font-weight: bold;;
-font-weight:normal;
-}
-table, th, td{
-border-collapse:collapse;
-border:2px solid #000;
-font-size:28px;
-padding:5px;
-}
-td:nth-child(odd){
-text-align:center; 
-}
-td:nth-child(even){
-padding-right:15px;
-}
-table{
-width:90%;
-margin:25px auto 0 auto;
-}
-th{
-font-family:lotus;
-font-weight: bold;;
-background-color:#f2f2f2;
-}
-td{
-font-family:lotus;
-}
-.content-js:not(.resources){
-text-decoration:underline 0.5px #000;
-text-decoration-skip-ink:none;
-color:transparent;
-}
-.resources-js{
-color:transparent;
-}
-.resources-js .subtitles{
-text-decoration:underline 0.5px #000;
-text-decoration-skip-ink:none;
-}
-.en-word{
-font-family:georgia;
-font-size:26px;
-}
-.ayah{
-font-family:uthman-tn-hafs;
-}
-.hadith{
-font-family:uthman-tn;
-font-weight: bold;
-}
-.hadith::before{
-content:"«";
-}
-.hadith::after{
-content:"»";
-}
-.ayah::before{
-content:"ﵻ";
-}
-.ayah::after{
-content:"ﵺ";
-}
-.ornaments{
-font-family:almodrajat;
-font-size: 43px;
-line-height: 0;
-position: relative;
-font-weight: 400;
-}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYPT86NJ4T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-/* ----- styling classes: ----- */
-.tar{
-text-align:right;
-}
-.tal{
-text-align:right;
-}
-.tac{
-text-align:right;
-}
-.mar-t-m-20{
-margin-top:-20px;
-}
-.mar-t-7{
-margin-top:7px;
-}
-.star::before{
-content:"* ";
-font-family:lotus;
-font-weight: bold;;
-}
-</style>
+  gtag('config', 'G-PYPT86NJ4T');
+</script>
+<title>أعمالي</title>
+<meta name="title" content="أعمالي">
+<meta name="description" content="موقع يختص بعرض أعمال الشعبة ٣٠٣ في ثانوية الملك فهد، من واجبات، واختبارات، وبحوث، ومشاريع.">
+<meta name="author" content="Good-Web-Dev"/>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="icon-transition.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-hijri/moment-hijri.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json"/>
+<meta name="apple-mobile-web-app-title" content="أعمالي"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#000000"/>
+<link rel="icon" type="image/png" sizes="16x16"
+href="https://good-web-dev.github.io/a3maly/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32"
+href="https://good-web-dev.github.io/a3maly/favicon-32x32.png">
+<link rel="icon" type="image/svg+xml" sizes="500x500" href="https://good-web-dev.github.io/a3maly/svg-icon.svg">
+<link rel="shortcut icon" type="image/x-icon"
+href="https://good-web-dev.github.io/a3maly/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180"
+href="https://good-web-dev.github.io/a3maly/apple-touch-icon.png"> 
+<link rel="mask-icon"
+href="https://good-web-dev.github.io/a3maly/svg-icon.svg" color="#ffffff">
+<meta property="og:image" content="https://good-web-dev.github.io/a3maly/og-image.png">
 </head>
 <body>
-<div class="pages cover no-page-number" onclick="print()">
+<div id="loaderBox">
+<noscript>
+<i class="fas fa fa-exclamation-triangle"></i>
+ رجاءً فعّل JavaScript في متصفحك؛ ليعمل الموقع 
+<i class="fas fa fa-exclamation-triangle"></i>
+</noscript>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 2160.000000 2160.000000" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,2160.000000) scale(0.100000,-0.100000)" fill="#2E635A" stroke="#2E635A" stroke-width="20">
+<path d="M15750 14210 c-150 -77 -410 -365 -534 -592 -43 -77 -78 -205 -69
+-251 16 -84 41 -106 221 -196 78 -39 142 -77 142 -84 0 -34 -99 -90 -360 -202
+-191 -83 -262 -116 -257 -121 8 -8 387 66 436 86 204 80 346 202 430 369 33
+65 49 148 37 195 -16 66 -119 140 -242 174 -84 24 -121 42 -152 75 l-23 24 49
+51 c27 27 78 65 113 82 88 45 131 81 156 132 34 68 133 279 133 284 0 10 -29
+1 -80 -26z" class="svg-elem-1"></path>
+<path d="M15607 12547 c-3 -7 -108 -177 -234 -377 l-230 -365 91 -1377 c51
+-757 94 -1379 97 -1383 3 -3 113 165 243 372 l238 378 -86 1310 c-48 720 -89
+1343 -93 1383 -5 68 -15 89 -26 59z" class="svg-elem-2"></path>
+<path d="M13259 12969 c-170 -40 -324 -199 -460 -475 -82 -166 -137 -329 -175
+-515 -25 -120 -28 -155 -28 -334 0 -222 12 -290 75 -421 17 -36 29 -67 27 -68
+-1 -2 -52 -19 -113 -40 -245 -82 -425 -192 -598 -363 -234 -230 -377 -463
+-611 -993 -76 -173 -101 -238 -94 -250 7 -11 -3 -44 -35 -120 -83 -192 -96
+-219 -114 -228 -72 -38 -853 -215 -870 -198 -4 3 -242 3534 -243 3585 0 10 -3
+11 -9 5 -5 -5 -98 -173 -207 -374 l-197 -365 37 -550 c103 -1529 217 -3168
+221 -3175 4 -7 668 152 880 211 240 68 427 140 655 254 351 175 539 324 734
+585 132 176 193 323 250 602 44 211 33 267 -62 321 -48 27 -64 30 -199 38 -80
+5 -155 7 -165 3 -44 -13 -12 18 60 59 170 98 277 140 877 346 226 78 484 168
+575 201 91 32 212 75 270 95 150 52 383 145 396 159 18 17 196 398 247 526 25
+63 54 143 63 178 29 104 39 106 -346 -71 -102 -46 -217 -96 -257 -110 -86 -31
+-265 -67 -334 -67 -50 0 -52 1 -125 76 -155 159 -277 362 -323 540 -28 107
+-28 126 2 120 12 -3 54 -8 92 -11 98 -9 342 -59 460 -95 55 -16 102 -26 106
+-22 11 12 273 832 268 837 -10 10 -360 86 -461 100 -113 16 -213 18 -269 4z" class="svg-elem-3"></path>
+<path d="M6670 13993 c-91 -13 -295 -41 -455 -64 -407 -56 -623 -86 -820 -114
+-93 -13 -260 -35 -370 -50 -110 -15 -220 -34 -244 -42 -60 -21 -124 -82 -150
+-143 -63 -147 -39 -414 50 -534 16 -22 29 -43 29 -47 0 -3 -36 -16 -80 -29
+-67 -19 -81 -27 -86 -47 -8 -31 10 -51 73 -79 97 -43 137 -136 131 -303 l-3
+-84 -95 -32 c-165 -55 -200 -84 -135 -111 19 -7 41 -14 50 -14 19 0 19 -14 -1
+-31 -31 -25 -65 -110 -76 -189 -21 -151 15 -329 87 -422 45 -60 60 -68 205
+-116 197 -64 497 -161 855 -277 182 -59 333 -109 337 -112 4 -2 -21 -47 -56
+-101 -80 -122 -215 -353 -312 -534 -217 -401 -354 -794 -400 -1139 -23 -174
+-15 -470 15 -584 52 -197 154 -348 321 -475 314 -240 752 -295 1335 -169 390
+85 835 283 1252 556 376 246 554 443 868 963 74 123 224 430 241 495 21 77 18
+193 -6 232 -51 85 -209 162 -489 239 -68 19 -126 36 -129 38 -2 2 18 37 45 78
+214 319 341 699 369 1109 7 101 -103 2086 -116 2102 -4 4 -90 -124 -192 -285
+-102 -161 -209 -330 -238 -375 l-52 -81 21 -309 c42 -615 71 -1174 78 -1469
+l6 -301 -45 -27 c-64 -37 -186 -89 -356 -151 -145 -53 -147 -54 -164 -93 -13
+-32 -21 -39 -36 -35 -17 4 -39 -33 -159 -269 -153 -298 -243 -499 -243 -541 0
+-19 7 -30 23 -37 12 -5 139 -35 282 -65 498 -108 777 -190 848 -253 51 -45 9
+-76 -318 -237 -583 -289 -1011 -425 -1459 -466 -178 -17 -535 -6 -656 20 -233
+49 -378 125 -511 269 -150 162 -209 337 -195 577 10 179 69 394 170 625 36 83
+260 519 339 661 13 24 33 31 208 74 107 25 293 71 414 100 121 30 276 67 345
+84 69 16 229 55 355 86 127 31 307 74 400 96 259 62 277 67 273 86 -4 23 -52
+49 -160 88 l-93 33 -3 97 c-5 166 30 240 138 293 90 44 93 84 11 111 l-43 14
+25 21 c128 110 175 429 87 600 -17 33 -29 60 -28 61 2 1 37 10 78 20 93 22
+111 31 103 51 -8 21 -52 43 -163 80 l-95 31 0 114 c1 169 28 227 131 276 64
+30 78 45 70 76 -5 20 -52 37 -498 172 -271 81 -556 167 -633 190 l-140 41
+-165 -23z m-1386 -554 c563 -184 816 -266 844 -274 21 -6 22 -11 22 -118 0
+-62 -3 -163 -7 -225 -5 -98 -8 -112 -22 -107 -13 5 -503 144 -776 220 -44 12
+-181 50 -305 84 -190 53 -230 67 -256 93 -41 38 -65 112 -71 219 -10 153 31
+249 104 249 20 0 230 -63 467 -141z m2581 34 c-24 -57 -35 -138 -33 -243 l2
+-115 -810 -202 c-445 -111 -809 -201 -810 -200 -1 1 1 98 4 215 5 206 6 214
+26 223 11 5 165 38 341 74 468 96 938 193 1115 230 85 18 159 33 164 34 4 1 5
+-7 1 -16z m19 -604 c77 -61 72 -342 -9 -443 -19 -24 -45 -35 -161 -67 -77 -22
+-314 -89 -529 -149 -214 -60 -453 -127 -530 -149 -77 -22 -141 -38 -143 -37
+-1 2 -5 102 -9 222 l-6 219 379 123 c208 68 498 163 644 212 146 48 281 89
+301 89 23 1 46 -7 63 -20z m-2824 -128 c107 -22 251 -52 320 -66 258 -54 907
+-187 962 -197 31 -5 63 -15 71 -21 12 -10 16 -54 19 -224 3 -117 2 -213 -1
+-212 -3 0 -368 92 -811 202 l-804 202 2 115 c3 105 -7 175 -33 241 -7 19 -28
+22 275 -40z m-156 -597 c94 -30 362 -118 596 -194 234 -76 452 -147 484 -157
+l59 -18 -7 -220 c-4 -121 -8 -220 -9 -221 -2 -2 -169 44 -927 256 -58 16 -170
+47 -249 69 -159 45 -183 57 -207 104 -41 79 -58 251 -34 339 16 56 55 98 93
+98 17 0 107 -25 201 -56z m2836 -94 c-15 -43 -19 -84 -20 -186 l0 -132 -792
+-197 c-436 -108 -801 -199 -811 -201 -17 -5 -18 5 -11 213 4 120 7 219 8 220
+8 10 347 73 369 69 18 -4 72 7 140 28 62 18 261 64 442 101 182 37 411 85 510
+105 99 20 181 36 182 36 1 -1 -7 -26 -17 -56z" class="svg-elem-4"></path>
+<path d="M7408 7721 c-339 -64 -621 -120 -626 -126 -19 -21 -386 -754 -380
+-760 3 -3 187 28 409 69 222 41 500 93 617 114 117 22 214 41 216 43 9 9 387
+771 384 774 -2 1 -281 -50 -620 -114z" class="svg-elem-5"></path>
+</g>
+</svg>
 </div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة 
-</p>
 <div class="content">
-<br>
-<h1 class="headings sub-heading cha-num">الفصل الأول</h1>
-<h1 class="headings">أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة</h1><br>
-<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: معنى أشراط الساعة لغة:</h3>
-«الأشراط جمع شرط بالتحريك، والشرط العلامة، وأشراط الساعة أي علاماتها، وأشراط الشيء أوائله، ومنه شرط السلطان وهم نخبة أصحابه الذين يقدمهم على غيرهم من مجموع جنده.
-قال الجوهري <span class="ornaments">r</span>: أشراط الساعة علاماتها وأسبابها التي دون معظمها وقيامها.
-وقال ابن الأثير <span class="ornaments">r</span>: الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط السلطان؛ لأنهم جعلوا لأنفسهم علامات يعرفون بها»<sup>(١)</sup>.
-<br><br><br><br>
-<hr>
-<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٢٩.
+<header>
+<div class="todays-date">
+<span id="hijri-date"></span><br>
+<span id="miladi-date"></span>
+</div>
+<div class="header-btns-div">
+<button id="hide-ended-rows" class="header-btns"><i class="fas fa fa-tasks"></i>إخفاء الأعمال المنتهية</button>
+<button id="clear-local-storage" onclick="cls()" class="header-btns"><i class="fas fa fa-undo-alt"></i>إعــادة جـميــع الأعـمـال</button>
+<button id="install-app" class="header-btns" onclick="inap()"><i class="fas fa fa-download"></i>تــثــبــيــــــت الـتــطــبــيـــــق</button>
+<button id="most-prominent-contributors" class="header-btns" onclick="mpc()"><i class="fas fa fa-star"></i>أبـــــرز الـمـســاهـمـيـــــــــن</button>
+</div>
+<div class="logo-div">
+<img src="icon.svg" alt="أعمالي" onclick="location.reload()"></img>
+</div>
+</header>
+<div class="marquee dont-print">
+<span></span>
+<span></span>
+<p>
+
 </p>
 </div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
+
 <br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+<select id="select" class="select-css">
+<option value="">جميع المواد</option>
+<option value="البحث ومصادر المعلومات">البحث ومصادر المعلومات</option>
+<option value="الجغرافيا">الجغرافيا</option>
+<option value="الكتابة الوظيفية والإبداعية">الكتابة الوظيفية والإبداعية</option>
+<option value="الكيمياء">الكيمياء</option>
+<option value="اللغة الإنجليزية">اللغة الإنجليزية</option>
+<option value="الرياضيات">الرياضيات</option>
+<option value="التقنية الرقمية">التقنية الرقمية</option>
+<option value="الفيزياء">الفيزياء</option>
+</select>
+
+<div include-html="exams.html"></div>
+<div include-html="assignments.html"></div>
+<div include-html="others.html"></div>
+<div include-html="researches.html"></div>
+<div include-html="projects.html"></div>
+
+<div class="break"></div>
+<!-- <footer>
+<a href=""><i class="fab fa-telegram"></i> قناة إشعارات أعمالي</a>
+</footer> -->
 </div>
-<div class="border-top"></div>
-<p class="page-title">
-الفصل الثاني: أشراط الساعة الصغرى
-</p>
-<div class="content">
-<br>
-<h1 class="headings sub-heading cha-num">الفصل الثاني</h1>
-<h1 class="headings">أشراط الساعة الصغرى</h1><br>
-<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: أشراط ظهرت:</h3>
-<p class="subtitles mar-t-7">١. بعثة النبي <span class="ornaments">m</span>:</p>
-أخبر <span class="ornaments">m</span> أن بعثته دليل على قرب الساعة، وأنها أول علامات الساعة الصغرى<sup>(١)</sup>، عن سهل بن سعد <span class="ornaments">h</span> قال: رَأَيْتُ رَسولَ اللهِ <span class="ornaments">g</span> قالَ بإصْبَعَيْهِ هَكَذَا - بالوُسْطَى والَّتي تَلِي الإبْهَامَ -: <span class="hadith">بُعِثْتُ والسَّاعَةُ كَهَاتَيْنِ</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٢. وفاة النبي <span class="ornaments">m</span>:</p>
-الفجيعة بموته <span class="ornaments">m</span>، هي من أوائل علامات قرب الساعة<sup>(٣)</sup>، فقد قال عوف بن مالك <span class="ornaments">h</span>: أَتَيْتُ النَّبيَّ <span class="ornaments">g</span> في غَزْوَةِ تَبُوكَ وهو في قُبَّةٍ مِن أَدَمٍ<sup>(٤)</sup>، فَقالَ: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ: مَوْتِي . . .</span><sup>(٥)</sup> الحديث.
-<br><br><br><br>
-<hr>
-<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٣٧.                               (٢) أخرجه البخاري (٤٩٣٦).
-(٣) محمد العريفي، نهاية العالم، ص٣٨.                               (٤) قبة من أدم: أي خيمة من جلد.
-(٥) أخرجه البخاري (٣١٧٦).
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة
-</p>
-<div class="content">
-<br>
-<p class="subtitles mar-t-7">٣. انشقاق القمر:</p>
-ومن أشراط الساعة انشقاق القمر<sup>(١)</sup>، كما قال الله <span class="ornaments">f</span>: <span class="ayah">ٱقۡتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلۡقَمَرُ</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٤. فتح بيت المقدس:</p>
-ومن أشراط الساعة فتح بيت المقدس<sup>(٣)</sup>، كما جاء في حديث عوف بن مالك <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ</span>، وذكر منها: <span class="hadith">فَتْحُ بَيْتِ المَقْدِسِ</span><sup>(٤)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٥. كثرة ظهور الفتن:</p>
-«الفتن: جمع فتنة، وهي الابتلاء والامتحان والاختبار، ثم كثُرَ استعمالها فيما أخرجه الاختبار للمكروه، ثم أُطلِقت على كلِّ مكروهٍ أو آيٍلٍ إليه؛ كالإثم، والكفر، والقتل، والتَّحريق، وغير ذلك من الأمور المكروهة»<sup>(٥)</sup>.
-<br>
-وقد أخبر <span class="ornaments">m</span> بمجيء فتن عظيمة يلتبس على المؤمن فيها الحق<sup>(٦)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">بَادِرُوا بالأعْمَالِ فِتَنًا كَقِطَعِ اللَّيْلِ المُظْلِمِ، يُصْبِحُ الرَّجُلُ مُؤْمِنًا وَيُمْسِي كَافِرًا، أَوْ يُمْسِي مُؤْمِنًا وَيُصْبِحُ كَافِرًا، يَبِيعُ دِينَهُ بعَرَضٍ مِنَ الدُّنْيَا</span><sup>(٧)</sup>.
-<br><br>
-<hr>
-<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٣٩.                               (٢) سورة القمر، الآية: ١.
-(٣) محمد العريفي، نهاية العالم، ص٤٢.                               (٤) أخرجه البخاري (٣١٧٦).
-(٥) يوسف الوابل، أشراط الساعة، ص٩٠.                       (٦) محمد العريفي، نهاية العالم، ص٤٥.
-(٧) أخرجه مسلم (١١٨).
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-الفصل الثاني: أشراط الساعة الصغرى
-</p>
-<div class="content">
-<br>
-<p class="subtitles mar-t-7">٦. إخبار النبي <span class="ornaments">g</span> بموقعة صفين:</p>
-ومن أشراط الساعة أن النبي <span class="ornaments">g</span> أخبر بمعركة تكون بين طائفتين عظيمتين من المسلمين، وكانت تلك المعركة: معركة صفين، وهي معركة وقعت بين علي ومعاوية <span class="ornaments">k</span> بعد مقتل عثمان <span class="ornaments">h</span> سنة ٣٦ للهجرة<sup>(١)</sup>. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى تَقْتَتِلَ فِئَتانِ عَظِيمَتانِ، وتَكُونُ بيْنَهُما مَقْتَلَةٌ عَظِيمَةٌ ودَعْواهُما واحِدَةٌ</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٧. ظهور الخوارج:</p>
-ومن أشراط الساعة خروج بعض الفرق المخالفة لنهج النبي <span class="ornaments">g</span> وصحابته الكرام <span class="ornaments">j</span>، فعن عبدالله بن مسعود <span class="ornaments">h</span> أنه قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">يخرجُ في آخرِ الزمانِ قومٌ أحداثُ الأسنانِ، سفهاءُ الأحلامِ، يقرأونَ القرآنَ لا يُجاوزُ تَرَاقِيَهُمْ، يقولونَ من قولِ خيرِ البريَّةِ، يمرقونَ من الدِّينِ كما يَمرُقُ السهمُ من الرَّمِيَّةِ</span><sup>(٣)</sup>، ومن هؤلاء فرقة الخوارج، وهم فرقة ضالة مضلة، ومن معتقداتهم: تكفير مرتكب الكبيرة والقول بأنه يخلد في النار، وهذا ضلال مبين، والحق أن المسلم إذا ارتكب هذه الكبائر لا يكفر، لكنه يكون عاصيًا فاسقًا بفعلها، وعليه التوبة والإقلاع عن معصيته. ومن معتقداتهم أيضًا تكفير علي ومعاوية <span class="ornaments">k</span> وكثير من الصحابة الذين رضوا بالتحكيم <span class="ornaments">j</span> جميعًا<sup>(٤)</sup>.
-<br><br>
-<hr>
-<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٤٧.                           (٢) أخرجه مسلم (١٥٧).
-(٣) أخرجه الترمذي (٢١٨٨).                                        (٤) محمد العريفي، نهاية العالم، ص٤٨ - ص٤٩.
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة
-</p>
-<div class="content">
-<br>
-<p class="subtitles mar-t-7">٨. خروج الدجالين الكذابين مدعي النبوة:</p>
-ومن أشراط الساعة خروج الدجالين الكذابين مدعي النبوة الذين يثيرون الفتنة بأباطيلهم<sup>(١)</sup>، فعن أبي هريرة <span class="ornaments">h</span> عن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يُبْعَثَ دَجَّالُونَ كَذّابُونَ، قَرِيبًا مِن ثَلاثِينَ، كُلُّهُمْ يَزْعُمُ أنَّه رَسولُ اللهِ</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٩. اتباع سنن الأمم الماضية:</p>
-ومن أشراط الساعة اتباع سنن الأمم الماضية من اليهود والنصارى وتقليدهم، والتشبه بأخلاقهم والإعجاب بهم، وهذا ما أخبرنا به <span class="ornaments">m</span><sup>(٣)</sup>، فعن أبي سعيد الخدري <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لَتَتَّبِعُنَّ سَنَنَ مَن قَبْلَكُمْ شِبْرًا بشِبْرٍ، وَذِرَاعًا بذِرَاعٍ، حتَّى لو سَلَكُوا جُحْرَ ضَبٍّ لَسَلَكْتُمُوهُ</span> قُلْنَا: يا رَسُولَ اللهِ، اليَهُودَ وَالنَّصَارَى؟ قالَ: <span class="hadith">فَمَنْ؟</span><sup>(٤)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">١٠. قبض العلم وظهور الجهل:</p>
-كما أن من أشراط الساعة قبض العلم وظهور الجهل<sup>(٥)</sup>، فعن أنس بن مالك <span class="ornaments">h</span> قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">إنَّ مِن أشْراطِ السَّاعَةِ: أنْ يُرْفَعَ العِلْمُ ويَثْبُتَ الجَهْلُ، ويُشْرَبَ الخَمْرُ، ويَظْهَرَ الزِّنا</span><sup>(٦)</sup>.
-<br><br>
-<hr>
-<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٥٠.                                (٢) أخرجه البخاري (٣٩٠٦).
-(٣) يوسف الوابل، أشراط الساعة، ص١١١.                             (٤) أخرجه البخاري (٣٤٥٦).   
-(٥) يوسف الوابل، أشراط الساعة، ص١٣١.                             (٦) أخرجه البخاري (٨٠).
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة الصغرى
-</p>
-<div class="content">
-<br><br>
-<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الثاني: أشراط لم تظهر بعد:</h3>
-<p class="subtitles mar-t-7">
-١. ظهور الخسف<sup>(١)</sup> والمسخ<sup>(٢)</sup> والقذف<sup>(٣)</sup>:</p>
-وهذه من العقوبات التي تقع على الناس في آخر الزمان، وهي من أشراط الساعة التي لم تقع إلى الآن<sup>(٤)</sup>، فعن عمران بن حصين <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">في هذه الأمةِ خَسْفٌ ومَسْخٌ وقَذْفٌ</span> فقال رجلٌ مِن المسلمين: يا رسولَ اللهِ، ومتى ذلك؟ قال: <span class="hadith">إذا ظَهَرَتْ القِيانُ<sup>(٥)</sup> والمعازفُ<sup>(٦)</sup> وشُرِبَتْ الخمورُ</span><sup>(٧)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٢. كثرة المطر وقلة النبات:</p>
-ومن أشراط الساعة كثرة المطر وقلة النبات<sup>(٨)</sup>، فعن أنس بن مالك <span class="ornaments">h</span> قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">لا تَقومُ السَّاعةُ حتى يُمطَرَ النَّاسُ مَطرًا عامًّا، ولا تُنبِتَ الأرضُ شيئًا</span><sup>(٩)</sup>.
-<br><br><br>
-<hr>
-<p class="footnotes">(١) الخسف: وهو الهبوط الذي يقع بجزء من الأرض.                  (٤) محمد العريفي، نهاية العالم، ص١٣١.
-(٢) المسخ: وهو تحويل الصورة وتبديلها إلى أقبح منها.                 (٥) القيان: جمع قَينة وهي المرأة المغنية.
-(٣) القذف: وهو الرمي بالحجارة، كما حدث لقوم لوط.              (٦) المعازف: آلات اللهو والغناء.
-(٧) أخرجه الترمذي (٢٢١٢).                                                        (٩) أخرجه أحمد (١٢٤٢٩).
-(٨) يوسف الوابل، أشراط الساعة، ص٢٠٣.
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة
-</p>
-<div class="content">
-<br>
-<p class="subtitles mar-t-7">٣. قتال المسلمين اليهود:</p>
-وهذا القتال سيحدث آخر الزمان وهو من أشراط الساعة، فينتصر فيه المسلمون على اليهود، حتى يقول الحجر والشجر: يا مسلم، يا عبدالله، هذا يهودي خلفي، تعال فاقتله، إلا شجرة الغرقد اليهودية فإنها لا تنطق<sup>(١)</sup>. عن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يُقاتِلَ المُسْلِمُونَ اليَهُودَ، فَيَقْتُلُهُمُ المُسْلِمُونَ حتَّى يَخْتَبِئَ اليَهُودِيُّ مِن وراءِ الحَجَرِ والشَّجَرِ، فيَقولُ الحَجَرُ أوِ الشَّجَرُ: يا مُسْلِمُ يا عَبْدَ اللهِ هذا يَهُودِيٌّ خَلْفِي، فَتَعالَ فاقْتُلْهُ، إلَّا الغَرْقَدَ، فإنَّه مِن شَجَرِ اليَهُودِ</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٤. حسر الفرات عن جبل من ذهب:</p>
-ومن أشراط الساعة أن يُحسَر نهر الفرات عن جبل من ذهب، يقتتل عليه الناس، فيُقتَل من كل مئة تسعة وتسعون، ويقول كل رجل منهم لعلي أكون أنا الذي أنجو<sup>(٣)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يَحْسِرَ الفُراتُ عن جَبَلٍ مِن ذَهَبٍ، يَقْتَتِلُ النَّاسُ عليه، فيُقْتَلُ مِن كُلِّ مِائَةٍ تِسْعَةٌ وتِسْعُونَ، ويقولُ كُلُّ رَجُلٍ منهمْ: لَعَلِّي أكُونُ أنا الذي أنْجُو</span><sup>(٤)</sup>.
-<br><br><br>
-<hr>
-<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص١٣٦.                                  (٢) أخرجه مسلم (٢٩٢٢).
-(٣) يوسف الوابل، أشراط الساعة، ص٢٠٤.                          (٤) أخرجه مسلم (٢٨٩٤).
-</p>
-</div>
-</div>
-</div>
-<!-- * * * * * * * * * * * * * * * -->
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-أشراط الساعة الصغرى
-</p>
-<div class="content">
-<br>
-<p class="subtitles mar-t-7">٥. تكليم السباع والجماد للإنس:</p>
-ومن أشراط الساعة التي أخبر بها نبينا <span class="ornaments">m</span> تكليم السباع والجماد للإنس<sup>(١)</sup>، فعن أبي سعيد الخدري <span class="ornaments">h</span> قال: عَدا الذِّئْبُ على شاةٍ، فأخَذَها، فطَلَبَه الرَّاعي، فانتَزَعَها منه، فأقْعى الذِّئْبُ على ذَنَبِه، قال: ألَا تَتَّقي اللهَ؟ تَنزِعُ مِنِّي رِزقًا ساقَه اللهُ إليَّ! فقال: يا عَجبي! ذِئْبٌ مُقْعٍ على ذَنَبِه، يُكلِّمُني كَلامَ الإنْسِ! فقال الذِّئْبُ: ألَا أُخبِرُك بأعجَبَ من ذلك؟ مُحمَّدٌ <span class="ornaments">g</span> بيَثرِبَ، يُخبِرُ النَّاسَ بأنْباءِ ما قد سَبَقَ، قال: فأقبَلَ الراعي يَسوقُ غَنَمَه حتى دَخَلَ المدينةَ، فزَواها إلى زاويةٍ من زَواياها، ثُمَّ أتَى رسولَ اللهِ <span class="ornaments">g</span> فأخْبَرَه، فأمَرَ رسولُ اللهِ <span class="ornaments">g</span>، فنُودِيَ: الصَّلاةَ جامِعَةً، ثُمَّ خَرَجَ، فقال للرَّاعي: <span class="hadith">أخْبِرْهم</span>، فأخْبَرَهم، فقال رسولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">صَدَقَ والَّذي نَفْسي بيَدِه، لا تَقومُ السَّاعةُ حتى يُكلِّمَ السِّباعُ الإنْسَ، ويُكلِّمَ الرَّجُلَ عَذَبةُ سَوطِه، وشِراكُ نَعْلِه، ويُخبِرَه فَخِذُه بما أحْدَثَ أهْلُه بعْدَه</span><sup>(٢)</sup>.
-<br><br>
-<p class="subtitles mar-t-7">٦. عودة أرض العرب مروجًا وأنهارًا:</p>
-ومن أشراط الساعة عودة أرض العرب مروجًا وأنهارًا بعد أن كان معظمها صحراء قاحلة لا تنبت<sup>(٣)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السّاعَةُ حتّى يَكْثُرَ المالُ ويَفِيضَ، حتّى يَخْرُجَ الرَّجُلُ بزَكاةِ مالِهِ فلا يَجِدُ أحَدًا يَقْبَلُها منه، وحتّى تَعُودَ أرْضُ العَرَبِ مُرُوجًا وأَنْهارًا</span><sup>(٤)</sup>.
-<br><br>
-<hr>
-<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٦٣.                                 (٢) أخرجه أحمد (١١٧٩٢).
-(٣) محمد العريفي، نهاية العالم، ص١٤١.                                      (٤) أخرجه مسلم (١٥٧).
-</p>
-</div>
-</div>
-</div>
+<script src="scripts.js"></script>
 <script>
-const pagesDivs = document.querySelectorAll('.pages .page-content');
-
-pagesDivs.forEach((pageDiv, index) => {
-  if (!pageDiv.classList.contains('no-page-number')) {
-    const numberElement = document.createElement('p');
-    numberElement.classList.add('page-number');
-    const pageNumber = index + 1;
-    const easternArabicNumber = pageNumber.toLocaleString('ar-SA');
-    numberElement.textContent = easternArabicNumber;
-    const secondChild = pageDiv.children[2]; 
-    pageDiv.insertBefore(numberElement, secondChild);
-  }
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('sw.js')
+.then((registration) => {
+console.log('Service Worker registered with scope:', registration.scope);
+})
+.catch((error) => {
+console.log('Service Worker registration failed:', error);
 });
-
-function getPageNumberInEasternArabic(pageNumber) {
-  const skippedDivs = document.querySelectorAll('.no-page-number').length;
-  const adjustedPageNumber = pageNumber - skippedDivs;
-  const tensDigit = Math.floor(adjustedPageNumber / 10);
-  const onesDigit = adjustedPageNumber % 10;
-  let easternArabicNumber = '';
-  if (tensDigit > 0) {
-    easternArabicNumber += easternArabicNumerals[tensDigit];
-  }
-  easternArabicNumber += easternArabicNumerals[onesDigit];
-  return easternArabicNumber;
 }
+
+window.addEventListener('beforeinstallprompt', (event) => {
+deferredPrompt = event;
+});
 </script>
 </body>
 </html>
-<!-- * * * * * * * * * * * * * * * 
-<div class="pages">
-<div class="page-content">
-<br>
-<div class="square-div">
-<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
-</div>
-<div class="border-top"></div>
-<p class="page-title">
-المقدمة
-</p>
-<p class="basmalah">﷽</p>
-<div class="content">
-<p class="subtitles">* المقدمة:</p>
-
-</div>
-</div>
-</div> -->
