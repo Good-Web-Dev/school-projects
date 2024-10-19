@@ -22,20 +22,28 @@ width:210mm !important;
 </style>
 <style>
 @font-face{
-font-family:"uthman-tn-bold";
+font-family:"uthman-tn-hafs";
+src:url("https://good-web-dev.github.io/WebFonts/uthman-tn-hafs.woff2") format("woff2");
+}
+@font-face{
+font-family:"uthman-tn";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn-bold.woff2") format("woff2");
+font-weight:bold;
 }
 @font-face{
 font-family:"uthman-tn";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/uthman-tn.woff2") format("woff2");
+font-weight: normal;
 }
 @font-face{
 font-family:"lotus";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus.woff2") format("woff2");
+font-weight: normal;
 }
 @font-face{
-font-family:"lotus-bold";
+font-family:"lotus";
 src:url("https://good-web-dev.github.io/school-projects/researches/fonts/lotus-bold.woff2") format("woff2");
+font-weight:bold;
 }
 @font-face{
 font-family:"basmalah";
@@ -57,7 +65,7 @@ user-select:none;
 width:210mm;
 height:297mm;
 border:0px #000 solid;
-margin:5px auto;
+margin:5px auto 100px auto;
 padding:30px 60px;
 }
 .page-content{
@@ -68,7 +76,7 @@ position:relative;
 }
 .border-top{
 width:100%;
-height:2px;
+height:1.5px;
 border:solid 2px #000;
 border-bottom-width:3px;
 border-left:none;
@@ -79,133 +87,197 @@ top:45px;
 .page-number{
 background-color:#F2F2F2;
 width:70px;
-height:38px;
+height:40px;
 position:absolute;
-top:-17px;
-padding:2px 0 0 0;
+top:-20px;
 right:0;
 font-family:lotus;
 text-align:center;
-font-size:22px;
+font-size:25px;
+}
+.closing{
+width:220px;
+text-align: center;
+margin:20px auto 0 auto;
+display: block;
 }
 .square{
-width:45px;
+width:43px;
 position:absolute;
-top:6px;
-right:-5.5px;
+top:7px;
+right:-6px;
 }
 .square-div{
 text-align:center;
 border:2px #000 solid;
 border-top:none;
 border-bottom:none;
-width:45px;
+width:42px;
 height:40px;
 position:absolute;
 top:5px;
 right:70px;
 }
 .cover{
-background-image:url('https://good-web-dev.github.io/school-projects/researches/cell-structures-and-functions/cover.svg');
+background-image:url('https://good-web-dev.github.io/school-projects/researches/signs-of-the-hour/cover.svg');
 background-size:1000px;
 background-position:center -115px;
 background-repeat:no-repeat;
 }
 .page-title{
-font-family:uthman-tn-bold;
+font-family:uthman-tn;
+font-weight: bold;;
 position:absolute;
-top:-21px;
-font-size:22px;
+top:-24px;
+font-size:25px;
 padding:0 3px;
 }
-.pages:nth-of-type(odd) .page-number {
+.pages:nth-of-type(even) .page-number {
 left: 0;
 }
-.pages:nth-of-type(odd) .square-div {
+.pages:nth-of-type(even) .square-div {
 left: 70px;
 }
-.pages:nth-of-type(odd) .page-title {
+.pages:nth-of-type(even) .page-title {
 right:0;
 }
 .basmalah{
 font-family:basmalah;
-font-size:154px;
-margin: 30px 0 140px 0;
+font-size:170px;
+margin: 10px 0 173px 0;
 text-align:center;
 height:10px;
 }
 .content{
 direction:rtl;
 font-family:lotus;
-font-size:30px;
+font-size:32px;
 line-height:1.6;
+text-align:justify;
 }
 .subtitles{
-font-family:lotus-bold;
-font-size:34px;
+font-family:lotus;
+font-weight: bold;
+font-size:36px;
 margin-bottom:3px;
 }
-.footnotes p{
-font-size:20px;
-padding-top:20px;
+.headings{
+font-family: uthman-tn;
+font-weight: bold;;
+text-align:center;
+font-size:48px;
+margin:0;
 }
-hr{
-width:250px;
-border:1px solid #000;
-position:absolute;
-right:0;
+.sub-heading{
+font-size:38px;
+margin-top:10px;
+}
+.cha-num{
+font-size:44px;
+margin-top:10px;
+}
+.footnotes{
+font-size:26px;
+white-space:pre-wrap;
+text-align: justify;
+position: absolute;
+bottom:-85px;
+border-top:0px solid #000;
+padding-top:13px;
+}
+.footnotes::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+height: 1.7px; 
+width: 300px;
+background-color: black;
 }
 sup{
 font-size:20px;
 }
 b{
-font-family:lotus-bold;
-font-weight:normal;
+font-family:lotus;
+font-weight: 700;
 }
-table, th, td{
+.resources-table, .resources-table th, .resources-table td{
 border-collapse:collapse;
 border:2px solid #000;
-font-size:28px;
-padding:5px;
+padding:10px;
+font-size: 36px;
+text-align: center;
+font-weight: 500;
 }
-td:nth-child(odd){
-text-align:center;
+.resources-table{
+margin:auto;
+width:100%;
 }
-td:nth-child(even){
-padding-right:15px;
+.resources-table tr:nth-child(even):not(.resources-table tr:nth-child(2)){
+background-color: #efefefaa;
+font-weight: 700;
 }
-table{
-width:90%;
-margin:25px auto 0 auto;
-}
-th{
-font-family:lotus-bold;
-background-color:#f2f2f2;
-}
-td{
-font-family:lotus;
-}
-.content-js:not(.resources){
-text-decoration:underline 0.5px #000;
-text-decoration-skip-ink:none;
-color:transparent;
-}
-.resources-js{
-color:transparent;
-}
-.resources-js .subtitles{
-text-decoration:underline 0.5px #000;
-text-decoration-skip-ink:none;
+.resources-table tr:first-child td{
+background-color: #ddd;
+font-weight: bold;
 }
 .en-word{
 font-family:georgia;
 font-size:26px;
+}
+.ayah{
+font-family:uthman-tn-hafs;
+}
+.hadith{
+font-family:uthman-tn;
+font-weight: bold;
+}
+.hadith::before{
+content:"«";
+}
+.hadith::after{
+content:"»";
+}
+.ayah::before{
+content:"ﵻ";
+}
+.ayah::after{
+content:"ﵺ";
+}
+.ornaments{
+font-family:almodrajat;
+font-size: 43px;
+line-height: 0.5;
+position: relative;
+font-weight: 400;
+}
+/* ----- styling classes: ----- */
+.tar{
+text-align:right;
+}
+.tal{
+text-align:right;
+}
+.tac{
+text-align:right;
+}
+.mar-t-m-20{
+margin-top:-20px;
+}
+.mar-t-7{
+margin-top:7px;
+}
+.star::before{
+content:"* ";
+font-family:lotus;
+font-weight: bold;;
 }
 </style>
 </head>
 <body>
 <div class="pages cover no-page-number" onclick="print()">
 </div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -214,21 +286,217 @@ font-size:26px;
 </div>
 <div class="border-top"></div>
 <p class="page-title">
-أشراط الساعة
+الفهرس
 </p>
+<div class="content">
+<h1 class="headings" style="margin:50px 0 -60px 0;">الفهرس</h1>
+<p style="width:100%; height:30px; margin:0;"></p>
+<br>
+
+<div style="width:100%; font-size: 36px; text-align: justify; font-weight: 500; line-height:1.7;" contenteditable="">
+<!-- "ㅤ" " " "․․․․․․" "․" -->
+المقدمة ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․  ٢ الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة ․ ٤ ㅤㅤالمبحث الأول: معنى أشراط الساعة لغة ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․ ٤ ㅤㅤالمبحث الثاني: معنى أشراط الساعة اصطلاحًا    ․․․․․․․․․․․․․․․․․․․․․․    ٥ ㅤㅤالمبحث الثالث: الأدلة من الكتاب على أشراط الساعة وعلاماتها  ․․․․    ٥ ㅤㅤالمبحث الرابع: الأدلة من السنة على أشراط الساعة وعلاماتها   ․․․․․․․   ٦ الفصل الثاني: أشراط الساعة الصغرى    ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․  ٨ ㅤㅤالمبحث الأول: معنى أشراط الساعة لغة ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․  ٨ ㅤㅤالمبحث الثاني: أشراط  لم تظهر بعد  ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․ ١٢
+</div>
+
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+المقدمة
+</p>
+<div class="content">
+<h1 class="headings" style="margin:50px 0 -75px 0;">المقدمة</h1>
 <p class="basmalah">﷽</p>
+الحمد لله رب العالمين، والصلاة والسلام على أشرف الأنبياء والمرسلين، نبينا محمد وعلى آله وصحبه أجمعين، وبعد؛
+<p style="width:100%; height:30px; margin:0;"></p>
+فيُعد الحديث عن أشراط الساعة من أهم الأحاديث التي تخص العقيدة الإسلامية، لما له من أثر بالغ في تقوية الإيمان وتحصين النفس من الشكوك والشبهات، وتهيئة المسلم لما ينتظره من أحداث عظيمة في آخر الزمان، وحثه على الاستعداد له بالعمل الصالح والتقرب إلى الله <span class="ornaments">f</span>، وتذكيره بِحتمية يوم القيامة، وأنه اليوم الذي لا ريب فيه كما قال <span class="ornaments">c</span>: <span class="ayah">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَۚ لَيَجۡمَعَنَّكُمۡ إِلَىٰ يَوۡمِ ٱلۡقِيَٰمَةِ لَا رَيۡبَ فِيهِۗ وَمَنۡ أَصۡدَقُ مِنَ ٱللَّهِ حَدِيثٗا</span><sup>(١)</sup>. لذا، فقد عمدنا في هذا البحث إلى الحديث عن أشراط الساعة بإيضاح معانيها وذكر الأدلة الدالة عليها من الكتاب والسنة، بالإضافة إلى ذكر بعض أشراطها الصغرى، وذكر أشراطها الكبرى.
+<p style="width:100%; height:30px; margin:0;"></p>
+وقد قسمنا هذا البحث إلى ثلاثة فصول رئيسية:
+<p style="width:100%; height:15px; margin:0;"></p>
+* الفصل الأول (معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة): ويُعنى بإيضاح معاني أشراط الساعة لغة واصطلاحًا، وذكر الأدلة الدالة عليها من الكتاب والسنة.
+<p class="footnotes">(١) سورة النساء، الآية: ٨٧.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+أشراط الساعة
+</p>
 <div class="content">
-<p class="subtitles">* مقدمة:</p>
-الخلية هي المكون الرئيس لجميع الكائنات الحية، حيث يتكون جسم الإنسان من عدد كبير من الخلايا، وتكمن وظيفتها بدعم بنية الجسم واستقبال العناصر الغذائية من الغذاء وتحويلها إلى طاقة يتم استخدامها لتأدية وظائف متخصصة، إضافةً لاحتوائها على المادة الوراثية <span class="en-word">DNA</span> حيث يمكنها تصنيع نسخ من نفسها لتؤدي وظيفتها في الجسم، وفي هذا البحث سنذكر تراكيبها ووظائفها الكثيرة والمعقدة.
-<p class="subtitles">* النواة:</p>
-تعد النواة مركزًا لقيادة الخلية، حيث ترسل بدورها إشارات إلى مكونات الخلية الأخرى لتنمو ويحدث فيها الانقسام وتموت لاحقًا، إضافة لاحتوائها على المادة الوراثية أو ما يسمى بالحمض النووي <span class="en-word">DNA</span>، وتحاط النواة بغشاء يسمى الغلاف النووي يفصلها عن بقية أجزاء الخلية.
-<p class="subtitles">* الجدار الخلوي:</p>
-يمكن القول بأن الجدار الخلوي هو الطبقة الخارجية للخلايا ويكون في الغالب ذو بنية صلبة ويحيط بغشاء الخلية ومكوناتها الأخرى ليوفّر الشكل والدعم للخلايا وحمايتها من الصدمات والإصابات الخارجية التي يمكن أن تتعرض لها.
-<p class="subtitles">* السيتوبلازم:</p>
-يكون السيتوبلازم على شكل مادة سميكة أشبه بالهلامية وشفافة توجد داخل غشاء الخلية
+<p style="width:100%; height:80px; margin:0;"></p>
+* الفصل الثاني (أشراط الساعة الصغرى): ويتناول أشراط الساعة الصغرى، مُستعرضًا أهم علاماتها، ومُفسّرًا بعضها بشرح مبسّط.
+<p style="width:100%; height:30px; margin:0;"></p>
+* الفصل الثالث (أشراط الساعة الكبرى): وتخصص بذكر أشراط الساعة الكبرى، مُبيّنًا ومفصّلًا لبعض ما ورد فيها.
+<p style="width:100%; height:30px; margin:0;"></p>
+وقد واجهتنا أثناء إعداد هذا البحث بعض الصعوبات، تمثلت في التوفيق بين دقة وصحة المصادر وكثرتها، بالإضافة إلى التقسيم والكتابة، وما إلى ذلك.
+<p style="width:100%; height:30px; margin:0;"></p>
+وفي الختام، نقدم جزيل الشكر للأستاذ عبدالله مقبل المقبل، وللدكتور محمد العريفي، وللدكتور يوسف الوابل، وللدكتور عبدالله الغفيلي، ولكل من ساهم في إنجاز هذا البحث، سواءً بتقديم المعلومات أو الدعم المعنوي، سائلين الله تعالى أن يتقبله منا، وأن ينفع به الإسلام والمسلمين، والله ولي التوفيق.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة 
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading cha-num">الفصل الأول</h1>
+<h1 class="headings">معنى أشراط الساعة وعلاماتها وأدلتها من <br> الكتاب والسنة</h1><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: معنى أشراط الساعة لغة:</h3>
+<p style="width:100%; height:10px; margin:0; padding:0;"></p>
+«الأشراط جمع شرط بالتحريك، والشرط العلامة، وأشراط الساعة أي علاماتها، وأشراط الشيء أوائله، ومنه شرط السلطان وهم نخبة أصحابه الذين يقدمهم على غيرهم من مجموع جنده.
+قال الجوهري <span class="ornaments">r</span>: أشراط الساعة علاماتها وأسبابها التي دون معظمها وقيامها.
+وقال ابن الأثير <span class="ornaments">r</span>: الأشراط: العلامات، واحدها شرط بالتحريك، وبه سميت شرط السلطان؛ لأنهم جعلوا لأنفسهم علامات يعرفون بها»<sup>(١)</sup>.
+
+<br><br>
+فتبين من هذا أن الأشراط لغةً هي علامات الشيء المتقدمة عليه، ومما يدل على تسمية الأشراط في السنة بالعلامات ما جاء في حديث جبريل <span class="ornaments">n</span> المشهور عند النسائي <span class="ornaments">r</span> قال<sup>(٢)</sup>: يا محمدُ أخبرني متى الساعةُ، قال. فنكس فلم يجبه شيئًا، ثم أعاد فلم يجبه شيئًا، ثم أعاد فلم يُجبه شيئًا، ورفع رأسَه فقال: <span class="hadith">ما المسؤولُ عنها بأعلمَ من السائلِ، ولكن لها علاماتٌ تعرف بها…</span><sup>(٣)</sup> الحديث.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
+<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٢٩.                              (٢) المرجع السابق، ص٢٩ - ص٣٠.
+(٣) أخرجه النسائي (٥٠٠٦).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+أشراط الساعة
+</p>
+<div class="content">
+<p style="width:100%; height:15px;"></p>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الثاني: معنى أشراط الساعة اصطلاحًا:</h3>
+<p style="width:100%; height:10px; margin:0; padding:0;"></p>
+«أشراط الساعة اصطلاحا: هي العلامات التي تسبق يوم القيامة وتدل على قدومها.<br>
+يقول الحليمي <span class="ornaments">r</span>: أما انتهاء الحياة الأولى فإن لها مقدمات تسمى أشراط الساعة وهي أعلامها.
+ويقول البيهقي <span class="ornaments">r</span> في تحديد المراد من الأشراط: أي ما يتقدمها من العلامات الدالة على قرب حينها. ويقول الحافظ ابن حجر <span class="ornaments">r</span> المراد بالأشراط: العلامات التي يعقبها قيام الساعة»<sup>(١)</sup>.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
+<br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الثالث: الأدلة من الكتاب على أشراط الساعة وعلاماتها:</h3>
+<p style="width:100%; height:10px; margin:0; padding:0;"></p>
+من الآيات الدالة على أشراط الساعة قوله <span class="ornaments">f</span>: <span class="ayah">فَهَلۡ يَنظُرُونَ إِلَّا ٱلسَّاعَةَ أَن تَأۡتِيَهُم بَغۡتَةٗۖ فَقَدۡ جَآءَ أَشۡرَاطُهَاۚ فَأَنَّىٰ لَهُمۡ إِذَا جَآءَتۡهُمۡ ذِكۡرَىٰهُمۡ</span><sup>(٢)</sup>، وقد ورد في تفسيرها في المختصر في التفسير: «فهل ينتظر الكفار إلا أن تأتيهم الساعة فجأة من غير سابق علم لهم بها؟! فقد جاءت علاماتها، ومنها بعثته <span class="ornaments">g</span>، وانشقاق القمر، فكيف لهم أن يتذكروا إذا جاءتهم الساعة؟»<sup>(٣)</sup>.
+<br>
+ومن الآيات الدالة على أشراط الساعة قوله <span class="ornaments">f</span>: <span class="ayah">قُلۡ أَرَءَيۡتَكُمۡ إِنۡ أَتَىٰكُمۡ عَذَابُ ٱللَّهِ أَوۡ أَتَتۡكُمُ ٱلسَّاعَةُ أَغَيۡرَ ٱللَّهِ تَدۡعُونَ إِن كُنتُمۡ صَٰدِقِينَ</span><sup>(٤)</sup>، وقد ورد في تفسيرها في المختصر في التفسير: «قل - أيها الرسول - لهؤلاء المشركين: أخبروني إن
+<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٣١.        (٢) سورة محمد، الآية: ١٨.
+(٣) المختصر في تفسير القرآن الكريم، جماعة من علماء التفسير، ص٥٠٨.
+(٤) سورة الأنعام، الآية: ٤٠.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الأول: معنى أشراط الساعة وعلاماتها وأدلتها من الكتاب والسنة
+</p>
+<div class="content">
+<p style="width:100%; height:55px; margin:0; padding:0;"></p>
+جاءكم عذاب من الله أو جاءتكم الساعة التي وُعِدتُّم أنها آتية، أتطلبون إذ ذاك غير الله ليكشف ما ينزل بكم من البلاء والشدة، إن كنتم صادقين في ادعاء أن معبوداتكم تجلب نفعًا أو تدفع ضرًّا؟!»<sup>(١)</sup>.
+<br>
+ومن الآيات الدالة على أشراط الساعة قوله <span class="ornaments">c</span>: <span class="ayah">وَمَا خَلَقۡنَا ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَ وَمَا بَيۡنَهُمَآ إِلَّا بِٱلۡحَقِّۗ وَإِنَّ ٱلسَّاعَةَ لَأٓتِيَةٞۖ فَٱصۡفَحِ ٱلصَّفۡحَ ٱلۡجَمِيلَ</span><sup>(٢)</sup>، وقد قال ابن كثير <span class="ornaments">r</span> في تفسيره لهذه الآية: «ثم أخبر نبيه بقيام الساعة، وإنها كائنة لا محالة»<sup>(٣)</sup>.
+<br><p style="width:100%; height:15px; margin:0; padding:0;"></p>
+والأدلة من الكتاب في هذا الشأن كثيرة جدًّا.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
+<br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الرابع: الأدلة من السنة على أشراط الساعة وعلاماتها:</h3>
+<p style="width:100%; height:10px; margin:0; padding:0;"></p>
+من الأحاديث الدالة على أشراط الساعة الحديث الذي رواه عوف بن مالك <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السّاعَةِ: مَوْتِي، ثُمَّ فَتْحُ بَيْتِ المَقْدِسِ، ثُمَّ مُوتانٌ يَأْخُذُ فِيكُمْ كَقُعاصِ الغَنَمِ، ثُمَّ اسْتِفاضَةُ المالِ حتّى يُعْطى الرَّجُلُ مِئَةَ دِينارٍ فَيَظَلُّ ساخِطًا، ثُمَّ فِتْنَةٌ لا يَبْقى بَيْتٌ مِنَ العَرَبِ إلّا دَخَلَتْهُ، ثُمَّ هُدْنَةٌ تَكُونُ بيْنَكُمْ وبيْنَ بَنِي الأصْفَرِ، فَيَغْدِرُونَ فَيَأْتُونَكُمْ تَحْتَ ثَمانِينَ غايَةً، تَحْتَ كُلِّ غايَةٍ اثْنا عَشَرَ أَلْفًا</span><sup>(٤)</sup>.
+<p class="footnotes">(١) المختصر في تفسير القرآن الكريم، جماعة من علماء التفسير، ص١٣٢.
+(٢) سورة الحجر، الآية: ٨٥.
+(٣) تفسير القرآن العظيم، الحافظ إسماعيل بن كثير، ج٤، ص٥٤٥.
+(٤) أخرجه البخاري (٣١٧٦).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+أشراط الساعة
+</p>
+<div class="content">
+<p style="width:100%; height:55px; margin:0; padding:0;"></p>
+ومن الأحاديث الدالة على أشراط الساعة الحديث الذي رواه أبو هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السّاعَةُ حتّى تَقْتَتِلَ فِئَتانِ عَظِيمَتانِ، يَكونُ بيْنَهُما مَقْتَلَةٌ عَظِيمَةٌ، دَعْوَتُهُما واحِدَةٌ، وحتّى يُبْعَثَ دَجّالُونَ كَذّابُونَ، قَرِيبٌ مِن ثَلاثِينَ، كُلُّهُمْ يَزْعُمُ أنَّه رَسولُ اللَّهِ، وحتّى يُقْبَضَ العِلْمُ، وتَكْثُرَ الزَّلازِلُ، ويَتَقارَبَ الزَّمانُ، وتَظْهَرَ الفِتَنُ، ويَكْثُرَ الهَرْجُ، وهو القَتْلُ، وحتّى يَكْثُرَ فِيكُمُ المالُ فَيَفِيضَ، حتّى يُهِمَّ رَبَّ المالِ مَن يَقْبَلُ صَدَقَتَهُ، وحتّى يَعْرِضَهُ عليه، فَيَقُولَ الذي يَعْرِضُهُ عليه: لا أرَبَ لي به، وحتّى يَتَطاوَلَ النّاسُ في البُنْيانِ، وحتّى يَمُرَّ الرَّجُلُ بقَبْرِ الرَّجُلِ فيَقولُ: يا لَيْتَنِي مَكانَهُ! وحتّى تَطْلُعَ الشَّمْسُ مِن مَغْرِبِها، فإذا طَلَعَتْ ورَآها النّاسُ -يَعْنِي آمَنُوا- أجْمَعُونَ، فَذلكَ حِينَ لا يَنْفَعُ نَفْسًا إيمانُها لَمْ تَكُنْ آمَنَتْ مِن قَبْلُ، أوْ كَسَبَتْ في إيمانِها خَيْرًا، ولَتَقُومَنَّ السّاعَةُ وقدْ نَشَرَ الرَّجُلانِ ثَوْبَهُما بيْنَهُما، فلا يَتَبايَعانِهِ ولا يَطْوِيانِهِ، ولَتَقُومَنَّ السّاعَةُ وقَدِ انْصَرَفَ الرَّجُلُ بلَبَنِ لِقْحَتِهِ فلا يَطْعَمُهُ، ولَتَقُومَنَّ السّاعَةُ وهو يُلِيطُ حَوْضَهُ فلا يَسْقِي فِيهِ، ولَتَقُومَنَّ السّاعَةُ وقدْ رَفَعَ أُكْلَتَهُ إلى فِيهِ فلا يَطْعَمُها</span><sup>(١)</sup>.
+<br><p style="width:100%; height:15px; margin:0; padding:0;"></p>
+والأدلة من السنة في هذا الشأن كثيرة جدًّا. وبعض هذه العلامات مثل: فتح بيت المقدس، وظهور الدجالين الكذابين، وظهور الفتن، وقبض العلم، وطلوع الشمس من مغربها، سيأتي الحديث عنها في الفصول التالية بإذن الله تعالى.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
+<p class="footnotes">(١) أخرجه البخاري (٧١٢١)
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<h1 class="headings sub-heading cha-num">الفصل الثاني</h1>
+<h1 class="headings">أشراط الساعة الصغرى</h1><br>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الأول: أشراط ظهرت:</h3>
+<p class="subtitles mar-t-7">١. بعثة النبي <span class="ornaments">m</span>:</p>
+أخبر <span class="ornaments">m</span> أن بعثته دليل على قرب الساعة، وأنها أول علامات الساعة الصغرى<sup>(١)</sup>، عن سهل بن سعد <span class="ornaments">h</span> قال: رَأَيْتُ رَسولَ اللهِ <span class="ornaments">g</span> قالَ بإصْبَعَيْهِ هَكَذَا - بالوُسْطَى والَّتي تَلِي الإبْهَامَ -: <span class="hadith">بُعِثْتُ والسَّاعَةُ كَهَاتَيْنِ</span><sup>(٢)</sup>، وعن أبي جبيرة بن الضحاك الأنصاري <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">بُعِثتُ في نَسمِ الساعةِ</span> <sup>(٣)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٢. وفاة النبي <span class="ornaments">m</span>:</p>
+الفجيعة بموته <span class="ornaments">m</span>، هي من أوائل علامات قرب الساعة<sup>(٤)</sup>، فقد قال عوف بن مالك <span class="ornaments">h</span>: أَتَيْتُ النَّبيَّ <span class="ornaments">g</span> في غَزْوَةِ تَبُوكَ وهو في قُبَّةٍ مِن أَدَمٍ<sup>(٥)</sup>، فَقالَ: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ: مَوْتِي . . .</span><sup>(٦)</sup> الحديث.
+ 
+<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٣٧.                                    (٢) أخرجه البخاري (٤٩٣٦).
+(٣) رواه الحاكم في الكنى، وقال الألباني "صحيح" كما في السلسة الصحيحة الحديث رقم (۸۰۸)، ونسم الساعة أولها، والنسم في الأصل أول هبوب الريح الضعيفة.
+(٤) محمد العريفي، نهاية العالم، ص٣٨.                                    (٥) قبة من أدم: أي خيمة من جلد.
+(٦) أخرجه البخاري (٣١٧٦).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -241,18 +509,51 @@ font-size:26px;
 </p>
 <div class="content">
 <br>
-حيث تحدث فيه معظم التفاعلات الكيميائية في الخلية، ويحتوي على مكونات الخلية الأخرى كالشبكة الإندوبلازمية، الفجوات، الميتوكوندريا، والريبوسومات، وغيرها الكثير.
-<p class="subtitles">* الغشاء الخلوي:</p>
-يعرف الغشاء الخلوي بأنه البطانة الخارجية للخلية، فهو غشاء رقيق يختصّ بأنه شبه نافذ ويحيط بسيتوبلازم الخلية ومحتوياتها ويقوم بفصل الخلية عن محيطها ويسمح بدخول وخروج المواد المختلفة منها.
-<p class="subtitles">* الهيكل الخلوي:</p>
-يحدد الهيكل الخلوي شكل الخلية، فهو عبارة عن شبكة من الألياف الطويلة التي تشكّل البناء العام للخلية نظرًا لدوره المهم في انقسام الخلية والسماح لها بالتحرك، فهو أيضًا يوفر نظامًا يوجه حركة مكونات الخلية الأخرى.
-<p class="subtitles">* الريبوسومات:</p>
-تعد الريبوسومات المواقع التي يتم فيها تصنيع جزيئات البروتين من الأحماض الأمينية، حيث تتكون من بروتينات و<span class="en-word">RNA</span>، ويكون جزء منها مرتبطًا بالشبكة الإندوبلازمية والجزء الآخر يسبح حرًّا في السيتوبلازم.
-<p class="subtitles">* الأهداب والأسواط:</p>
-يمكن تعريف الأهداب والأسواط بأنها زوائد خلوية متحركة توجد في الخلايا الحيوانية فقط ولا توجد في الخلايا النباتية، وتساعد على حركة الخلية ونقل السوائل والمواد عبر الخلية، أما الأهداب فتتواجد وتكثر في الجهاز التنفسي عند البشر لتمنع استنشاق البخار والدخان والكائنات الضارة من دخول الرئتين وحمايتها، إضافةً لوظيفتها في نقل الطعام والأكسجين
+<p class="subtitles mar-t-7">٣. انشقاق القمر:</p>
+ومن أشراط الساعة انشقاق القمر<sup>(١)</sup>، كما قال الله <span class="ornaments">f</span>: <span class="ayah">ٱقۡتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلۡقَمَرُ</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٤. فتح بيت المقدس:</p>
+ومن أشراط الساعة فتح بيت المقدس<sup>(٣)</sup>، كما جاء في حديث عوف بن مالك <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">اعْدُدْ سِتًّا بيْنَ يَدَيِ السَّاعَةِ</span>، وذكر منها: <span class="hadith">فَتْحُ بَيْتِ المَقْدِسِ</span><sup>(٤)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٥. كثرة ظهور الفتن:</p>
+«الفتن: جمع فتنة، وهي الابتلاء والامتحان والاختبار، ثم كثُرَ استعمالها فيما أخرجه الاختبار للمكروه، ثم أُطلِقت على كلِّ مكروهٍ أو آيٍلٍ إليه؛ كالإثم، والكفر، والقتل، والتَّحريق، وغير ذلك من الأمور المكروهة»<sup>(٥)</sup>.
+<br>
+وقد أخبر <span class="ornaments">m</span> بمجيء فتن عظيمة يلتبس على المؤمن فيها الحق<sup>(٦)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">بَادِرُوا بالأعْمَالِ فِتَنًا كَقِطَعِ اللَّيْلِ المُظْلِمِ، يُصْبِحُ الرَّجُلُ مُؤْمِنًا وَيُمْسِي كَافِرًا، أَوْ يُمْسِي مُؤْمِنًا وَيُصْبِحُ كَافِرًا، يَبِيعُ دِينَهُ بعَرَضٍ مِنَ الدُّنْيَا</span><sup>(٧)</sup>.
+ 
+<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٣٩.                               (٢) سورة القمر، الآية: ١.
+(٣) محمد العريفي، نهاية العالم، ص٤٢.                               (٤) أخرجه البخاري (٣١٧٦).
+(٥) يوسف الوابل، أشراط الساعة، ص٩٠.                       (٦) محمد العريفي، نهاية العالم، ص٤٥.
+(٧) أخرجه مسلم (١١٨).
+</p>
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<p class="subtitles mar-t-7">٦. إخبار النبي <span class="ornaments">g</span> بموقعة صفين:</p>
+ومن أشراط الساعة أن النبي <span class="ornaments">g</span> أخبر بمعركة تكون بين طائفتين عظيمتين من المسلمين، وكانت تلك المعركة: معركة صفين، وهي معركة وقعت بين علي ومعاوية <span class="ornaments">k</span> بعد مقتل عثمان <span class="ornaments">h</span> سنة ٣٦ للهجرة<sup>(١)</sup>. فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى تَقْتَتِلَ فِئَتانِ عَظِيمَتانِ، وتَكُونُ بيْنَهُما مَقْتَلَةٌ عَظِيمَةٌ ودَعْواهُما واحِدَةٌ</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٧. ظهور الخوارج:</p>
+ومن أشراط الساعة خروج بعض الفرق المخالفة لنهج النبي <span class="ornaments">g</span> وصحابته الكرام <span class="ornaments">j</span>، فعن عبدالله بن مسعود <span class="ornaments">h</span> أنه قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">يخرجُ في آخرِ الزمانِ قومٌ أحداثُ الأسنانِ، سفهاءُ الأحلامِ، يقرأونَ القرآنَ لا يُجاوزُ تَرَاقِيَهُمْ، يقولونَ من قولِ خيرِ البريَّةِ، يمرقونَ من الدِّينِ كما يَمرُقُ السهمُ من الرَّمِيَّةِ</span><sup>(٣)</sup>، ومن هؤلاء فرقة الخوارج، وهم فرقة ضالة مضلة، ومن معتقداتهم: تكفير مرتكب الكبيرة والقول بأنه يخلد في النار، وهذا ضلال مبين، والحق أن المسلم إذا ارتكب هذه الكبائر لا يكفر، لكنه يكون عاصيًا فاسقًا بفعلها، وعليه التوبة والإقلاع عن معصيته. ومن معتقداتهم أيضًا تكفير علي ومعاوية <span class="ornaments">k</span> وكثير من الصحابة الذين رضوا بالتحكيم <span class="ornaments">j</span> جميعًا<sup>(٤)</sup>.
+ 
+<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص٤٧.                           (٢) أخرجه مسلم (١٥٧).
+(٣) أخرجه الترمذي (٢١٨٨).                                        (٤) محمد العريفي، نهاية العالم، ص٤٨ - ص٤٩.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -265,16 +566,53 @@ font-size:26px;
 </p>
 <div class="content">
 <br>
-في بعض الخلايا الحيوانية الأخرى.
-<p class="subtitles">* الشبكة الإندوبلازمية:</p>
-تعد الشبكة الإندوبلازمية شبكة من الأكياس المسطحة والأنابيب المفرغة التي تمتد عبر سيتوبلازم الخلية سواء كانت خلايا نباتية أم حيوانية، وتكون مرتبطة ببعضها بواسطة غشاء واحد متصل ببعضه البعض؛ بحيث يوفر لمكونات الخلية الأخرى تجويف داخلي كمساحة داخلية، وتشغل هذه الشبكة أكثر من ١٠٪ من الحجم الكلي للخلية، ويسمح بنقل الجزيئات المختلفة بشكل انتقائي من وإلى الخلية عبر السيتوبلازم.
-<p class="subtitles">* البلاستيدات الخضراء:</p>
-تعد البلاستيدات الخضراء من المكونات المميزة للخلايا النباتية وهي أجسام صغيرة تساهم في تصنيع وتخزين المواد الغذائية في الخلية، إذ تقوم بحبس الطاقة المستمدة من ضوء الشمس أثناء حدوث عملية التمثيل الضوئي في النباتات لإنتاج الغذاء، وتكون على شكل أقراص مرتبة أشبه بالصفائح المرصوصة فوق بعضها البعض.
-<p class="subtitles">* الجسيمات الحالة:</p>
-إن الجسيمات الحالة توجد تقريبًا في جميع أنواع الخلايا حقيقية النواة، سواء كانت نباتية أو حيوانية، وهي المسؤولة عادةً عن هضم الأجزاء الكبيرة وأجزاء وبقايا الخلايا القديمة والكائنات الحية الدقيقة للتخلص منها، إذ يحيط بكل جسم حال غشاء ليحافظ على بنيته ذات الطبيعة الحمضية عبر مضخة بروتون، وتحتوي أيضًا على مجموعة كبيرة من الأنزيمات المتحللة للماء لتكسير الجزيئات الكبيرة كالأحماض النووية والسكريات والبروتينات.
+<p class="subtitles mar-t-7">٨. خروج الدجالين الكذابين مدعي النبوة:</p>
+ومن أشراط الساعة خروج الدجالين الكذابين مدعي النبوة الذين يثيرون الفتنة بأباطيلهم<sup>(١)</sup>، فعن أبي هريرة <span class="ornaments">h</span> عن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يُبْعَثَ دَجَّالُونَ كَذّابُونَ، قَرِيبًا مِن ثَلاثِينَ، كُلُّهُمْ يَزْعُمُ أنَّه رَسولُ اللهِ</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٩. اتباع سنن الأمم الماضية:</p>
+ومن أشراط الساعة اتباع سنن الأمم الماضية من اليهود والنصارى وتقليدهم، والتشبه بأخلاقهم والإعجاب بهم، وهذا ما أخبرنا به <span class="ornaments">m</span><sup>(٣)</sup>، فعن أبي سعيد الخدري <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لَتَتَّبِعُنَّ سَنَنَ مَن قَبْلَكُمْ شِبْرًا بشِبْرٍ، وَذِرَاعًا بذِرَاعٍ، حتَّى لو سَلَكُوا جُحْرَ ضَبٍّ لَسَلَكْتُمُوهُ</span> قُلْنَا: يا رَسُولَ اللهِ، اليَهُودَ وَالنَّصَارَى؟ قالَ: <span class="hadith">فَمَنْ؟</span><sup>(٤)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">١٠. قبض العلم وظهور الجهل:</p>
+كما أن من أشراط الساعة قبض العلم وظهور الجهل<sup>(٥)</sup>، فعن أنس بن مالك <span class="ornaments">h</span> قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">إنَّ مِن أشْراطِ السَّاعَةِ: أنْ يُرْفَعَ العِلْمُ ويَثْبُتَ الجَهْلُ، ويُشْرَبَ الخَمْرُ، ويَظْهَرَ الزِّنا</span><sup>(٦)</sup>.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖">
+<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٥٠.                                (٢) أخرجه البخاري (٣٩٠٦).
+(٣) يوسف الوابل، أشراط الساعة، ص١١١.                             (٤) أخرجه البخاري (٣٤٥٦).   
+(٥) يوسف الوابل، أشراط الساعة، ص١٣١.                             (٦) أخرجه البخاري (٨٠).
+</p>
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<p style="width:100%; height:15px;"></p>
+<h3 class="headings sub-heading tar mar-t-m-20 star">المبحث الثاني: أشراط لم تظهر بعد:</h3>
+<p class="subtitles mar-t-7">
+١. ظهور الخسف<sup>(١)</sup> والمسخ<sup>(٢)</sup> والقذف<sup>(٣)</sup>:</p>
+وهذه من العقوبات التي تقع على الناس في آخر الزمان، وهي من أشراط الساعة التي لم تقع إلى الآن<sup>(٤)</sup>، فعن عمران بن حصين <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">في هذه الأمةِ خَسْفٌ ومَسْخٌ وقَذْفٌ</span> فقال رجلٌ مِن المسلمين: يا رسولَ اللهِ، ومتى ذلك؟ قال: <span class="hadith">إذا ظَهَرَتْ القِيانُ<sup>(٥)</sup> والمعازفُ<sup>(٦)</sup> وشُرِبَتْ الخمورُ</span><sup>(٧)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٢. كثرة المطر وقلة النبات:</p>
+ومن أشراط الساعة كثرة المطر وقلة النبات<sup>(٨)</sup>، فعن أنس بن مالك <span class="ornaments">h</span> قال: قالَ رَسُولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">لا تَقومُ السَّاعةُ حتى يُمطَرَ النَّاسُ مَطرًا عامًّا، ولا تُنبِتَ الأرضُ شيئًا</span><sup>(٩)</sup>.
+<br> 
+<p class="footnotes">(١) الخسف: وهو الهبوط الذي يقع بجزء من الأرض.                  (٤) محمد العريفي، نهاية العالم، ص١٣١.
+(٢) المسخ: وهو تحويل الصورة وتبديلها إلى أقبح منها.                 (٥) القيان: جمع قَينة وهي المرأة المغنية.
+(٣) القذف: وهو الرمي بالحجارة، كما حدث لقوم لوط.              (٦) المعازف: آلات اللهو والغناء.
+(٧) أخرجه الترمذي (٢٢١٢).                                                        (٩) أخرجه أحمد (١٢٤٢٩).
+(٨) يوسف الوابل، أشراط الساعة، ص٢٠٣.
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -287,15 +625,44 @@ font-size:26px;
 </p>
 <div class="content">
 <br>
-<p class="subtitles">* الميتوكندريا:</p>
-تتواجد الميتوكندريا عادةً في السيتوبلازم وترتبط فيه بغشاء في أغلبية أنواع الخلايا حقيقية النواة، وتتمثل وظيفتها الأساسية بتوليد كميات كبيرة من الطاقة تتمثل على شكل مركب ثلاثي فوسفات الأدينوسين <span class="en-word">ATP</span> وتتخذ شكلًا مستديرًا إلى بيضاوي، وتتميز بوظيفتها بتخزين الكاليسوم للقيام بأنشطة إطلاق الإشارات من وإلى الخلايا وتوليد الحرارة ونمو الخلية وانقسامها وموتها، وتتواجد في مختلف خلايا الجسم، فمثلًا؛ تكثر في خلايا الكبد والعضلات عند الإنسان.
-<p class="subtitles">* جهاز غولجي:</p>
-يرتبط جهاز غولجي بغشاء من الخلايا حقيقية النواة وتكون عبارة عن سلسة من الأكياس المفلطحة الشكل والمكدّسة فوق بعضها البعض، وهي مسؤولة عن نقل وتعديل وتعبئة البروتينات والدهون في حويصلات متخصصة تقوم بنقلها للخلايا المحددة، تتواجد أجهزة غولجي تحديدًا في السيتوبلازم بجوار الشبكة الإندوبلازمية وبالقرب من نواة الخلية.
-<p class="subtitles">* الأنيبيات الدقيقة:</p>
-تتكون الأنيبيبات الدقيقة من هيكل أنبوبي الشكل غير محدد الطول، يتكون بشكل أساسي من بروتينات كروية الشكل تسمى توبولين، وتوجد فقط في الخلايا حقيقية النواة وتتمثل وظيفتها بتوفير المكونات الصلبة والمنظمة للهيكل الخلوي لإعطاء الخلية شكلها، إضافةً بأنها تعد من المكونات الرئيسة للأهداب والأسواط في الخلايا الحيوانية وتساهم أيضًا في انقسام الخلايا وتكاثرها وتساعد عادةً في حركة عضيات الخلية داخلها وحركة الحويصلات في الخلايا العصبية.
+<p class="subtitles mar-t-7">٣. قتال المسلمين اليهود:</p>
+وهذا القتال سيحدث آخر الزمان وهو من أشراط الساعة، فينتصر فيه المسلمون على اليهود، حتى يقول الحجر والشجر: يا مسلم، يا عبدالله، هذا يهودي خلفي، تعال فاقتله، إلا شجرة الغرقد اليهودية فإنها لا تنطق<sup>(١)</sup>. عن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يُقاتِلَ المُسْلِمُونَ اليَهُودَ، فَيَقْتُلُهُمُ المُسْلِمُونَ حتَّى يَخْتَبِئَ اليَهُودِيُّ مِن وراءِ الحَجَرِ والشَّجَرِ، فيَقولُ الحَجَرُ أوِ الشَّجَرُ: يا مُسْلِمُ يا عَبْدَ اللهِ هذا يَهُودِيٌّ خَلْفِي، فَتَعالَ فاقْتُلْهُ، إلَّا الغَرْقَدَ، فإنَّه مِن شَجَرِ اليَهُودِ</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٤. حسر الفرات عن جبل من ذهب:</p>
+ومن أشراط الساعة أن يُحسَر نهر الفرات عن جبل من ذهب، يقتتل عليه الناس، فيُقتَل من كل مئة تسعة وتسعون، ويقول كل رجل منهم لعلي أكون أنا الذي أنجو<sup>(٣)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يَحْسِرَ الفُراتُ عن جَبَلٍ مِن ذَهَبٍ، يَقْتَتِلُ النَّاسُ عليه، فيُقْتَلُ مِن كُلِّ مِائَةٍ تِسْعَةٌ وتِسْعُونَ، ويقولُ كُلُّ رَجُلٍ منهمْ: لَعَلِّي أكُونُ أنا الذي أنْجُو</span><sup>(٤)</sup>.
+ 
+<p class="footnotes">(١) محمد العريفي، نهاية العالم، ص١٣٦.                                  (٢) أخرجه مسلم (٢٩٢٢).
+(٣) يوسف الوابل، أشراط الساعة، ص٢٠٤.                          (٤) أخرجه مسلم (٢٨٩٤).
+</p>
 </div>
 </div>
 </div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<p class="subtitles mar-t-7">٥. تكليم السباع والجماد للإنس:</p>
+ومن أشراط الساعة التي أخبر بها نبينا <span class="ornaments">m</span> تكليم السباع والجماد للإنس<sup>(١)</sup>، فعن أبي سعيد الخدري <span class="ornaments">h</span> قال: عَدا الذِّئْبُ على شاةٍ، فأخَذَها، فطَلَبَه الرَّاعي، فانتَزَعَها منه، فأقْعى الذِّئْبُ على ذَنَبِه، قال: ألَا تَتَّقي اللهَ؟ تَنزِعُ مِنِّي رِزقًا ساقَه اللهُ إليَّ! فقال: يا عَجبي! ذِئْبٌ مُقْعٍ على ذَنَبِه، يُكلِّمُني كَلامَ الإنْسِ! فقال الذِّئْبُ: ألَا أُخبِرُك بأعجَبَ من ذلك؟ مُحمَّدٌ <span class="ornaments">g</span> بيَثرِبَ، يُخبِرُ النَّاسَ بأنْباءِ ما قد سَبَقَ، قال: فأقبَلَ الراعي يَسوقُ غَنَمَه حتى دَخَلَ المدينةَ، فزَواها إلى زاويةٍ من زَواياها، ثُمَّ أتَى رسولَ اللهِ <span class="ornaments">g</span> فأخْبَرَه، فأمَرَ رسولُ اللهِ <span class="ornaments">g</span>، فنُودِيَ: الصَّلاةَ جامِعَةً، ثُمَّ خَرَجَ، فقال للرَّاعي: <span class="hadith">أخْبِرْهم</span>، فأخْبَرَهم، فقال رسولُ اللهِ <span class="ornaments">g</span>: <span class="hadith">صَدَقَ والَّذي نَفْسي بيَدِه، لا تَقومُ السَّاعةُ حتى يُكلِّمَ السِّباعُ الإنْسَ، ويُكلِّمَ الرَّجُلَ عَذَبةُ سَوطِه، وشِراكُ نَعْلِه، ويُخبِرَه فَخِذُه بما أحْدَثَ أهْلُه بعْدَه</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٦. عودة أرض العرب مروجًا وأنهارًا:</p>
+ومن أشراط الساعة عودة أرض العرب مروجًا وأنهارًا بعد أن كان معظمها صحراء قاحلة لا تنبت<sup>(٣)</sup>، فعن أبي هريرة <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">لا تَقُومُ السّاعَةُ حتّى يَكْثُرَ المالُ ويَفِيضَ، حتّى يَخْرُجَ الرَّجُلُ بزَكاةِ مالِهِ فلا يَجِدُ أحَدًا يَقْبَلُها منه، وحتّى تَعُودَ أرْضُ العَرَبِ مُرُوجًا وأَنْهارًا</span><sup>(٤)</sup>.
+ 
+<p class="footnotes">(١) عبدالله الغفيلي، أشراط الساعة، ص٦٣.                                 (٢) أخرجه أحمد (١١٧٩٢).
+(٣) محمد العريفي، نهاية العالم، ص١٤١.                                      (٤) أخرجه مسلم (١٥٧).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
 <div class="pages">
 <div class="page-content">
 <br>
@@ -308,12 +675,89 @@ font-size:26px;
 </p>
 <div class="content">
 <br>
-<p class="subtitles">* المُريكزات:</p>
-تتكون المريكزات من أنابيب قصيرة مرتبة على شكل اسطوانة مفتوحة من الطرف وتجتمع في ٩ مجموعات من الحزم تتكون كل منها من ٣ أنابيب دقيقة وتتواجد غالبًا في قاعدة الهيكل للأهداب والأسواط وتسمى أجسامًا قاعدية، وتكون عادةً على شكل أزواج تترتب بزوايا قائمة فوق بعضها البعض، وتقوم بتكوين سحابة من البروتين حول نفسها وتعمل كأزواج في معظم الخلايا الحيوانية وكجسم واحد في الأهداب والأسواط.
-<p class="subtitles">* وختامًا:</p>
-تتكون الخلايا، لبنات بناء الحياة، من تراكيب معقدة ومتنوعة، لكل منها وظيفة محددة تساهم في عمل الخلية ككل. من النواة التي تحفظ المعلومات الوراثية إلى الميتوكوندريا التي تنتج الطاقة، تعمل هذه العضيات بانسجام للحفاظ على حياة الخلية وتأدية وظائفها بكفاءة. إن فهم أشراط الساعة يعتبر أساسيًّا لفهم العمليات الحيوية المعقدة التي تحدث داخل الكائنات الحية، كما أن التفكر فيها يشعرنا بعظمة الخالق <span style="font-family:Almodrajat; font-size: 34px;"></span> في خلقه، فتبارك الله أحسن الخالقين.
-<p class="subtitles">* المرجع:</p>
-د. سوار طلافحة، "تركيب الخلية ووظائفها"، ٢٩ أغسطس ٢٠٢١، موقع موضوع.
+<p class="subtitles mar-t-7">٧. فتح القسطنطينية:</p>
+ومن أشراط الساعة فتح القسطنطينية -قبل خروج الدجال- علي يدي المسلمين، فيفتحها الله لهم بدون قتال، وسلاحهم التكبير والتهليل<sup>(١)</sup>، ففي الحديث عن أبي هريرة <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">سَمِعْتُمْ بمَدِينَةٍ جانِبٌ مِنْها في البَرِّ وجانِبٌ مِنْها في البَحْرِ؟</span> قالوا: نَعَمْ يا رَسولَ اللهِ، قالَ: <span class="hadith">لا تَقُومُ السَّاعَةُ حتَّى يَغْزُوَها سَبْعُونَ ألْفًا مِن بَنِي إسْحاقَ<sup>(٢)</sup>، فإذا جاؤُوها نَزَلُوا، فَلَمْ يُقاتِلُوا بسِلاحٍ ولَمْ يَرْمُوا بسَهْمٍ، قالوا: لا إلَهَ إلَّا اللَّهُ واللَّهُ أكْبَرُ، فَيَسْقُطُ أحَدُ جانِبَيْها</span> -قالَ ثَوْرٌ (أحد رواة الحديث): لا أعْلَمُهُ إلَّا قالَ: الذي في البَحْرِ- <span class="hadith">ثُمَّ يَقولوا الثَّانِيَةَ: لا إلَهَ إلَّا اللَّهُ واللَّهُ أكْبَرُ، فَيَسْقُطُ جانِبُها الآخَرُ، ثُمَّ يَقولوا الثَّالِثَةَ: لا إلَهَ إلَّا اللَّهُ واللَّهُ أكْبَرُ، فيُفَرَّجُ لهمْ، فَيَدْخُلُوها فَيَغْنَمُوا، فَبيْنَما هُمْ يَقْتَسِمُونَ المَغانِمَ، إذْ جاءَهُمُ الصَّرِيخُ، فقالَ: إنَّ الدَّجَّالَ قدْ خَرَجَ، فَيَتْرُكُونَ كُلَّ شَيءٍ ويَرْجِعُون</span><sup>(٣)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">٨. خراب المدينة وخلوها من السكان والزائرين:</p>
+ومن أشراط الساعة عمران بيت المقدس، وخراب المدينة، أي خلوها من السكان والزائرين<sup>(٤)</sup>، فعن معاذ بن جبل <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">عمرانُ بيتِ المقدسِ، خرابُ يثربَ . . .</span><sup>(٥)</sup> الحديث.
+<p class="footnotes">(١) يوسف الوابل، أشراط الساعة، ص٢١٤.                                           (٣) أخرجه مسلم (٢٩٢٠).
+(٢) المرادُ بهم: مَن أَسلمَ مِن غيرِ العربِ، وهُمْ مِن سُلالةِ نَبيِّ اللهِ إِسحاقَ بنِ إبراهيمَ <span class="ornaments">q</span>.
+(٤) محمد العريفي، نهاية العالم، ص١٥٩.                                                   (٥) أخرجه أبو داود (٤٢٩٤).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+الفصل الثاني: أشراط الساعة الصغرى
+</p>
+<div class="content">
+<br>
+<p class="subtitles mar-t-7">٩. بعث الريح الطيبة لقبض أرواح المؤمنين:</p>
+ومن أشراط الساعة بعث ريح طيبة تقبض أرواح المؤمنين فلا يبقى على ظهر الأرض مؤمن، ويبقى شرار الخلق وعليهم تقوم الساعة<sup>(١)</sup>، ففي الحديث الطويل الذي رواه عبدالله بن عمرو <span class="ornaments">k</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">ثُمَّ يُرْسِلُ اللَّهُ رِيحًا بَارِدَةً مِن قِبَلِ الشَّأْمِ، فلا يَبْقَى علَى وَجْهِ الأرْضِ أَحَدٌ في قَلْبِهِ مِثْقَالُ ذَرَّةٍ مِن خَيْرٍ أَوْ إيمَانٍ إلَّا قَبَضَتْهُ</span><sup>(٢)</sup>.
+<br><br>
+<p class="subtitles mar-t-7">١٠. استحلال البيت الحرام، وهدم الكعبة:</p>
+«لا يستحل البيت الحرام إلا أهله، وأهله هم المسلمون، فإذا استحلوه؛ فإنه يصيبهم الهلاك، ثم يخرج رجل من أهل الحبشة؛ يقال له: ذو السويقتين، فيُخْرِبُ الكعبة، وينقضها حجرًا حجرًا، ويسلبها حليتها، ويجردها من كسوتها، وذلك في آخر الزمان، حين لا يبقى في الأرض أحد يقول: الله، الله، ولذلك لا يُعَمَّرُ البيتُ بعد هدمه أبداً ؛ كما جاءت بذلك الأحاديث الصحيحة»<sup>(٣)</sup>. فعن أبي هريرة <span class="ornaments">h</span> أن رسول الله <span class="ornaments">g</span> قال: <span class="hadith">يُبايَعُ لرجُلٍ ما بينَ الرُّكنِ والمَقامِ ولن يَستَحِلَّ البيتَ إلَّا أهلُه فإذا استَحَلُّوه فلا يُسأَلُ عن هَلَكَةِ العرَبِ ثم تَأتي الحبَشَةُ فيُخَرِّبونَه خَرابًا لا يُعَمَّرُ بعدَه أبدًا وهُمُ الذينَ يَستَخرِجونَ كَنزَه</span><sup>(٤)</sup>. وعنه <span class="ornaments">h</span> أن النبي <span class="ornaments">g</span> قال: <span class="hadith">يُخَرِّبُ الكَعْبَةَ ذُو السُّوَيْقَتَيْنِ مِنَ الحَبَشَةِ</span><sup>(٥)</sup>.
+<img class="closing" src="https://good-web-dev.github.io/school-projects/researches/icons/closing.svg" alt="❖❖❖❖❖❖" style="margin-top:-5px;">
+<p class="footnotes">(١) يوسف الوابل أشراط الساعة، ص٢٢٩ - ص٢٣٠.                        (٢) أخرجه مسلم (٢٩٤٠)
+(٣) يوسف الوابل، أشراط الساعة، ص٢٣١ - ص٢٣٢.                      (٤) أخرجه أحمد (٧٩١٠).
+(٥) أخرجه البخاري (١٥٩١).
+</p>
+</div>
+</div>
+</div>
+<!-- * * * * * * * * * * * * * * * -->
+<div class="pages">
+<div class="page-content">
+<br>
+<div class="square-div">
+<img class="square" src="https://good-web-dev.github.io/school-projects/researches/icons/square.svg" alt="#">
+</div>
+<div class="border-top"></div>
+<p class="page-title">
+المراجع
+</p>
+<div class="content">
+<br>
+<h1 class="headings">المراجع</h1>
+<br>
+<table class="resources-table">
+<tr>
+<td>الحرف</td>
+<td>المرجع</td>
+</tr>
+<tr>
+<td>ق</td>
+<td>القرآن الكريم.</td>
+</tr>
+<tr>
+<tr>
+<td>أ</td>
+<td>د. عبدالله الغفيلي، أشراط الساعة.</td>
+</tr>
+<tr>
+<td>أ</td>
+<td>يوسف الوابل، أشراط الساعة، الطبعة الرابعة، المملكة العربية السعودية، دار ابن الجوزي للنشر والتوزيع، ١٤١٤هـ.</td>
+</tr>
+<tr>
+<td>ت</td>
+<td>الحافظ إسماعيل بن كثير، تفسير القرآن العظيم، تحقيق سامي سلامة، الطبعة الثانية، دار طيبة للنشر والتوزيع، ١٤٢٠هـ.</td>
+</tr>
+<tr>
+<td>م</td>
+<td>جماعة من علماء التفسير، المختصر في تفسير القرآن الكريم، الطبعة الثالثة، المملكة العربية السعودية، مركز تفسير للدراسات القرآنية، ١٤٤٦هـ.</td>
+</tr>
+<td>ن</td>
+<td>د. محمد العريفي، نهاية العالم، الطبعة التاسعة، المملكة العربية السعودية، دار الحضارة للنشر والتوزيع، ١٤٣٩هـ.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -327,23 +771,10 @@ pagesDivs.forEach((pageDiv, index) => {
     const pageNumber = index + 1;
     const easternArabicNumber = pageNumber.toLocaleString('ar-SA');
     numberElement.textContent = easternArabicNumber;
-    const secondChild = pageDiv.children[2]; 
+    const secondChild = pageDiv.children[2];
     pageDiv.insertBefore(numberElement, secondChild);
   }
 });
-
-function getPageNumberInEasternArabic(pageNumber) {
-  const skippedDivs = document.querySelectorAll('.no-page-number').length;
-  const adjustedPageNumber = pageNumber - skippedDivs;
-  const tensDigit = Math.floor(adjustedPageNumber / 10);
-  const onesDigit = adjustedPageNumber % 10;
-  let easternArabicNumber = '';
-  if (tensDigit > 0) {
-    easternArabicNumber += easternArabicNumerals[tensDigit];
-  }
-  easternArabicNumber += easternArabicNumerals[onesDigit];
-  return easternArabicNumber;
-}
 </script>
 </body>
 </html>

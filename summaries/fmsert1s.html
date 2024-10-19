@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<title>ملخص صوتي لتحديد اختبار مادة البحث ومــــــصـــــــــادر الـــمـــــعـــلـــومــــــــــــــــــات الـــــنـــهــــــــــــائـــــــي</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Changa:wght@200..800&family=Handjet:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Readex+Pro:wght@160..700&display=swap');
+*{
+transition:all 0.3s ease-in-out;
+-webkit-transition:all 0.3s ease-in-out;
+color:#3b3b3c;
+}
+body{
+font-family: Readex pro, serif;
+font-size: 14px;
+}
+.subtitle{
+display: block;
+margin-bottom: 10px;
+line-height:1.8;
+text-align: right;
+color:#3b3b3c;
+}
+#subtitles{
+border-top:6px double #ff9d00;
+border-bottom:6px double #ff9d00;
+border-radius: 20px 10px;
+padding: 0 3px;
+}
+.highlighted{
+background-color: #ffdfaa;
+border-radius: 5px;
+padding:0 5px;
+}
+.audio-container{
+text-align: center;
+margin:20px auto;
+display: block;
+border-top:6px double #ff9d00;
+border-bottom:6px double #ff9d00;
+border-radius: 20px 10px;
+padding:8px 3px 5px 3px;
+}
+h1{
+font-size: 18px; line-height: 1.8;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center; font-size:20px; border-top:6px double #ff9d00; border-bottom:6px double #ff9d00; border-radius: 20px 10px; padding:3px 3px 6px 3px;" contenteditable>
+ملخص صوتي لتحديد اختبار مادة البحث
+<br>
+ومــــــصـــــــــادر الـــمـــــعـــلـــومــــــــــــــــــات الـــــنـــهــــــــــــائـــــــي
+</h1>
+<br>
+<h1 style="text-align:center;">المقطع الصوتي:</h1>
+<div class="audio-container"><audio id="audioPlayer" controls style="width:100%;"></audio></div>
+
+<h1 style="text-align:center; margin-bottom:20px;">التفريغ النصي للمقطع الصوتي:</h1>
+<div id="subtitles"></div>
+
+<script>
+//Improved SRT parsing function
+function parseSRT(srtData) {
+    const lines = srtData.split('\n');
+    const subtitles = [];
+    let currentSubtitle = {};
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+
+        if (line.match(/^\d+$/)) { // Index line - ignore
+            continue;
+        } else if (line.match(/^\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}$/)) { // Timestamp line
+            const [start, end] = line.split(' --> ');
+            currentSubtitle.start = convertTimeToSeconds(start);
+            currentSubtitle.end = convertTimeToSeconds(end);
+        } else if (line !== "") { // Subtitle text line
+            currentSubtitle.text = (currentSubtitle.text || "") + line + " ";
+        } else if (line === "" && currentSubtitle.text) { // Empty line after subtitle text
+            subtitles.push(currentSubtitle);
+            currentSubtitle = {};
+        }
+    }
+    if (currentSubtitle.text) {
+        subtitles.push(currentSubtitle);
+    }
+
+    return subtitles;
+
+
+    function convertTimeToSeconds(timeString) {
+        const [hours, minutes, secondsAndMilliseconds] = timeString.split(':');
+        const [seconds, milliseconds] = secondsAndMilliseconds.split(',');
+        try {
+            return parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds) + parseInt(milliseconds) / 1000;
+        } catch (error) {
+            console.error("Error converting time:", error);
+            return 0; // or handle the error appropriately
+        }
+    }
+}
+
+
+// Function to load and parse SRT data
+async function loadAndParseSRT(srtFilePath) {
+    try {
+        const response = await fetch(srtFilePath);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const srtText = await response.text();
+        return parseSRT(srtText);
+    } catch (error) {
+        console.error("Error loading or parsing SRT:", error);
+        return []; // Return an empty array if there's an error
+    }
+}
+
+// Get audio and subtitles elements
+const audioPlayer = document.getElementById('audioPlayer');
+const subtitlesDiv = document.getElementById('subtitles');
+
+// Load SRT data and create subtitles
+loadAndParseSRT('audio-summary.srt').then(srtData => {
+    // Create subtitles
+    srtData.forEach(subtitleData => {
+        const subtitleDiv = document.createElement('div');
+        subtitleDiv.classList.add('subtitle');
+        subtitleDiv.innerHTML = subtitleData.text;
+        subtitleDiv.dataset.start = subtitleData.start;
+        subtitleDiv.dataset.end = subtitleData.end;
+        subtitlesDiv.appendChild(subtitleDiv);
+    });
+
+    // Set audio source
+    audioPlayer.src = "audio-summary.mp3";
+
+    // Audio timeupdate event listener
+    audioPlayer.addEventListener('timeupdate', () => {
+        const currentTime = audioPlayer.currentTime;
+        const subtitles = subtitlesDiv.querySelectorAll('.subtitle');
+
+        subtitles.forEach(subtitle => {
+            const start = parseFloat(subtitle.dataset.start);
+            const end = parseFloat(subtitle.dataset.end);
+            if (currentTime >= start && currentTime <= end) {
+                subtitle.classList.add('highlighted');
+            } else {
+                subtitle.classList.remove('highlighted');
+            }
+        });
+    });
+
+    // Audio click event listener for seeking
+    audioPlayer.addEventListener('click', (event) => {
+        const rect = audioPlayer.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const percent = clickX / rect.width;
+        const newTime = audioPlayer.duration * percent;
+        audioPlayer.currentTime = newTime;
+    });
+});
+</script>
+
+</body>
+</html>
