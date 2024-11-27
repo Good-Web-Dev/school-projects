@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Electric Force</title>
+<style>
+@page{
+margin:0 !important;
+size:A4;
+padding:0 !important;
+}
+@media print{
+body{
+-webkit-print-color-adjust: exact;
+}
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Changa:wght@200..800&family=Handjet:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Readex+Pro:wght@160..700&display=swap');
+*{
+margin:0;
+padding:0;
+}
+table, td, th{
+border: 6px solid #fff;
+border-collapse: collapse;
+padding:10px;
+font-family:IBM Plex Sans Arabic;
+text-align:center;
+font-size:16px;
+}
+table{
+width:100%;
+}
+td{
+font-weight:500;
+}
+th{
+font-weight:600;
+}
+tr{
+background-color: #4e558611;
+}
+tr:nth-child(odd){
+background-color: #4e558655;
+}
+.odd{
+background-color: #4e558655;
+}
+.even{
+background-color: #4e558611 !important;
+}
+table tr:first-child th:first-child{
+background-color:#4e5586;
+color:white;
+font-weight:700;
+font-size:18px;
+}
+div{
+border: 0px red solid;
+width: 800px;
+height: 450px;
+page-break-after: always;
+}
+sup, sub{
+font-size: 11px;
+}
+span[dir="ltr"]{
+font-family: Georgia;
+}
+</style>
+</head>
+<body>
+<br><br>
+<div><table>
+<tr><th>الأهداف</th></tr>
+<tr><td>تلخص العلاقات بين القوى الكهربائية والشحنات الكهربائية والبعد بينها.</td></tr>
+<tr><td>توضح كيفية شحن الأجسام بطريقتي التوصيل والحث.</td></tr>
+<tr><td>تطور نموذجًا يوضح كيف يمكن للأجسام المشحونة أن تجذب أجسامًا متعادلة.</td></tr><tr><td>تطبق قانون كولوم في حل مسائل في بعد واحد وفي بعدين.</td></tr>
+</table>
+<br><br>
+<table>
+<tr><th>المفردات</th></tr>
+<tr><td style="line-height:2;">الكشاف الكهربائي.ㅤㅤㅤㅤ
+الشحن بالتوصيل.ㅤㅤㅤㅤ
+الشحن بالحث.ㅤㅤㅤㅤ
+التأريض.ㅤㅤㅤㅤ
+قانون کولوم.ㅤㅤㅤㅤ
+الكولوم.ㅤㅤㅤㅤ
+الشحنة الأساسية.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table>
+<tr><th colspan="4">القوى المؤثرة في الأجسام المشحونة</th></tr>
+<tr><td colspan="4">هناك نوعان من الشحنات الكهربائية: موجبة وسالبة.<br>
+تؤثر الشحنات بعضها في بعض بقوى عن بعد.<br>
+تكون القوة أكبر عندما تكون الشحنات متقاربة.<br>
+الشحنات المتشابهة تتنافر، والشحنات المختلفة تتجاذب.</td></tr>
+<tr><th rowspan="2">الكشاف الكهربائي
+</th>
+<td colspan="2">هو جهاز يتركب من كرة فلزية مثبت على سـاق فلزية متصلة بقطعتين فلزيتين خفيفتين رقیقتين، تسميان الورقتين.</td></tr>
+<tr class="odd"><td colspan="2">لمعرفة شحنة الكشاف نقرب ساق مشحونة بشحنة معلومة من الكشاف، فإذا ازداد انفراج الورقتين؛ كانت شحنة الكشاف مطابقة لشحنة الساق، وإذا قل الانفراج كانت شحنته مخالفة لشحنة الساق.</td></tr>
+<tr><td colspan="2" style="background-color: #fff; padding:0 !important;"><img src="ed.svg" width="364px" style="position:relative; top:3.5px;"></td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="7">القوى المؤثرة في الأجسام المشحونة</th></tr>
+<tr><th rowspan="3">أنواع الشحن الكهربائي</th>
+<td>١. الشحن بالتوصيل:</td>
+<td colspan="4">هو عملية شحن الجسم المتعادل بملامسته جسم آخر مشحونًا.</td></tr>
+<tr class="even"><td rowspan="2">٢. الشحن بالحث:</td>
+<td rowspan="2">هو عملية شحن الجسم دون ملامسته.</td>
+<td rowspan="2">التأريض:</td>
+<td>هو عملية توصيل جسم بالأرض للتخلض من الشحنات الفائضة.</td></tr>
+<tr class="even"><td>تعد الأرض كرة كبيرة ولها القدرة على استيعاب كمية كبيرة من الشحنة دون أن تظهر عليها آثار هذه الشحنة.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">قانون كولوم</th></tr>
+<tr>
+<th rowspan="2">تمهيد</th>
+<td>القوة الكهربائية يين جسمين تتناسب عكسيًّا مع مربع المسافة بين مركزيهما:
+<img style="display: block; width:70px; margin:20px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F\propto\frac{1}{r^^^2}">
+</td>
+</tr>
+<tr class="even"><td>القوة الكهربائية تتناسب طرديًّا مع مقدار شحنتي الجسمين:
+<img style="display: block; width:95px; margin:22px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image? F \propto q___A \, q___B">
+</td></tr>
+<tr class="odd"><th>نص قانون كولوم</th>
+<td>مقدار القوة الكهربائية المتبادلة بين الشحنتين تتناسب طرديًّا مع مقدار كل من الشحنتين وعكسيًّا مع مربع المسافة بينهما:
+<img style="display: block; width:100px; margin:23px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F \propto \frac{q___A \, q___B}{r^^^2}">
+</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="4">قانون كولوم</th></tr>
+<tr><th rowspan="2">معلومات هامة</th>
+<td>الكولوم C:</td>
+<td>هو وحدة قياس الشحنة الكهربائي في النظام العالمي للوحدات <span dir="ltr">SI</span>.</td>
+<td>قيمته تساوي مقدار شحنة <span dir="ltr">6.24 × 10<sup>18</sup></span> إلكترون أو بروتون.</td>
+</tr>
+<tr class="even">
+<td>مقدار شحنة الإلكترون:</td><td colspan="2">تساوي <span dir="ltr">1.6 × 10<sup>-19</sup> C</span>.</td>
+</tr>
+<tr class="odd"><th rowspan="2">معادلة قانون كولوم:</th>
+<td colspan="3"><img style="display: block; width:115px; margin:10px auto 12px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F = K \, \frac{q___A \, q___B}{r^^^2}">
+حيث <span dir="ltr">F</span> القوة الكهربائية، و<span dir="ltr">K</span> ثابت كولوم، و<span dir="ltr">q<sub>A</sub></span> الشحنة الأولى، و<span dir="ltr">q<sub>B</sub></span> الشحنة الثانية، و<span dir="ltr">r</span> المسافة بين الشحتتين.</td></tr>
+<tr><td>ثابت كولوم <span dir="ltr">K</span>:</td><td colspan="2">يساوي <span dir="ltr">9 × 10<sup>9</sup> N.m<sup>2</sup>/C<sup>2</sup></span></td></tr>
+<tr><th>ملاحظة:</th><td colspan="4">عند استخدام قانون كولوم فإنه يطبق فقط على الشحنات النقطية أو  التوزيعات الكروية المنتظمة للشحنة.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:30%;">
+<tr><th colspan="2">تطبيقات القوى الكهروسكونية على الجسيمات</th></tr>
+<tr><td>١. تجميع السناج ( السواد الناتج عن الدخان) من المداخن.</td><td>٢. شحن قطرات الطلاء الصغيرة جدًّا بالحث واستعمالها لطلاء السيارات.</td></tr>
+</table>
+<br><br>
+<table style="height:60%;">
+<tr><th>مسائل تدريبية</th></tr>
+<tr>
+<td>سؤال <span dir="ltr">8</span> صفحة <span dir="ltr">51</span>: تفصل مسافة مقدارها <span dir="ltr">0.30m</span> بين شحنتين؛ الأولى سالبة مقدارها <span dir="ltr">2 × 10<sup>-4</sup> C</span> والثانية موجبة مقدارها<br> <span dir="ltr">8 × 10<sup>-4</sup> C</span>. ما القوة المتبادلة بين الشحنتين؟</td>
+</tr>
+<tr><td>
+سؤال <span dir="ltr">9</span> صفحة <span dir="ltr">51</span>: إذا أثرت الشحنة السالبة <span dir="ltr">6 × 10<sup>-6</sup> C</span> بقوة جذب مقدارها <span dir="ltr">65N</span> في شحنة ثانية تبعد عنها مسافة <span dir="ltr">0.050m</span> فما مقدار الشحنة الثانية؟</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">١. إذا قُرِّبت ساق من كشاف كهربائي مشحون، وازداد انفراج ورقتي الكشاف فهذا يدل على أن الكشاف الكهربائي والساق:</th></tr>
+<tr class="even"><td>أ. مشحونان بالشحنة نفسها.</td><td>ب. مشحونان بشحنتين مختلفتين.</td><td rowspan="2">الجواب: أ.</td></tr>
+<tr class="even"><td>ج. غير مشحونين.</td><td>د. أحدهما فقط مشحون.</td></tr>
+<tr class="odd"><th colspan="3">٢. القوة الكهربائية بين شحنتين <span dir="ltr">80N</span>، فإذا حُرّكت الشحنتان بحيث قلت المسافة بينهما للنصف فكم تصبح القوة الكهربائية بينهما بوحدة النيوتن؟</th></tr>
+<tr class="odd"><td>أ. <span dir="ltr">20N</span>.</td><td>ب. <span dir="ltr">40N</span>.</td><td rowspan="2">الجواب: د.</td>
+</tr>
+<tr class="odd"><td>ج. <span dir="ltr">160N</span>.</td><td>د. <span dir="ltr">320N</span>.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">٣. جهاز يُستخدم للكشف عن الشحنات الكهربائية:</th></tr>
+<tr class="even"><td>أ. الأميتر.</td><td>ب. الفولتميتر.</td><td rowspan="2">الجواب: ج.</td></tr>
+<tr class="even"><td>ج. الكشاف الكهربائي.</td><td>د. الغرفة السحابية.</td></tr>
+<tr class="odd"><th colspan="3">٤. عندما يلامس جسمًا مشحونًا قرص كشاف كهربائي متعادل فإنه:</th></tr>
+<tr class="odd"><td>أ. تنطبق ورقتاه (تتجاذب).</td><td>ب. تنفرج ورقتاه (تتنافر).</td><td rowspan="2">الجواب: ب.</td>
+</tr>
+<tr class="odd"><td>ج. تتفرغ شحنة الكشاف.</td><td>د. لا يحدث شيء للورقتين.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">٥. الصيغة الرياضية التي تمثل قانون كولوم هي:</th></tr>
+<tr class="even"><td style="padding-bottom:16px;">أ. &nbsp;<img style="display: inline-block; width:60px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq}{r}"> .</td><td style="padding-bottom:16px;">ب. &nbsp;<img style="display: inline-block; width:60px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq}{r^^^2}"> .</td><td rowspan="2">الجواب: د.</td></tr>
+<tr class="even"><td style="padding-bottom:16px;">ج. &nbsp;<img style="display: inline-block; width:90px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq___A q___B}{r}"> .</td><td style="padding-bottom:16px;">د. &nbsp;<img style="display: inline-block; width:90px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq___A q___B}{r^^^2}"> .</td></tr>
+<tr class="odd"><th colspan="3">٦. يُستخدم قانون كولوم في:</th></tr>
+<tr class="odd"><td>أ. الأسلاك المشحونة الطويلة.</td><td>ب. الألواح المستوية المشحونة.</td><td rowspan="2">الجواب: ج.</td>
+</tr>
+<tr class="odd"><td>ج. الشحنات النقطية.</td><td>د. جميع ما سبق.</td></tr>
+</table>
+</div>
+</body>
+</html>
+<!-- 
+## 
+### ١. إذا قُرِّبت ساق من كشاف كهربائي مشحون، وازداد انفراج ورقتي الكشاف فهذا يدل على أن الكشاف الكهربائي والساق:
+#### أ. مشحونان بالشحنة نفسها. ب. مشحونان بشحنتين مختلفتين. ج. غير مشحونين. د. <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Electric Force</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Changa:wght@200..800&family=Handjet:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Readex+Pro:wght@160..700&display=swap');
+*{
+margin:0;
+padding:0;
+}
+table, td, th{
+border: 6px solid #fff;
+border-collapse: collapse;
+padding:10px;
+font-family:IBM Plex Sans Arabic;
+text-align:center;
+font-size:16px;
+}
+table{
+width:100%;
+}
+td{
+font-weight:500;
+}
+th{
+font-weight:600;
+}
+tr{
+background-color: #4e558611;
+}
+tr:nth-child(odd){
+background-color: #4e558655;
+}
+.odd{
+background-color: #4e558655;
+}
+.even{
+background-color: #4e558611 !important;
+}
+table tr:first-child th:first-child{
+background-color:#4e5586;
+color:white;
+font-weight:700;
+font-size:18px;
+}
+div{
+border:0px red solid;
+width:800px;
+height:450px;
+}
+sup, sub{
+font-size: 11px;
+}
+span[dir="ltr"]{
+font-family: Georgia;
+}
+</style>
+</head>
+<body>
+<div><table>
+<tr><th>الأهداف</th></tr>
+<tr><td>تلخص العلاقات بين القوى الكهربائية والشحنات الكهربائية والبعد بينها.</td></tr>
+<tr><td>توضح كيفية شحن الأجسام بطريقتي التوصيل والحث.</td></tr>
+<tr><td>تطور نموذجًا يوضح كيف يمكن للأجسام المشحونة أن تجذب أجسامًا متعادلة.</td></tr><tr><td>تطبق قانون كولوم في حل مسائل في بعد واحد وفي بعدين.</td></tr>
+</table>
+<br><br>
+<table>
+<tr><th>المفردات</th></tr>
+<tr><td style="line-height:2;">الكشاف الكهربائي.ㅤㅤㅤㅤ
+الشحن بالتوصيل.ㅤㅤㅤㅤ
+الشحن بالحث.ㅤㅤㅤㅤ
+التأريض.ㅤㅤㅤㅤ
+قانون کولوم.ㅤㅤㅤㅤ
+الكولوم.ㅤㅤㅤㅤ
+الشحنة الأساسية.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table>
+<tr><th colspan="4">القوى المؤثرة في الأجسام المشحونة</th></tr>
+<tr><td colspan="4">هناك نوعان من الشحنات الكهربائية: موجبة وسالبة.<br>
+تؤثر الشحنات بعضها في بعض بقوى عن بعد.<br>
+تكون القوة أكبر عندما تكون الشحنات متقاربة.<br>
+الشحنات المتشابهة تتنافر، والشحنات المختلفة تتجاذب.</td></tr>
+<tr><th rowspan="2">الكشاف الكهربائي
+</th>
+<td colspan="2">هو جهاز يتركب من كرة فلزية مثبت على سـاق فلزية متصلة بقطعتين فلزيتين خفيفتين رقیقتين، تسميان الورقتين.</td></tr>
+<tr class="odd"><td colspan="2">لمعرفة شحنة الكشاف نقرب ساق مشحونة بشحنة معلومة من الكشاف، فإذا ازداد انفراج الورقتين؛ كانت شحنة الكشاف مطابقة لشحنة الساق، وإذا قل الانفراج كانت شحنته مخالفة لشحنة الساق.</td></tr>
+<tr><td colspan="2" style="background-color: #fff; padding:0 !important;"><img src="ed.svg" width="364px" style="position:relative; top:3.5px;"></td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="7">القوى المؤثرة في الأجسام المشحونة</th></tr>
+<tr><th rowspan="3">أنواع الشحن الكهربائي</th>
+<td>١. الشحن بالتوصيل:</td>
+<td colspan="4">هو عملية شحن الجسم المتعادل بملامسته جسم آخر مشحونًا.</td></tr>
+<tr class="even"><td rowspan="2">٢. الشحن بالحث:</td>
+<td rowspan="2">هو عملية شحن الجسم دون ملامسته.</td>
+<td rowspan="2">التأريض:</td>
+<td>هو عملية توصيل جسم بالأرض للتخلض من الشحنات الفائضة.</td></tr>
+<tr class="even"><td>تعد الأرض كرة كبيرة ولها القدرة على استيعاب كمية كبيرة من الشحنة دون أن تظهر عليها آثار هذه الشحنة.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">قانون كولوم</th></tr>
+<tr>
+<th rowspan="2">تمهيد</th>
+<td>القوة الكهربائية يين جسمين تتناسب عكسيًّا مع مربع المسافة بين مركزيهما:
+<img style="display: block; width:70px; margin:20px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F\propto\frac{1}{r^^^2}">
+</td>
+</tr>
+<tr class="even"><td>القوة الكهربائية تتناسب طرديًّا مع مقدار شحنتي الجسمين:
+<img style="display: block; width:95px; margin:22px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image? F \propto q___A \, q___B">
+</td></tr>
+<tr class="odd"><th>نص قانون كولوم</th>
+<td>مقدار القوة الكهربائية المتبادلة بين الشحنتين تتناسب طرديًّا مع مقدار كل من الشحنتين وعكسيًّا مع مربع المسافة بينهما:
+<img style="display: block; width:100px; margin:23px auto 3px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F \propto \frac{q___A \, q___B}{r^^^2}">
+</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="4">قانون كولوم</th></tr>
+<tr><th rowspan="2">معلومات هامة</th>
+<td>الكولوم C:</td>
+<td>هو وحدة قياس الشحنة الكهربائي في النظام العالمي للوحدات <span dir="ltr">SI</span>.</td>
+<td>قيمته تساوي مقدار شحنة <span dir="ltr">6.24 × 10<sup>18</sup></span> إلكترون أو بروتون.</td>
+</tr>
+<tr class="even">
+<td>مقدار شحنة الإلكترون:</td><td colspan="2">تساوي <span dir="ltr">1.6 × 10<sup>-19</sup> C</span>.</td>
+</tr>
+<tr class="odd"><th rowspan="2">معادلة قانون كولوم:</th>
+<td colspan="3"><img style="display: block; width:115px; margin:10px auto 12px auto; text-align: center;" src="https://latex.codecogs.com/svg.image?F = K \, \frac{q___A \, q___B}{r^^^2}">
+حيث <span dir="ltr">F</span> القوة الكهربائية، و<span dir="ltr">K</span> ثابت كولوم، و<span dir="ltr">q<sub>A</sub></span> الشحنة الأولى، و<span dir="ltr">q<sub>B</sub></span> الشحنة الثانية، و<span dir="ltr">r</span> المسافة بين الشحتتين.</td></tr>
+<tr><td>ثابت كولوم <span dir="ltr">K</span>:</td><td colspan="2">يساوي <span dir="ltr">9 × 10<sup>9</sup> N.m<sup>2</sup>/C<sup>2</sup></span></td></tr>
+<tr><th>ملاحظة:</th><td colspan="4">عند استخدام قانون كولوم فإنه يطبق فقط على الشحنات النقطية أو  التوزيعات الكروية المنتظمة للشحنة.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:30%;">
+<tr><th colspan="2">تطبيقات القوى الكهروسكونية على الجسيمات</th></tr>
+<tr><td>١. تجميع السناج ( السواد الناتج عن الدخان) من المداخن.</td><td>٢. شحن قطرات الطلاء الصغيرة جدًّا بالحث واستعمالها لطلاء السيارات.</td></tr>
+</table>
+<br><br>
+<table style="height:60%;">
+<tr><th>مسائل تدريبية</th></tr>
+<tr>
+<td>سؤال <span dir="ltr">8</span> صفحة <span dir="ltr">51</span>: تفصل مسافة مقدارها <span dir="ltr">0.30m</span> بين شحنتين؛ الأولى سالبة مقدارها <span dir="ltr">2 × 10<sup>-4</sup> C</span> والثانية موجبة مقدارها<br> <span dir="ltr">8 × 10<sup>-4</sup> C</span>. ما القوة المتبادلة بين الشحنتين؟</td>
+</tr>
+<tr><td>
+سؤال <span dir="ltr">9</span> صفحة <span dir="ltr">51</span>: إذا أثرت الشحنة السالبة <span dir="ltr">6 × 10<sup>-6</sup> C</span> بقوة جذب مقدارها <span dir="ltr">65N</span> في شحنة ثانية تبعد عنها مسافة <span dir="ltr">0.050m</span> فما مقدار الشحنة الثانية؟</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">١. إذا قُرِّبت ساق من كشاف كهربائي مشحون، وازداد انفراج ورقتي الكشاف فهذا يدل على أن الكشاف الكهربائي والساق:</th></tr>
+<tr class="even"><td>أ. مشحونان بالشحنة نفسها.</td><td>ب. مشحونان بشحنتين مختلفتين.</td><td rowspan="2">الجواب: أ.</td></tr>
+<tr class="even"><td>ج. غير مشحونين.</td><td>د. أحدهما فقط مشحون.</td></tr>
+<tr class="odd"><th colspan="3">٢. القوة الكهربائية بين شحنتين <span dir="ltr">80N</span>، فإذا حُرّكت الشحنتان بحيث قلت المسافة بينهما للنصف فكم تصبح القوة الكهربائية بينهما بوحدة النيوتن؟</th></tr>
+<tr class="odd"><td>أ. <span dir="ltr">20N</span>.</td><td>ب. <span dir="ltr">40N</span>.</td><td rowspan="2">الجواب: د.</td>
+</tr>
+<tr class="odd"><td>ج. <span dir="ltr">160N</span>.</td><td>د. <span dir="ltr">320N</span>.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">٣. جهاز يُستخدم للكشف عن الشحنات الكهربائية:</th></tr>
+<tr class="even"><td>أ. الأميتر.</td><td>ب. الفولتميتر.</td><td rowspan="2">الجواب: ج.</td></tr>
+<tr class="even"><td>ج. الكشاف الكهربائي.</td><td>د. الغرفة السحابية.</td></tr>
+<tr class="odd"><th colspan="3">٤. عندما يلامس جسمًا مشحونًا قرص كشاف كهربائي متعادل فإنه:</th></tr>
+<tr class="odd"><td>أ. تنطبق ورقتاه (تتجاذب).</td><td>ب. تنفرج ورقتاه (تتنافر).</td><td rowspan="2">الجواب: ب.</td>
+</tr>
+<tr class="odd"><td>ج. تتفرغ شحنة الكشاف.</td><td>د. لا يحدث شيء للورقتين.</td></tr>
+</table>
+</div>
+<br><br>
+<div>
+<table style="height:100%;">
+<tr><th colspan="3">أسئلة تحصيلي</th></tr>
+<tr><th colspan="3">٥. الصيغة الرياضية التي تمثل قانون كولوم هي:</th></tr>
+<tr class="even"><td style="padding-bottom:16px;">أ. &nbsp;<img style="display: inline-block; width:60px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq}{r}"> .</td><td style="padding-bottom:16px;">ب. &nbsp;<img style="display: inline-block; width:60px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq}{r^^^2}"> .</td><td rowspan="2">الجواب: د.</td></tr>
+<tr class="even"><td style="padding-bottom:16px;">ج. &nbsp;<img style="display: inline-block; width:90px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq___A q___B}{r}"> .</td><td style="padding-bottom:16px;">د. &nbsp;<img style="display: inline-block; width:90px; margin:auto; text-align: center; position: relative; top:10px;" src="https://latex.codecogs.com/svg.image?F = \frac{Kq___A q___B}{r^^^2}"> .</td></tr>
+<tr class="odd"><th colspan="3">٦. يُستخدم قانون كولوم في:</th></tr>
+<tr class="odd"><td>أ. الأسلاك المشحونة الطويلة.</td><td>ب. الألواح المستوية المشحونة.</td><td rowspan="2">الجواب: ج.</td>
+</tr>
+<tr class="odd"><td>ج. الشحنات النقطية.</td><td>د. جميع ما سبق.</td></tr>
+</table>
+</div>
+</body>
+</html>
