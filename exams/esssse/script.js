@@ -78,6 +78,10 @@ function renderQuestions() {
       convertLatinToArabic();
     });
   });
+convertLatinToArabic();
+let laws = document.querySelectorAll('.formulas.laws:not(.inline)');
+let inlineLaws = document.querySelectorAll('.formulas.laws.inline');
+typesetFormulas(laws, inlineLaws);
 }
 
 function renderResultPage(correctAnswers, totalAnsweredQuestions) {
@@ -146,6 +150,10 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
       localStorage.removeItem(`resultPage_${pageIdentifier}`);
       renderQuestions();
     });
+convertLatinToArabic();
+let laws = document.querySelectorAll('.formulas.laws:not(.inline)');
+let inlineLaws = document.querySelectorAll('.formulas.laws.inline');
+typesetFormulas(laws, inlineLaws);
   }
 
   document.getElementById("retry-exam-btn").addEventListener("click", () => {
@@ -153,7 +161,6 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
     localStorage.removeItem(`userAnswers_${pageIdentifier}`);
     localStorage.removeItem(`resultPage_${pageIdentifier}`);
     renderQuestions();
-    convertLatinToArabic();
   });
 }
 
