@@ -95,8 +95,8 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   <br>
   النتيجة = عدد الأسئلة المُجَاوَب عليها بشكل صحيح 
   <b style="margin-top:7px; display: inline-block;">على</b> عدد الأسئلة المُجَاوَب عليها.
-  </p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      ${totalAnsweredQuestions < questions.length ? `<button id="complete-exam-btn"><i class="fas fa fa-play"></i> &nbsp;إكمال الاختبار</button>` : ""}<button id="retry-exam-btn"><i class="fas fa fa-undo"></i> إعادة الاختبار</button></div></div>
+  </p><p style="text-align: center; font-weight: 600;">${totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length ? "مبارك لك! لقد أجبت على جميع أسئلة هذا الفصل بشكل صحيح!" : ""}</p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      ${totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length ? "" : `<button id="complete-exam-btn"><i class="fas fa fa-play"></i> &nbsp;إكمال الاختبار</button>`}<button id="retry-exam-btn"><i class="fas fa fa-undo"></i> إعادة الاختبار</button></div></div>
   `;
 
   questions.forEach((q, index) => {
@@ -145,17 +145,44 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   endExamBtn.classList.add("hidden");
   localStorage.setItem(`resultPage_${pageIdentifier}`, "true");
 
-  if (totalAnsweredQuestions < questions.length) {
+  if (totalAnsweredQuestions <= questions.length && correctAnswers < totalAnsweredQuestions) {
     document.getElementById("complete-exam-btn").addEventListener("click", () => {
       localStorage.removeItem(`resultPage_${pageIdentifier}`);
       renderQuestions();
     });
-convertLatinToArabic();
-let laws = document.querySelectorAll('.formulas.laws:not(.inline)');
-let inlineLaws = document.querySelectorAll('.formulas.laws.inline');
-typesetFormulas(laws, inlineLaws);
   }
+if(totalAnsweredQuestions == questions.length && correctAnswers == questions.length){
+const end = Date.now() + 5 * 1000;
 
+const colors = ["#7bb4c8", "#67b0a5", "#ad2e59", "#5e4691", "#192545"];
+const shapes = ["circle", "square", "polygon", "triangle"];
+
+(function frame() {
+  confetti({
+    particleCount: 2,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors: colors,
+    shapes: shapes,
+zIndex: 3000
+  });
+
+  confetti({
+    particleCount: 2,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors: colors,
+    shapes: shapes,
+zIndex: 3000
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+})();
+}
   document.getElementById("retry-exam-btn").addEventListener("click", () => {
     userAnswers = {};
     localStorage.removeItem(`userAnswers_${pageIdentifier}`);
@@ -172,6 +199,10 @@ function calculateResult(totalAnsweredQuestions) {
     }
   }
   renderResultPage(correctAnswers, totalAnsweredQuestions);
+convertLatinToArabic();
+let laws = document.querySelectorAll('.formulas.laws:not(.inline)');
+let inlineLaws = document.querySelectorAll('.formulas.laws.inline');
+typesetFormulas(laws, inlineLaws);
 }
 
 endExamBtn.addEventListener("click", () => {
