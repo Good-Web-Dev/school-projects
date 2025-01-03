@@ -145,13 +145,13 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   endExamBtn.classList.add("hidden");
   localStorage.setItem(`resultPage_${pageIdentifier}`, "true");
 
-  if (totalAnsweredQuestions <= questions.length && correctAnswers < totalAnsweredQuestions) {
+  if (totalAnsweredQuestions < questions.length && totalAnsweredQuestions >= correctAnswers) {
     document.getElementById("complete-exam-btn").addEventListener("click", () => {
       localStorage.removeItem(`resultPage_${pageIdentifier}`);
       renderQuestions();
     });
   }
-if(totalAnsweredQuestions == questions.length && correctAnswers == questions.length){
+if(totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length){
 const end = Date.now() + 5 * 1000;
 
 const colors = ["#7bb4c8", "#67b0a5", "#ad2e59", "#5e4691", "#192545"];
