@@ -95,8 +95,8 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   <br>
   النتيجة = عدد الأسئلة المُجَاوَب عليها بشكل صحيح 
   <b style="margin-top:7px; display: inline-block;">على</b> عدد الأسئلة المُجَاوَب عليها.
-  </p><p style="text-align: center; font-weight: 600;">${totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length ? "مبارك لك! لقد أجبت على جميع أسئلة هذا الفصل بشكل صحيح!" : ""}</p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      ${totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length ? "" : `<button id="complete-exam-btn"><i class="fas fa fa-play"></i> &nbsp;إكمال الاختبار</button>`}<button id="retry-exam-btn"><i class="fas fa fa-undo"></i> إعادة الاختبار</button></div></div>
+  </p><p style="text-align: center; font-weight: 700;">${correctAnswers === questions.length ? "مبارك لك! لقد أجبت على جميع أسئلة هذا الفصل بشكل صحيح!" : ""}</p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      ${correctAnswers < questions.length ? `<button id="complete-exam-btn"><i class="fas fa fa-play"></i> &nbsp;إكمال الاختبار</button>` : ""}<button id="retry-exam-btn"><i class="fas fa fa-undo"></i> إعادة الاختبار</button></div></div>
   `;
 
   questions.forEach((q, index) => {
@@ -145,13 +145,13 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   endExamBtn.classList.add("hidden");
   localStorage.setItem(`resultPage_${pageIdentifier}`, "true");
 
-  if (totalAnsweredQuestions < questions.length && totalAnsweredQuestions >= correctAnswers) {
+  if (correctAnswers < questions.length) {
     document.getElementById("complete-exam-btn").addEventListener("click", () => {
       localStorage.removeItem(`resultPage_${pageIdentifier}`);
       renderQuestions();
     });
   }
-if(totalAnsweredQuestions === correctAnswers && totalAnsweredQuestions === questions.length){
+if(correctAnswers === questions.length){
 const end = Date.now() + 5 * 1000;
 
 const colors = ["#7bb4c8", "#67b0a5", "#ad2e59", "#5e4691", "#192545"];
