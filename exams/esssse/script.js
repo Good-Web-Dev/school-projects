@@ -95,7 +95,7 @@ function renderResultPage(correctAnswers, totalAnsweredQuestions) {
   <br>
   النتيجة = عدد الأسئلة المُجَاوَب عليها بشكل صحيح 
   <b style="margin-top:7px; display: inline-block;">على</b> عدد الأسئلة المُجَاوَب عليها.
-  </p><p style="text-align: center; font-weight: 700;">${correctAnswers === questions.length ? "مبارك لك! لقد أجبت على جميع أسئلة هذا الفصل بشكل صحيح!" : ""}</p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+  </p><p style="text-align: center; font-weight: 700;">${correctAnswers === questions.length ? "مبارك لك! لقد أجبت على جميع الأسئلة بشكل صحيح!" : ""}</p><div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
       ${correctAnswers < questions.length ? `<button id="complete-exam-btn"><i class="fas fa fa-play"></i> &nbsp;إكمال الاختبار</button>` : ""}<button id="retry-exam-btn"><i class="fas fa fa-undo"></i> إعادة الاختبار</button></div></div>
   `;
 
