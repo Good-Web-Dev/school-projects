@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شرح الرياضيات</title>
+<link rel="stylesheet" href="https://good-web-dev.github.io/WebFonts-v2/fonts.css">
+  <style>
+*{
+font-family: ksa;
+}
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #444;
+      padding: 15px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Video Grid Layout */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      padding: 20px;
+    }
+
+    .video-item {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+h1{
+text-align: center;
+}
+  </style>
+</head>
+<body>
+<h1>شرح الرياضيات:</h1>
+  <div class="video-grid">
+    <div class="video-item">
+      <h3>شرح صفحة ٤٤ من الملف:</h3>
+      <div class="video-container" onclick="enterFullscreen(this)">
+        <iframe src="https://a.top4top.io/m_3314w1fw71.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+      <h3>شرح صفحة ٥٤ من الملف:</h3>
+      <div class="video-container" onclick="enterFullscreen(this)">
+        <iframe src="https://k.top4top.io/m_3314dzkxp1.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+      <h3>شرح صفحة ٥٧ من الملف:</h3>
+      <div class="video-container" onclick="enterFullscreen(this)">
+        <iframe src="https://g.top4top.io/m_3314ei2321.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+      <h3>شرح صفحة ٦٣ من الملف:</h3>
+      <div class="video-container" onclick="enterFullscreen(this)">
+        <iframe src="https://c.top4top.io/m_33143a1672.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+<script>
+  function enterFullscreen(element) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { // Firefox
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { // IE/Edge
+      element.msRequestFullscreen();
+    }
+  }
+</script>
+</body>
+</html>
