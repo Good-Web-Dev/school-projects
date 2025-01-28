@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شرح الرياضيات</title>
-<link rel="stylesheet" href="https://good-web-dev.github.io/WebFonts-v2/fonts.css">
+  <title>شرح الرياضيات للأستاذ مشعل الحربي</title>
+  <link rel="stylesheet" href="https://good-web-dev.github.io/WebFonts-v2/fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-*{
-font-family: ksa;
-}
+    * {
+      font-family: ksa;
+-webkit-tap-highlight-color:transparent;
+    }
+
     /* General Styles */
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+    }
+
+    h1 {
+      text-align: center;
     }
 
     h3 {
@@ -27,11 +33,16 @@ font-family: ksa;
       border-bottom: 1px solid #eee;
     }
 
+    h3::before {
+      content: "❖ ";
+      font-size: 0.8em;
+    }
+
     /* Video Grid Layout */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 50px;
+      gap: 30px;
       padding: 20px;
     }
 
@@ -50,7 +61,7 @@ font-family: ksa;
 
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      padding-bottom: 177.78%; /* 9:16 Aspect Ratio */
       height: 0;
       overflow: hidden;
     }
@@ -63,51 +74,95 @@ font-family: ksa;
       height: 100%;
       border: none;
     }
-h1{
+
+a:hover{
+opacity:0.8;
+cursor:pointer;
+}
+a{
+color: #333;
+font-size: 18px;
 text-align: center;
+display: block;
+text-decoration:none;
+}
+a span {
+text-decoration: underline; 
+}
+a:visited{
+color: #333;
+}
+a::after{
+font-family: Georgia;
+content: "⇱";
+font-weight: bold;
+position:relative;
+top:-3px;
+left:-1px;
+transform: scale(0.65);
+display:inline-block;
 }
   </style>
 </head>
 <body>
-<h1>شرح الرياضيات:</h1>
-  <div class="video-grid">
-    <div class="video-item">
-      <h3>شرح صفحة ٤٤ من الملف:</h3>
-      <div class="video-container" onclick="enterFullscreen(this)">
-        <iframe src="https://a.top4top.io/m_3314w1fw71.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="video-item">
-      <h3>شرح صفحة ٥٤ من الملف:</h3>
-      <div class="video-container" onclick="enterFullscreen(this)">
-        <iframe src="https://k.top4top.io/m_3314dzkxp1.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="video-item">
-      <h3>شرح صفحة ٥٧ من الملف:</h3>
-      <div class="video-container" onclick="enterFullscreen(this)">
-        <iframe src="https://g.top4top.io/m_3314ei2321.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="video-item">
-      <h3>شرح صفحة ٦٣ من الملف:</h3>
-      <div class="video-container" onclick="enterFullscreen(this)">
-        <iframe src="https://c.top4top.io/m_33143a1672.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-<script>
-  function enterFullscreen(element) {
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) { // Firefox
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { // IE/Edge
-      element.msRequestFullscreen();
+  <h1>شرح الرياضيات للأستاذ مشعل الحربي</h1>
+<a href="https://t.me/+B_WUAC6ITWRjNDY0">جميع مقاطع الشرح موجودة أيضًا في <span>قناة التيليجرام هذه</span>!</a>
+<br>
+  <div class="video-grid" id="video-grid"></div>
+
+  <script>
+    // JavaScript Object List
+    const videos = [
+      {
+        title: "شرح صفحة ٤٠ وصفحة ٤٤ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-01-27_203842.mp4"
+      },
+      {
+        title: "شرح صفحة ٥٢ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-01-27_203937.mp4"
+      },
+      {
+        title: "شرح صفحة ٥٤ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-01-27_151848.mp4"
+      },
+      {
+        title: "شرح صفحة ٥٧ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-01-27_151639.mp4"
+      },
+      {
+        title: "شرح صفحة ٦٣ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-01-27_151916.mp4"
+      }
+    ];
+
+    // Function to generate video items
+    function generateVideoItems() {
+      const videoGrid = document.getElementById('video-grid');
+
+      videos.forEach(video => {
+        const videoItem = document.createElement('div');
+        videoItem.classList.add('video-item');
+
+        const title = document.createElement('h3');
+        title.textContent = video.title;
+
+        const videoContainer = document.createElement('div');
+        videoContainer.classList.add('video-container');
+
+        const iframe = document.createElement('iframe');
+        iframe.src = video.link;
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+
+        videoContainer.appendChild(iframe);
+        videoItem.appendChild(title);
+        videoItem.appendChild(videoContainer);
+        videoGrid.appendChild(videoItem);
+      });
     }
-  }
-</script>
+
+    // Call the function to generate video items
+    generateVideoItems();
+  </script>
 </body>
 </html>
