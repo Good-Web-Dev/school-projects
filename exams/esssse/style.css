@@ -490,3 +490,8 @@ transition:filter 0.01s ease-in-out;
 -webkit-transition:filter 0.01s ease-in-out;
 cursor:pointer;
 }
+
+.loader {
+  color: #4A4A66;
+margin-bottom:-2px;
+}

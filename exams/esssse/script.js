@@ -1,3 +1,16 @@
+const dotsElement = document.getElementById('dots');
+        let dotCount = 1;
+
+        function updateDots() {
+            if (dotCount > 3) {
+                dotCount = 1;
+            }
+            dotsElement.textContent = '.'.repeat(dotCount);
+            dotCount++;
+        }
+
+        setInterval(updateDots, 300);
+
 let questions = []; // Initialize an empty array for questions
 
 const app = document.getElementById("app");
@@ -26,7 +39,7 @@ fetch(jsonDatabase)
   })
   .catch((error) => {
     console.error("Error fetching questions:", error);
-    app.innerHTML = `<h2 style="color:darkred; margin-bottom: -5px;">تعذر تحميل الأسئلة! يرجى المحاولة لاحقًا.</h2>`;
+    app.innerHTML = `<h2 style="color:darkred; margin-bottom: -2px;">تعذر تحميل الأسئلة! يرجى المحاولة لاحقًا.</h2>`;
   });
 
 function renderQuestions() {
