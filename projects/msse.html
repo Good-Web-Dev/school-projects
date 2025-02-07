@@ -16,8 +16,8 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #363636;
+      color: #eee;
     }
 
     h1 {
@@ -27,10 +27,11 @@
     h3 {
       margin: 0;
       font-size: 1.2rem;
-      color: #444;
+      color: #eee;
       padding: 15px;
-      background: #fff;
-      border-bottom: 1px solid #eee;
+      background: #222;
+      border-bottom: 1px solid #ccc;
+margin-bottom:-90px;
     }
 
     h3::before {
@@ -42,20 +43,20 @@
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 10px;
       padding: 20px;
     }
 
     .video-item {
-      background: #fff;
+      background: #222;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+transform: scale(0.95);
+  }
 
     .video-item:hover {
-      transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
@@ -74,13 +75,32 @@
       height: 100%;
       border: none;
     }
-
+.btnsGrid{
+display: flex;
+flex-direction: row;
+gap:10px;
+width:100%;
+align-items: center;
+justify-content: center;
+}
+button{
+font-size: 16px;
+width:180px;
+background-color: #eee;
+padding: 5px;
+border-radius: 8px;
+border-top:none;
+border-bottom:none;
+border-width:4px;
+box-shadow: 0 0 10px #eeeeee22;
+color:#363636;
+}
 a:hover{
 opacity:0.8;
 cursor:pointer;
 }
 a{
-color: #333;
+color: #eee;
 font-size: 18px;
 text-align: center;
 display: block;
@@ -90,7 +110,7 @@ a span {
 text-decoration: underline; 
 }
 a:visited{
-color: #333;
+color: #eee;
 }
 a::after{
 font-family: Georgia;
@@ -104,12 +124,40 @@ display:inline-block;
 }
 noscript{
 color:darkred;
+background-color: #fff;
 font-weight: bold;
 width:100%;
 z-index: 900 !important;
 margin:25px auto auto auto;
 display: block;
 text-align: center;
+}
+iframe{
+z-index:1;
+}
+.video-loader{
+position:relative;
+margin:0 auto 0 auto;
+text-align: center;
+top:390px;
+color:#528020;
+width:80px;
+height:80px;
+display:block;
+animation:loading 1s linear infinite;
+border:8px double #eeeeee44;
+border-top:8px double #eee;
+border-radius:50%;
+z-index:0;
+background-color:transparent;
+}
+@keyframes loading{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
 }
   </style>
 </head>
@@ -120,39 +168,97 @@ text-align: center;
 &nbsp;<i class="fas fa fa-exclamation-triangle"></i>
 </noscript>
   <h1>شرح الرياضيات للأستاذ مشعل الحربي</h1>
-<a href="https://t.me/+B_WUAC6ITWRjNDY0">جميع مقاطع الشرح موجودة أيضًا في <span>قناة التيليجرام هذه</span>!</a>
+<a href="https://t.me/+B_WUAC6ITWRjNDY0">جميع مقاطع الشرح موجودة أيضًا في <span>قناة التيليجرام هذه</span></a>
+<br>
+<div class="btnsGrid"><button onclick="selectChapter(secondChapterVideos)">الفصل الثاني (القطوع المخروطية)</button>
+<button onclick="selectChapter(thirdChapterVideos)">الفصل الثالث (المتجهات)</button></div>
 <br>
   <div class="video-grid" id="video-grid"></div>
 
   <script>
     // JavaScript Object List
-    const videos = [
+    const secondChapterVideos = [
       {
         title: "شرح صفحة ٤٠ وصفحة ٤٤ من الملف:",
-        link: "https://4up4.com/uploads/file_2025-01-27_203842.mp4"
+        link: "https://4up4.com/uploads/file_2025-01-27_203842.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/022548e7550a471495a2944357479fdb26c137bdb3a646c7efaf6355ef082ea9?pmaid=282507582" 
       },
       {
         title: "شرح صفحة ٥٢ من الملف:",
-        link: "https://4up4.com/uploads/file_2025-01-27_203937.mp4"
+        link: "https://4up4.com/uploads/file_2025-01-27_203937.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/c5bf508ed5f2f87a8bdb9bf1a0d1ac7f0e897044e27ba0a46993a42b8d9a4276?pmaid=282508560" 
       },
       {
         title: "شرح صفحة ٥٤ من الملف:",
-        link: "https://4up4.com/uploads/file_2025-01-27_151848.mp4"
+        link: "https://4up4.com/uploads/file_2025-01-27_151848.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/c008dcfd8fd8d3488a87ce36a659296fafdf307433ece4263ac4db5fbab09728?pmaid=282509198" 
       },
       {
         title: "شرح صفحة ٥٧ من الملف:",
-        link: "https://4up4.com/uploads/file_2025-01-27_151639.mp4"
+        link: "https://4up4.com/uploads/file_2025-01-27_151639.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/99ec9b00c1ab58aeb8edb98fb74388eba3b6329cdb400dea1039ec9d00d6a6c1?pmaid=282510125" 
       },
       {
         title: "شرح صفحة ٦٣ من الملف:",
-        link: "https://4up4.com/uploads/file_2025-01-27_151916.mp4"
+        link: "https://4up4.com/uploads/file_2025-01-27_151916.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/7fd299988b52978f9d9bf187b8ae95f4092d4f6cf7cfabd405bdd874c7e22c4e?pmaid=282510903" 
       }
     ];
 
-    // Function to generate video items
-    function generateVideoItems() {
-      const videoGrid = document.getElementById('video-grid');
+    const thirdChapterVideos = [
+      {
+        title: "شرح صفحة ٨٠ وصفحة ٨٧ وصفحة ٨٨ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_204344.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/1e4001bc72adf94d8374108dad83952e8dec9baaf24279009167ca91ad48e027?pmaid=282511908" 
+      },
+      {
+        title: "شرح صفحة ٨٩ وصفحة ٩١ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_204712.mp4",
+         backupLink: "https://pfst.cf2.poecdn.net/base/video/900779c702f56a6101e9f4596c18ab4f492917789d5f694e24d26f2e2daf6087?pmaid=282512589" 
+      },
+      {
+        title: "شرح صفحة ٩٦ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_165051.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/322560d80fb349857f375afb1af568e7d6615689a2db75e6285d0c7a6ce9889c?pmaid=282513470" 
+      },
+      {
+        title: "شرح صفحة ٩٨ وصفحة ٩٩ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_161602.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/905793fd4224dfa59b8300bbcb6bff9904c95e412152fffbef4aa5a4bab99825?pmaid=282514171" 
+      },
+      {
+        title: "شرح صفحة ١٠٢ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_192557.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/81de36e7b3dd5f82166abd5711665a09cfefc11291a0aeaec266d8bada81ab75?pmaid=282514709" 
+      },
+      {
+        title: "شرح صفحة ١٠٦ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_193349.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/8cebdef5c07f31f0289eac5bd9237515db45b34f62193c9f4448ec75da64c2e3?pmaid=282515289" 
+      },
+      {
+        title: "شرح صفحة ١٠٩ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_195512.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/515b80acbb6c7ea670e1bc98ef2d5091768da4aff5d8e2a6f4c6c6790492fc15?pmaid=282515794" 
+      },
+      {
+        title: "شرح صفحة ١١٠ من الملف:",
+        link: "https://4up4.com/uploads/file_2025-02-07_202421.mp4",
+        backupLink: "https://pfst.cf2.poecdn.net/base/video/5b8be40c568d93ab931c5c32c59c1e0fd783cdc38c60602427813da088d945f4?pmaid=282517584" 
+      },
+];
 
+function selectChapter(selectedChapter){
+const videoGrid = document.getElementById('video-grid');
+videoGrid.innerHTML = "";
+// Call the function to generate video items
+generateVideoItems(selectedChapter);
+}
+
+    // Function to generate video items
+    function generateVideoItems(selectedChapter) {
+      const videoGrid = document.getElementById('video-grid');
+const videos = selectedChapter;
       videos.forEach(video => {
         const videoItem = document.createElement('div');
         videoItem.classList.add('video-item');
@@ -168,15 +274,32 @@ text-align: center;
         iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
 
+        // Add an error handler to the iframe
+        iframe.onerror = () => {
+          console.log(`Error loading video from ${video.link}.  Attempting backup URL.`);
+          if (video.backupLink) {
+            iframe.src = video.backupLink;
+          } else {
+            console.warn(`No backup URL available for ${video.title}`);
+            // Optionally display an error message to the user here.
+            iframe.src = ""; // Set src to empty to prevent further loading attempts
+            iframe.style.display = "none"; // Hide the iframe
+alert("تعذر تحميل المقطع، يرجى الذهاب لقناة التيليجرام لمشاهدة المقطع!");
+          }
+        };
+
+const videoLoaderParent = document.createElement('div');
+const videoLoader = document.createElement('div');
+videoLoader.classList.add("video-loader")
+
         videoContainer.appendChild(iframe);
         videoItem.appendChild(title);
+videoItem.appendChild(videoLoaderParent);
+videoLoaderParent.appendChild(videoLoader);
         videoItem.appendChild(videoContainer);
         videoGrid.appendChild(videoItem);
       });
     }
-
-    // Call the function to generate video items
-    generateVideoItems();
   </script>
 </body>
 </html>
