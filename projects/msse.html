@@ -150,6 +150,7 @@ color:#528020;
 width:80px;
 height:80px;
 display:block;
+visibility: hidden;
 animation:loading 1s linear infinite;
 border:8px double #eeeeee44;
 border-top:8px double #eee;
@@ -170,6 +171,31 @@ border-color:darkgreen;
 color:darkgreen;
 font-weight: bold;
 }
+    .play-button {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: #eee;
+      font-size: 2em;
+width:90px;
+height:90px;
+      padding: 5px 0px 2px 2px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .play-button:hover {
+      opacity: 0.8;
+    }
+
+    .play-button.faded {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -322,46 +348,69 @@ document.getElementById("scBtn").classList.remove("active");
       }
     }
 
-    function generateVideoItems(videos) {
-  const videoGrid = document.getElementById('video-grid');
-  videoGrid.innerHTML = ""; // Clear existing videos
+function generateVideoItems(videos) {
+    const videoGrid = document.getElementById('video-grid');
+    videoGrid.innerHTML = ""; // Clear existing videos
 
-  videos.forEach(video => {
-    const videoItem = document.createElement('div');
-    videoItem.classList.add('video-item');
+    videos.forEach((video, index) => { // Add index to the loop
+      const videoItem = document.createElement('div');
+      videoItem.classList.add('video-item');
 
-    const title = document.createElement('h3');
-    title.textContent = video.title;
+      const title = document.createElement('h3');
+      title.textContent = video.title;
 
-    const videoContainer = document.createElement('div');
-    videoContainer.classList.add('video-container');
+      const videoContainer = document.createElement('div');
+      videoContainer.classList.add('video-container');
 
-    const iframe = document.createElement('iframe');
-    // Disable autoplay by adding `autoplay=0` to the video URL
-    iframe.src = getVideoLink(video) + "?autoplay=0";
-    iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('loading', 'lazy');
-    iframe.setAttribute('autoplay', 'false'); // Explicitly disable autoplay
-    iframe.setAttribute('muted', 'true'); // Mute videos to prevent autoplay in some browsers
-    iframe.onerror = () => {
-      iframe.src = "";
-      iframe.style.display = "none";
-      alert("تعذر تحميل المقطع من السيرفر المحدد، الرجاء اختيار سيرفر آخر أو الذهاب لقناة التيليجرام لمشاهدة المقطع!");
-    };
+      // Create play button
+      const playButton = document.createElement('button');
+      playButton.classList.add('play-button');
+      playButton.innerHTML = '<i class="fas fa-play"></i>'; // Font Awesome play icon
 
-    const videoLoaderParent = document.createElement('div');
-    const videoLoader = document.createElement('div');
-    videoLoader.classList.add("video-loader");
+      let iframe; // Declare iframe here
 
-    videoContainer.appendChild(iframe);
-    videoItem.appendChild(title);
-    videoItem.appendChild(videoLoaderParent);
-    videoLoaderParent.appendChild(videoLoader);
-    videoItem.appendChild(videoContainer);
-    videoGrid.appendChild(videoItem);
-  });
-}
+      playButton.addEventListener('click', () => {
+        // Stop any currently playing video
+        const currentIframe = videoGrid.querySelector('iframe');
+        if (currentIframe) {
+          currentIframe.remove(); // Remove the current iframe
+          // Find the video item and show its play button
+          const parentVideoItem = currentIframe.closest('iframe');
+          if (parentVideoItem) {
+           document.querySelectorAll('.play-button').forEach((playBtn) =>{playBtn.classList.remove("faded");});
+          }
+        }
+
+        // Create and append the new iframe
+        iframe = document.createElement('iframe');
+        iframe.src = getVideoLink(video);
+        iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('autoplay', 'true');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('muted', 'true');
+        iframe.onerror = () => {
+          iframe.src = "";
+          iframe.style.display = "none";
+          alert("تعذر تحميل المقطع من السيرفر المحدد، الرجاء اختيار سيرفر آخر أو الذهاب لقناة التيليجرام لمشاهدة المقطع!");
+        };
+        videoContainer.appendChild(iframe);
+        playButton.classList.add('faded'); // Fade out the play button
+      });
+
+      const videoLoaderParent = document.createElement('div');
+      const videoLoader = document.createElement('div');
+      videoLoader.classList.add("video-loader");
+
+      // Append the button and container to the video item
+      videoItem.appendChild(title);
+      videoItem.appendChild(videoLoaderParent);
+      videoLoaderParent.appendChild(videoLoader);
+      videoContainer.appendChild(playButton); // Add play button to container
+      videoItem.appendChild(videoContainer);
+      videoGrid.appendChild(videoItem);
+    });
+  }
 
     // Initialize with the second chapter videos and default server
     selectChapter(secondChapterVideos);
