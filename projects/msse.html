@@ -33,6 +33,10 @@
       border-bottom: 1px solid #ccc;
 margin-bottom:-90px;
     }
+h2{
+margin-bottom: 10px;
+padding-right:10px;
+}
 
     h3::before {
       content: "❖ ";
@@ -44,7 +48,7 @@ margin-bottom:-90px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 10px;
-      padding: 20px;
+      padding:10px 20px;
     }
 
     .video-item {
@@ -74,6 +78,7 @@ transform: scale(0.95);
       width: 100%;
       height: 100%;
       border: none;
+      background-color:black;
     }
 .btnsGrid{
 display: flex;
@@ -85,13 +90,14 @@ justify-content: center;
 }
 button{
 font-size: 16px;
-width:180px;
+width:45%;
 background-color: #eee;
 padding: 5px;
 border-radius: 8px;
 border-top:none;
 border-bottom:none;
 border-width:4px;
+border-color:#eee;
 box-shadow: 0 0 10px #eeeeee22;
 color:#363636;
 }
@@ -144,6 +150,7 @@ color:#528020;
 width:80px;
 height:80px;
 display:block;
+visibility: hidden;
 animation:loading 1s linear infinite;
 border:8px double #eeeeee44;
 border-top:8px double #eee;
@@ -159,6 +166,36 @@ transform:rotate(0deg);
 transform:rotate(360deg);
 }
 }
+.active{
+border-color:darkgreen;
+color:darkgreen;
+font-weight: bold;
+}
+    .play-button {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: #eee;
+      font-size: 2em;
+width:90px;
+height:90px;
+      padding: 5px 0px 2px 2px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .play-button:hover {
+      opacity: 0.8;
+    }
+
+    .play-button.faded {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -169,10 +206,21 @@ transform:rotate(360deg);
 </noscript>
   <h1>شرح الرياضيات للأستاذ مشعل الحربي</h1>
 <a href="https://t.me/+B_WUAC6ITWRjNDY0">جميع مقاطع الشرح موجودة أيضًا في <span>قناة التيليجرام هذه</span></a>
+<h2>اختر الفصل:</h2>
+<div class="btnsGrid">
+<button id="scBtn" onclick="selectChapter(secondChapterVideos)">الفصل الثاني (القطوع المخروطية)</button>
+<button id="tcBtn" onclick="selectChapter(thirdChapterVideos)">الفصل الثالث (المتجهات)</button>
+</div>
+<h2>اختر الخادم (السيرفر):</h2>
+<div class="btnsGrid">
+<button id="poeBtn" onclick="setServer('poe')">خادم <span style="font-family: Georgia; font-size: 13px">Poe</span></button>
+  <button id="4up4Btn" onclick="setServer('4up4')">
+خادم <span style="font-family: Georgia; font-size: 13px">4up4</span>
+</button>
+</div>
+<p style="text-align: center; padding: 0 10px; font-size: 16px;">الخادم الافتراضي هو خادم <span style="font-family: Georgia; font-size: 13px">Poe</span> وإذا لم يعمل فحاول تغييره إلى خادم <span style="font-family: Georgia; font-size: 13px">4up4</span> أو الذهاب لقناة التيليجرام. </p>
 <br>
-<div class="btnsGrid"><button onclick="selectChapter(secondChapterVideos)">الفصل الثاني (القطوع المخروطية)</button>
-<button onclick="selectChapter(thirdChapterVideos)">الفصل الثالث (المتجهات)</button></div>
-<br>
+<h2 class="chapterTitle" style="text-align: center; margin-bottom: -6px;"></h2>
   <div class="video-grid" id="video-grid"></div>
 
   <script>
@@ -248,58 +296,125 @@ transform:rotate(360deg);
       },
 ];
 
-function selectChapter(selectedChapter){
-const videoGrid = document.getElementById('video-grid');
-videoGrid.innerHTML = "";
-// Call the function to generate video items
-generateVideoItems(selectedChapter);
-}
+    let currentServer = 'poe'; // Default server
+let chapterTitle = document.querySelector(".chapterTitle");
+document.getElementById("poeBtn").classList.add("active");
 
-    // Function to generate video items
-    function generateVideoItems(selectedChapter) {
+    function setServer(server) {
+      currentServer = server;
+if (currentServer === '4up4') {
+document.getElementById("4up4Btn").classList.add("active");
+document.getElementById("poeBtn").classList.remove("active")
+      } else if (currentServer === 'poe') {
+document.getElementById("poeBtn").classList.add("active");
+document.getElementById("4up4Btn").classList.remove("active")
+      }
+      // Re-render the videos based on the currently selected chapter
       const videoGrid = document.getElementById('video-grid');
-const videos = selectedChapter;
-      videos.forEach(video => {
-        const videoItem = document.createElement('div');
-        videoItem.classList.add('video-item');
+      if (videoGrid.dataset.chapter === 'second') {
+        selectChapter(secondChapterVideos);
+chapterTitle.innerHTML ="الفصل الثاني (القطوع المخروطية):";
+document.getElementById("scBtn").classList.add("active");
+document.getElementById("tcBtn").classList.remove("active");
+      } else if (videoGrid.dataset.chapter === 'third') {
+        selectChapter(thirdChapterVideos);
+chapterTitle.innerHTML ="الفصل الثالث (المتجهات):";
+document.getElementById("tcBtn").classList.add("active");
+document.getElementById("scBtn").classList.remove("active");
+      }
+    }
 
-        const title = document.createElement('h3');
-        title.textContent = video.title;
+    function selectChapter(selectedChapter) {
+      const videoGrid = document.getElementById('video-grid');
+      videoGrid.innerHTML = "";
+      if (selectedChapter === secondChapterVideos) {
+        videoGrid.dataset.chapter = 'second';
+chapterTitle.innerHTML ="الفصل الثاني (القطوع المخروطية):";
+document.getElementById("scBtn").classList.add("active");
+document.getElementById("tcBtn").classList.remove("active");
+      } else if (selectedChapter === thirdChapterVideos) {
+        videoGrid.dataset.chapter = 'third';
+chapterTitle.innerHTML ="الفصل الثالث (المتجهات):";
+document.getElementById("tcBtn").classList.add("active");
+document.getElementById("scBtn").classList.remove("active");
+      }
+      generateVideoItems(selectedChapter);
+    }
 
-        const videoContainer = document.createElement('div');
-        videoContainer.classList.add('video-container');
+    function getVideoLink(video) {
+      if (currentServer === '4up4') {
+        return video.link;
+      } else if (currentServer === 'poe') {
+        return video.backupLink;
+      }
+    }
 
-        const iframe = document.createElement('iframe');
-        iframe.src = video.link;
+function generateVideoItems(videos) {
+    const videoGrid = document.getElementById('video-grid');
+    videoGrid.innerHTML = ""; // Clear existing videos
+
+    videos.forEach((video, index) => { // Add index to the loop
+      const videoItem = document.createElement('div');
+      videoItem.classList.add('video-item');
+
+      const title = document.createElement('h3');
+      title.textContent = video.title;
+
+      const videoContainer = document.createElement('div');
+      videoContainer.classList.add('video-container');
+
+      // Create play button
+      const playButton = document.createElement('button');
+      playButton.classList.add('play-button');
+      playButton.innerHTML = '<i class="fas fa-play"></i>'; // Font Awesome play icon
+
+      let iframe; // Declare iframe here
+
+      playButton.addEventListener('click', () => {
+        // Stop any currently playing video
+        const currentIframe = videoGrid.querySelector('iframe');
+        if (currentIframe) {
+          currentIframe.remove(); // Remove the current iframe
+          // Find the video item and show its play button
+          const parentVideoItem = currentIframe.closest('iframe');
+          if (parentVideoItem) {
+           document.querySelectorAll('.play-button').forEach((playBtn) =>{playBtn.classList.remove("faded");});
+          }
+        }
+
+        // Create and append the new iframe
+        iframe = document.createElement('iframe');
+        iframe.src = getVideoLink(video);
         iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
-
-        // Add an error handler to the iframe
+        iframe.setAttribute('autoplay', 'true');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('muted', 'true');
         iframe.onerror = () => {
-          console.log(`Error loading video from ${video.link}.  Attempting backup URL.`);
-          if (video.backupLink) {
-            iframe.src = video.backupLink;
-          } else {
-            console.warn(`No backup URL available for ${video.title}`);
-            // Optionally display an error message to the user here.
-            iframe.src = ""; // Set src to empty to prevent further loading attempts
-            iframe.style.display = "none"; // Hide the iframe
-alert("تعذر تحميل المقطع، يرجى الذهاب لقناة التيليجرام لمشاهدة المقطع!");
-          }
+          iframe.src = "";
+          iframe.style.display = "none";
+          alert("تعذر تحميل المقطع من السيرفر المحدد، الرجاء اختيار سيرفر آخر أو الذهاب لقناة التيليجرام لمشاهدة المقطع!");
         };
-
-const videoLoaderParent = document.createElement('div');
-const videoLoader = document.createElement('div');
-videoLoader.classList.add("video-loader")
-
         videoContainer.appendChild(iframe);
-        videoItem.appendChild(title);
-videoItem.appendChild(videoLoaderParent);
-videoLoaderParent.appendChild(videoLoader);
-        videoItem.appendChild(videoContainer);
-        videoGrid.appendChild(videoItem);
+        playButton.classList.add('faded'); // Fade out the play button
       });
-    }
+
+      const videoLoaderParent = document.createElement('div');
+      const videoLoader = document.createElement('div');
+      videoLoader.classList.add("video-loader");
+
+      // Append the button and container to the video item
+      videoItem.appendChild(title);
+      videoItem.appendChild(videoLoaderParent);
+      videoLoaderParent.appendChild(videoLoader);
+      videoContainer.appendChild(playButton); // Add play button to container
+      videoItem.appendChild(videoContainer);
+      videoGrid.appendChild(videoItem);
+    });
+  }
+
+    // Initialize with the second chapter videos and default server
+    selectChapter(secondChapterVideos);
   </script>
 </body>
 </html>

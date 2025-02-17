@@ -18,7 +18,7 @@
     "chapter": "الفصل الثاني (الميكانيكا السماوية)"
   },
   {
-    "question": "<span dir='ltr'>r<sub>a</sub> = a(<span class='latin-num'>1</span> - e)</span>:",
+    "question": "<span dir='ltr'>r<sub>a</sub> = a(<span class='latin-num'>1</span> + e)</span>:",
     "options": ["البعد الأوجي", "البعد الحضيضي", "المحور الأكبر", "المحور الأصغر"],
     "correct": 0,
     "chapter": "الفصل الثاني (الميكانيكا السماوية)"
